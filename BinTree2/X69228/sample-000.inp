@@ -1,0 +1,213 @@
+VISUALFORMAT
+                         Concat
+                           |
+                ----------- -----------
+               |                       |
+             Concat                 Reverse
+               |                       |
+       -------- --------           ----
+      |                 |         |
+    Concat           Reverse     bbb
+      |                 |
+  ---- ----         ----
+ |         |       |
+bcb       baa     caa
+
+                 Reverse
+                    |
+                ----
+               |
+             Concat
+               |
+           ---- ----
+          |         |
+       Reverse      c
+          |
+      ----
+     |
+  Reverse
+     |
+ ----
+|
+a
+
+                   Reverse
+                      |
+                  ----
+                 |
+               Concat
+                 |
+            ----- -----
+           |           |
+        Reverse      Concat
+           |           |
+       ----        ---- ----
+      |           |         |
+   Reverse     Reverse     bab
+      |           |
+  ----        ----
+ |           |
+acc          c
+
+   Concat
+     |
+ ---- ----
+|         |
+c      Reverse
+          |
+      ----
+     |
+    acb
+
+            Reverse
+               |
+           ----
+          |
+       Reverse
+          |
+      ----
+     |
+   Concat
+     |
+ ---- ----
+|         |
+aa       abb
+
+   Reverse
+      |
+  ----
+ |
+abc
+
+            Concat
+              |
+      -------- --------
+     |                 |
+   Concat            Concat
+     |                 |
+ ---- ----         ---- ----
+|         |       |         |
+cb     Reverse    a       Concat
+          |                 |
+      ----              ---- ----
+     |                 |         |
+     ac                c         b
+
+         Concat
+           |
+       ---- ----
+      |         |
+    Concat     aca
+      |
+  ---- ----
+ |         |
+ccb        c
+
+         Concat
+           |
+       ---- ----
+      |         |
+   Reverse    Concat
+      |         |
+  ----     ----- -----
+ |        |           |
+cbc    Reverse     Reverse
+          |           |
+      ----        ----
+     |           |
+    cbc         bab
+
+        Concat
+          |
+      ---- ----
+     |         |
+   Concat      b
+     |
+ ---- ----
+|         |
+bc       bcc
+
+                       Concat
+                         |
+               ---------- ----------
+              |                     |
+            Concat               Reverse
+              |                     |
+      -------- --------         ----
+     |                 |       |
+   Concat           Reverse    a
+     |                 |
+ ---- ----         ----
+|         |       |
+a        bbb     bbb
+
+        Reverse
+           |
+       ----
+      |
+   Reverse
+      |
+  ----
+ |
+ccb
+
+ac
+
+                 Reverse
+                    |
+                ----
+               |
+            Reverse
+               |
+           ----
+          |
+       Reverse
+          |
+      ----
+     |
+   Concat
+     |
+ ---- ----
+|         |
+cc       aca
+
+  Reverse
+     |
+ ----
+|
+cb
+
+ba
+
+             Reverse
+                |
+            ----
+           |
+        Reverse
+           |
+       ----
+      |
+   Reverse
+      |
+  ----
+ |
+cba
+
+               Concat
+                 |
+            ----- -----
+           |           |
+        Reverse      Concat
+           |           |
+       ----        ---- ----
+      |           |         |
+   Reverse     Reverse    Concat
+      |           |         |
+  ----        ----      ---- ----
+ |           |         |         |
+abc          cb       baa        ac
+
+cca
+
+aaa
+
