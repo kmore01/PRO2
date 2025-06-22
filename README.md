@@ -1,0 +1,1 @@
+En este repositorio encontraras todos los ejercicios de la asignatura de Programación 2 de la carrera de ingeniera informática de la UPC. Si algún ejercicio no está en su respectiva carpeta, puedes buscarlo en la carpeta de Repaso.
