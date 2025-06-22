@@ -1,0 +1,467 @@
+\hypertarget{classBarco}{}\doxysection{Referencia de la Clase Barco}
+\label{classBarco}\index{Barco@{Barco}}
+
+
+Representa el barco comerciante de la cuenca fluvial.  
+
+
+
+
+{\ttfamily \#include $<$Barco.\+hh$>$}
+
+\doxysubsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classBarco_aea54a1f00318af549e695999ccf08e38}{Barco}} ()
+\begin{DoxyCompactList}\small\item\em Creadora por defecto. Se ejecuta automáticamente al declarar el barco. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classBarco_a24461024052a406bae67865da7e37486}{Barco}} (int id1, int nid1, int id2, int nid2, list$<$ string $>$ l)
+\begin{DoxyCompactList}\small\item\em Creadora con valores concretos. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBarco_a929d145ae55e1025c88c1f08af4639c5}{modificar\+\_\+barco}} (int id1, int nid1, int id2, int nid2)
+\begin{DoxyCompactList}\small\item\em Modificadora de la carga del barco. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBarco_a02e1602b8fd26f49560a33cdaab0d2b4}{modificar\+\_\+ncomprar}} (int nid1)
+\begin{DoxyCompactList}\small\item\em Modificadora de las unidades de producto a comprar. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBarco_a236cc8b2e1a0df725c817ec697bbeecc}{modificar\+\_\+nvender}} (int nid2)
+\begin{DoxyCompactList}\small\item\em Modificadora de las unidades de producto a vender. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBarco_aedc69e98340c24baa6a5be34f33a5ae0}{anadir\+\_\+viaje}} (string ciudad)
+\begin{DoxyCompactList}\small\item\em Añade un nuevo viaje. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classBarco_a7c56b635ecaf977e6ca924e9dbc39b47}{consultar\+\_\+idcompra}} () const
+\begin{DoxyCompactList}\small\item\em Consultora de el id del producto a comprar. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classBarco_aeb3795a66ef08c54a3674ae2e6c7ee36}{consultar\+\_\+nidcompra}} () const
+\begin{DoxyCompactList}\small\item\em Consultora de las unidades de producto a comprar. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classBarco_a5628cad9a12763791496aa0a77ba9149}{consultar\+\_\+idventa}} () const
+\begin{DoxyCompactList}\small\item\em Consultora de el id del producto a vender. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classBarco_a2703e6554c772fddc9392d07f4e1b20d}{consultar\+\_\+nidventa}} () const
+\begin{DoxyCompactList}\small\item\em Consultora de las unidades de producto a vender. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBarco_adbcd8100a10a2fea162e6c18bd8d3914}{leer}} ()
+\begin{DoxyCompactList}\small\item\em Operación de lectura. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBarco_a3f1c26f2f0565e375924dae85b2e89a0}{escribir\+\_\+barco}} () const
+\begin{DoxyCompactList}\small\item\em Operación de escritura. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Atributos privados}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classBarco_a507426ffcd74398d965d4c1970e8a04a}{id\+Producto\+Comprar}}
+\item 
+int \mbox{\hyperlink{classBarco_a52bb7a5ae9cb5b42a78022b04bf18259}{nproducto\+Comprar}}
+\item 
+int \mbox{\hyperlink{classBarco_abf0be583838c883dbf64fe705872fff7}{id\+Producto\+Vender}}
+\item 
+int \mbox{\hyperlink{classBarco_a6b03f1f9cabab5cdb1b9195dd77037b6}{n\+Producto\+Vender}}
+\item 
+list$<$ string $>$ \mbox{\hyperlink{classBarco_a95580a8317213144ce6f9e5e7db9d664}{viajes}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+Representa el barco comerciante de la cuenca fluvial. 
+
+Sus operaciones son las modificadoras de todos los atributos, las unidades a comprar y vender y añadir un nuevo viaje, las consultoras de el identificador del producto a comprar y vender y sus respectivas cantidades, la de lectura y la de escritura. 
+
+Definición en la línea 20 del archivo Barco.\+hh.
+
+
+
+\doxysubsection{Documentación del constructor y destructor}
+\mbox{\Hypertarget{classBarco_aea54a1f00318af549e695999ccf08e38}\label{classBarco_aea54a1f00318af549e695999ccf08e38}} 
+\index{Barco@{Barco}!Barco@{Barco}}
+\index{Barco@{Barco}!Barco@{Barco}}
+\doxysubsubsection{\texorpdfstring{Barco()}{Barco()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Barco\+::\+Barco (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Creadora por defecto. Se ejecuta automáticamente al declarar el barco. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape cierto} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El resultado es el barco sin ningun tipo de atributo 
+\end{DoxyPostcond}
+
+
+Definición en la línea 3 del archivo Barco.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{4 \{}
+\DoxyCodeLine{5     \mbox{\hyperlink{classBarco_a507426ffcd74398d965d4c1970e8a04a}{idProductoComprar}} = \mbox{\hyperlink{classBarco_a52bb7a5ae9cb5b42a78022b04bf18259}{nproductoComprar}} = 0;}
+\DoxyCodeLine{6     \mbox{\hyperlink{classBarco_abf0be583838c883dbf64fe705872fff7}{idProductoVender}} = \mbox{\hyperlink{classBarco_a6b03f1f9cabab5cdb1b9195dd77037b6}{nProductoVender}} = 0;}
+\DoxyCodeLine{7     \mbox{\hyperlink{classBarco_a95580a8317213144ce6f9e5e7db9d664}{viajes}} = list<string>();}
+\DoxyCodeLine{8 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classBarco_a24461024052a406bae67865da7e37486}\label{classBarco_a24461024052a406bae67865da7e37486}} 
+\index{Barco@{Barco}!Barco@{Barco}}
+\index{Barco@{Barco}!Barco@{Barco}}
+\doxysubsubsection{\texorpdfstring{Barco()}{Barco()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Barco\+::\+Barco (\begin{DoxyParamCaption}\item[{int}]{id1,  }\item[{int}]{nid1,  }\item[{int}]{id2,  }\item[{int}]{nid2,  }\item[{list$<$ string $>$}]{l }\end{DoxyParamCaption})}
+
+
+
+Creadora con valores concretos. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape cierto} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El resultado es el barco con id\+Producto\+Comprar \char`\"{}id1\char`\"{}, nproducto\+Comprar \char`\"{}nid1\char`\"{}, id\+Producto\+Vender \char`\"{}id2\char`\"{}, n\+Producto\+Vender \char`\"{}nid2\char`\"{} y viajes \char`\"{}l\char`\"{} 
+\end{DoxyPostcond}
+
+
+Definición en la línea 10 del archivo Barco.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{11 \{}
+\DoxyCodeLine{12     \mbox{\hyperlink{classBarco_a507426ffcd74398d965d4c1970e8a04a}{idProductoComprar}} = id1;}
+\DoxyCodeLine{13     \mbox{\hyperlink{classBarco_a52bb7a5ae9cb5b42a78022b04bf18259}{nproductoComprar}} = nid1;}
+\DoxyCodeLine{14     \mbox{\hyperlink{classBarco_abf0be583838c883dbf64fe705872fff7}{idProductoVender}} = id2;}
+\DoxyCodeLine{15     \mbox{\hyperlink{classBarco_a6b03f1f9cabab5cdb1b9195dd77037b6}{nProductoVender}} = nid2;}
+\DoxyCodeLine{16     l = \mbox{\hyperlink{classBarco_a95580a8317213144ce6f9e5e7db9d664}{viajes}};}
+\DoxyCodeLine{17 \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Documentación de las funciones miembro}
+\mbox{\Hypertarget{classBarco_aedc69e98340c24baa6a5be34f33a5ae0}\label{classBarco_aedc69e98340c24baa6a5be34f33a5ae0}} 
+\index{Barco@{Barco}!anadir\_viaje@{anadir\_viaje}}
+\index{anadir\_viaje@{anadir\_viaje}!Barco@{Barco}}
+\doxysubsubsection{\texorpdfstring{anadir\_viaje()}{anadir\_viaje()}}
+{\footnotesize\ttfamily void Barco\+::anadir\+\_\+viaje (\begin{DoxyParamCaption}\item[{string}]{ciudad }\end{DoxyParamCaption})}
+
+
+
+Añade un nuevo viaje. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape cierto} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+La carga del parámetro implícito se ha visto modificada 
+\end{DoxyPostcond}
+
+
+Definición en la línea 37 del archivo Barco.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{38 \{}
+\DoxyCodeLine{39     \mbox{\hyperlink{classBarco_a95580a8317213144ce6f9e5e7db9d664}{viajes}}.push\_back(ciudad);}
+\DoxyCodeLine{40 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classBarco_a7c56b635ecaf977e6ca924e9dbc39b47}\label{classBarco_a7c56b635ecaf977e6ca924e9dbc39b47}} 
+\index{Barco@{Barco}!consultar\_idcompra@{consultar\_idcompra}}
+\index{consultar\_idcompra@{consultar\_idcompra}!Barco@{Barco}}
+\doxysubsubsection{\texorpdfstring{consultar\_idcompra()}{consultar\_idcompra()}}
+{\footnotesize\ttfamily int Barco\+::consultar\+\_\+idcompra (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Consultora de el id del producto a comprar. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape cierto} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El resultado es el id del producto que el barco busca comprar 
+\end{DoxyPostcond}
+
+
+Definición en la línea 42 del archivo Barco.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{43 \{}
+\DoxyCodeLine{44     \textcolor{keywordflow}{return} \mbox{\hyperlink{classBarco_a507426ffcd74398d965d4c1970e8a04a}{idProductoComprar}};}
+\DoxyCodeLine{45 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classBarco_a5628cad9a12763791496aa0a77ba9149}\label{classBarco_a5628cad9a12763791496aa0a77ba9149}} 
+\index{Barco@{Barco}!consultar\_idventa@{consultar\_idventa}}
+\index{consultar\_idventa@{consultar\_idventa}!Barco@{Barco}}
+\doxysubsubsection{\texorpdfstring{consultar\_idventa()}{consultar\_idventa()}}
+{\footnotesize\ttfamily int Barco\+::consultar\+\_\+idventa (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Consultora de el id del producto a vender. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape cierto} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El resultado es el id del producto que el barco busca vender 
+\end{DoxyPostcond}
+
+
+Definición en la línea 52 del archivo Barco.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{53 \{}
+\DoxyCodeLine{54     \textcolor{keywordflow}{return} \mbox{\hyperlink{classBarco_abf0be583838c883dbf64fe705872fff7}{idProductoVender}};}
+\DoxyCodeLine{55 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classBarco_aeb3795a66ef08c54a3674ae2e6c7ee36}\label{classBarco_aeb3795a66ef08c54a3674ae2e6c7ee36}} 
+\index{Barco@{Barco}!consultar\_nidcompra@{consultar\_nidcompra}}
+\index{consultar\_nidcompra@{consultar\_nidcompra}!Barco@{Barco}}
+\doxysubsubsection{\texorpdfstring{consultar\_nidcompra()}{consultar\_nidcompra()}}
+{\footnotesize\ttfamily int Barco\+::consultar\+\_\+nidcompra (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Consultora de las unidades de producto a comprar. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape cierto} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El resultado es el numero de productos que el barco busca comprar 
+\end{DoxyPostcond}
+
+
+Definición en la línea 47 del archivo Barco.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{48 \{}
+\DoxyCodeLine{49     \textcolor{keywordflow}{return} \mbox{\hyperlink{classBarco_a52bb7a5ae9cb5b42a78022b04bf18259}{nproductoComprar}};}
+\DoxyCodeLine{50 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classBarco_a2703e6554c772fddc9392d07f4e1b20d}\label{classBarco_a2703e6554c772fddc9392d07f4e1b20d}} 
+\index{Barco@{Barco}!consultar\_nidventa@{consultar\_nidventa}}
+\index{consultar\_nidventa@{consultar\_nidventa}!Barco@{Barco}}
+\doxysubsubsection{\texorpdfstring{consultar\_nidventa()}{consultar\_nidventa()}}
+{\footnotesize\ttfamily int Barco\+::consultar\+\_\+nidventa (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Consultora de las unidades de producto a vender. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape cierto} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El resultado es el numero de productos que el barco busca vender 
+\end{DoxyPostcond}
+
+
+Definición en la línea 57 del archivo Barco.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{58 \{}
+\DoxyCodeLine{59     \textcolor{keywordflow}{return} \mbox{\hyperlink{classBarco_a6b03f1f9cabab5cdb1b9195dd77037b6}{nProductoVender}};}
+\DoxyCodeLine{60 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classBarco_a3f1c26f2f0565e375924dae85b2e89a0}\label{classBarco_a3f1c26f2f0565e375924dae85b2e89a0}} 
+\index{Barco@{Barco}!escribir\_barco@{escribir\_barco}}
+\index{escribir\_barco@{escribir\_barco}!Barco@{Barco}}
+\doxysubsubsection{\texorpdfstring{escribir\_barco()}{escribir\_barco()}}
+{\footnotesize\ttfamily void Barco\+::escribir\+\_\+barco (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Operación de escritura. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape cierto} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se han escrito los atributos del parámetro implícito por el canal de salida 
+\end{DoxyPostcond}
+
+
+Definición en la línea 72 del archivo Barco.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{73 \{}
+\DoxyCodeLine{74     cout << \mbox{\hyperlink{classBarco_a507426ffcd74398d965d4c1970e8a04a}{idProductoComprar}} << \textcolor{charliteral}{' '} << \mbox{\hyperlink{classBarco_a52bb7a5ae9cb5b42a78022b04bf18259}{nproductoComprar}} << \textcolor{charliteral}{' '};}
+\DoxyCodeLine{75     cout << \mbox{\hyperlink{classBarco_abf0be583838c883dbf64fe705872fff7}{idProductoVender}} << \textcolor{charliteral}{' '} << \mbox{\hyperlink{classBarco_a6b03f1f9cabab5cdb1b9195dd77037b6}{nProductoVender}} << endl;}
+\DoxyCodeLine{76     \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} it = \mbox{\hyperlink{classBarco_a95580a8317213144ce6f9e5e7db9d664}{viajes}}.begin(); it != \mbox{\hyperlink{classBarco_a95580a8317213144ce6f9e5e7db9d664}{viajes}}.end(); ++it) \{}
+\DoxyCodeLine{77         cout << *it << endl;}
+\DoxyCodeLine{78     \}}
+\DoxyCodeLine{79 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classBarco_adbcd8100a10a2fea162e6c18bd8d3914}\label{classBarco_adbcd8100a10a2fea162e6c18bd8d3914}} 
+\index{Barco@{Barco}!leer@{leer}}
+\index{leer@{leer}!Barco@{Barco}}
+\doxysubsubsection{\texorpdfstring{leer()}{leer()}}
+{\footnotesize\ttfamily void Barco\+::leer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Operación de lectura. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape cierto} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se ha leído un barco desde el canal de entrada 
+\end{DoxyPostcond}
+
+
+Definición en la línea 62 del archivo Barco.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{63 \{}
+\DoxyCodeLine{64     \textcolor{keywordtype}{int} id1, id2, nid1, nid2;}
+\DoxyCodeLine{65     cin >> id1 >> nid1 >> id2 >> nid2;}
+\DoxyCodeLine{66     \mbox{\hyperlink{classBarco_a507426ffcd74398d965d4c1970e8a04a}{idProductoComprar}} = id1;}
+\DoxyCodeLine{67     \mbox{\hyperlink{classBarco_a52bb7a5ae9cb5b42a78022b04bf18259}{nproductoComprar}} = nid1;}
+\DoxyCodeLine{68     \mbox{\hyperlink{classBarco_abf0be583838c883dbf64fe705872fff7}{idProductoVender}} = id2;}
+\DoxyCodeLine{69     \mbox{\hyperlink{classBarco_a6b03f1f9cabab5cdb1b9195dd77037b6}{nProductoVender}} = nid2;}
+\DoxyCodeLine{70 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classBarco_a929d145ae55e1025c88c1f08af4639c5}\label{classBarco_a929d145ae55e1025c88c1f08af4639c5}} 
+\index{Barco@{Barco}!modificar\_barco@{modificar\_barco}}
+\index{modificar\_barco@{modificar\_barco}!Barco@{Barco}}
+\doxysubsubsection{\texorpdfstring{modificar\_barco()}{modificar\_barco()}}
+{\footnotesize\ttfamily void Barco\+::modificar\+\_\+barco (\begin{DoxyParamCaption}\item[{int}]{id1,  }\item[{int}]{nid1,  }\item[{int}]{id2,  }\item[{int}]{nid2 }\end{DoxyParamCaption})}
+
+
+
+Modificadora de la carga del barco. 
+
+\begin{DoxyPrecond}{Precondición}
+Los dos productos existen, son diferentes, las unidades no son negativas y al menos una de ellas es estrictamente positiva 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+La carga del parámetro implícito se ha visto modificada 
+\end{DoxyPostcond}
+
+
+Definición en la línea 19 del archivo Barco.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{20 \{}
+\DoxyCodeLine{21     \mbox{\hyperlink{classBarco_a507426ffcd74398d965d4c1970e8a04a}{idProductoComprar}} = id1;}
+\DoxyCodeLine{22     \mbox{\hyperlink{classBarco_a52bb7a5ae9cb5b42a78022b04bf18259}{nproductoComprar}} = nid1;}
+\DoxyCodeLine{23     \mbox{\hyperlink{classBarco_abf0be583838c883dbf64fe705872fff7}{idProductoVender}} = id2;}
+\DoxyCodeLine{24     \mbox{\hyperlink{classBarco_a6b03f1f9cabab5cdb1b9195dd77037b6}{nProductoVender}} = nid2;}
+\DoxyCodeLine{25 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classBarco_a02e1602b8fd26f49560a33cdaab0d2b4}\label{classBarco_a02e1602b8fd26f49560a33cdaab0d2b4}} 
+\index{Barco@{Barco}!modificar\_ncomprar@{modificar\_ncomprar}}
+\index{modificar\_ncomprar@{modificar\_ncomprar}!Barco@{Barco}}
+\doxysubsubsection{\texorpdfstring{modificar\_ncomprar()}{modificar\_ncomprar()}}
+{\footnotesize\ttfamily void Barco\+::modificar\+\_\+ncomprar (\begin{DoxyParamCaption}\item[{int}]{nid1 }\end{DoxyParamCaption})}
+
+
+
+Modificadora de las unidades de producto a comprar. 
+
+\begin{DoxyPrecond}{Precondición}
+El entero nid1 $>$= 0 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El atributo nproducto\+Comprar del parámetro implícito se ha visto modificada 
+\end{DoxyPostcond}
+
+
+Definición en la línea 27 del archivo Barco.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{28 \{}
+\DoxyCodeLine{29     \mbox{\hyperlink{classBarco_a52bb7a5ae9cb5b42a78022b04bf18259}{nproductoComprar}} = nid1;}
+\DoxyCodeLine{30 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classBarco_a236cc8b2e1a0df725c817ec697bbeecc}\label{classBarco_a236cc8b2e1a0df725c817ec697bbeecc}} 
+\index{Barco@{Barco}!modificar\_nvender@{modificar\_nvender}}
+\index{modificar\_nvender@{modificar\_nvender}!Barco@{Barco}}
+\doxysubsubsection{\texorpdfstring{modificar\_nvender()}{modificar\_nvender()}}
+{\footnotesize\ttfamily void Barco\+::modificar\+\_\+nvender (\begin{DoxyParamCaption}\item[{int}]{nid2 }\end{DoxyParamCaption})}
+
+
+
+Modificadora de las unidades de producto a vender. 
+
+\begin{DoxyPrecond}{Precondición}
+El entero nid2 $>$= 0 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El atributo n\+Producto\+Vender del parámetro implícito se ha visto modificada 
+\end{DoxyPostcond}
+
+
+Definición en la línea 32 del archivo Barco.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{33 \{}
+\DoxyCodeLine{34     \mbox{\hyperlink{classBarco_a6b03f1f9cabab5cdb1b9195dd77037b6}{nProductoVender}} = nid2;}
+\DoxyCodeLine{35 \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Documentación de los datos miembro}
+\mbox{\Hypertarget{classBarco_a507426ffcd74398d965d4c1970e8a04a}\label{classBarco_a507426ffcd74398d965d4c1970e8a04a}} 
+\index{Barco@{Barco}!idProductoComprar@{idProductoComprar}}
+\index{idProductoComprar@{idProductoComprar}!Barco@{Barco}}
+\doxysubsubsection{\texorpdfstring{idProductoComprar}{idProductoComprar}}
+{\footnotesize\ttfamily int Barco\+::id\+Producto\+Comprar\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definición en la línea 105 del archivo Barco.\+hh.
+
+\mbox{\Hypertarget{classBarco_abf0be583838c883dbf64fe705872fff7}\label{classBarco_abf0be583838c883dbf64fe705872fff7}} 
+\index{Barco@{Barco}!idProductoVender@{idProductoVender}}
+\index{idProductoVender@{idProductoVender}!Barco@{Barco}}
+\doxysubsubsection{\texorpdfstring{idProductoVender}{idProductoVender}}
+{\footnotesize\ttfamily int Barco\+::id\+Producto\+Vender\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definición en la línea 107 del archivo Barco.\+hh.
+
+\mbox{\Hypertarget{classBarco_a52bb7a5ae9cb5b42a78022b04bf18259}\label{classBarco_a52bb7a5ae9cb5b42a78022b04bf18259}} 
+\index{Barco@{Barco}!nproductoComprar@{nproductoComprar}}
+\index{nproductoComprar@{nproductoComprar}!Barco@{Barco}}
+\doxysubsubsection{\texorpdfstring{nproductoComprar}{nproductoComprar}}
+{\footnotesize\ttfamily int Barco\+::nproducto\+Comprar\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definición en la línea 106 del archivo Barco.\+hh.
+
+\mbox{\Hypertarget{classBarco_a6b03f1f9cabab5cdb1b9195dd77037b6}\label{classBarco_a6b03f1f9cabab5cdb1b9195dd77037b6}} 
+\index{Barco@{Barco}!nProductoVender@{nProductoVender}}
+\index{nProductoVender@{nProductoVender}!Barco@{Barco}}
+\doxysubsubsection{\texorpdfstring{nProductoVender}{nProductoVender}}
+{\footnotesize\ttfamily int Barco\+::n\+Producto\+Vender\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definición en la línea 108 del archivo Barco.\+hh.
+
+\mbox{\Hypertarget{classBarco_a95580a8317213144ce6f9e5e7db9d664}\label{classBarco_a95580a8317213144ce6f9e5e7db9d664}} 
+\index{Barco@{Barco}!viajes@{viajes}}
+\index{viajes@{viajes}!Barco@{Barco}}
+\doxysubsubsection{\texorpdfstring{viajes}{viajes}}
+{\footnotesize\ttfamily list$<$string$>$ Barco\+::viajes\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definición en la línea 109 del archivo Barco.\+hh.
+
+
+
+La documentación para esta clase fue generada a partir de los siguientes ficheros\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{Barco_8hh}{Barco.\+hh}}\item 
+\mbox{\hyperlink{Barco_8cc}{Barco.\+cc}}\end{DoxyCompactItemize}

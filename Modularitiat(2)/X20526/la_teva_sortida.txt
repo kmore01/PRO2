@@ -1,0 +1,49 @@
+Conjunt:
+111 4.22
+222 6.66
+333 NP
+
+Nota mitjana: 5.44
+
+Conjunt:
+111 4.22
+222 6.66
+333 NP
+444 5.02
+
+Nota mitjana: 5.3
+
+Conjunt:
+111 7.13
+222 6.66
+333 NP
+444 5.02
+
+Nota mitjana: 6.27
+
+Conjunt:
+111 7.13
+333 NP
+444 5.02
+
+Nota mitjana: 6.075
+
+Conjunt:
+111 7.13
+333 NP
+444 5.02
+445 NP
+555 9.5
+
+Nota mitjana: 7.21667
+
+L'estudiant 445 ja hi era
+
+Conjunt:
+111 7.13
+444 5.02
+445 NP
+555 9.5
+
+Nota mitjana: 7.21667
+

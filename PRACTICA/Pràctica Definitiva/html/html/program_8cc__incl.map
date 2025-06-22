@@ -1,0 +1,6 @@
+<map id="program.cc" name="program.cc">
+<area shape="rect" id="node1" title="Programa principal." alt="" coords="55,5,149,32"/>
+<area shape="rect" id="node2" href="$Rio_8hh.html" title="Especificación de la clase Rio." alt="" coords="71,80,133,107"/>
+<area shape="rect" id="node3" href="$Ciudad_8hh.html" title="Especificación de la clase Ciudad." alt="" coords="5,155,92,181"/>
+<area shape="rect" id="node4" href="$Barco_8hh.html" title="Especificación de la clase Barco." alt="" coords="116,155,195,181"/>
+</map>

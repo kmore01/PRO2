@@ -1,0 +1,33 @@
+\hypertarget{arbolmain_8cc_source}{}\doxysection{arbolmain.\+cc}
+\mbox{\hyperlink{arbolmain_8cc}{Ir a la documentación de este archivo.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{arbolmain_8cc_source_l00001}00001 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{\Hypertarget{arbolmain_8cc_source_l00002}00002 \textcolor{preprocessor}{\#include "{}BinTree.hh"{}}}
+\DoxyCodeLine{\Hypertarget{arbolmain_8cc_source_l00003}00003 }
+\DoxyCodeLine{\Hypertarget{arbolmain_8cc_source_l00004}00004 \textcolor{keyword}{using namespace }std;}
+\DoxyCodeLine{\Hypertarget{arbolmain_8cc_source_l00005}\mbox{\hyperlink{arbolmain_8cc_a694ec8eec0a91ba0762aca230314b26a}{00005}} \textcolor{keyword}{typedef} BinTree<string> \mbox{\hyperlink{arbolmain_8cc_a694ec8eec0a91ba0762aca230314b26a}{BT}};}
+\DoxyCodeLine{\Hypertarget{arbolmain_8cc_source_l00006}00006 }
+\DoxyCodeLine{\Hypertarget{arbolmain_8cc_source_l00007}\mbox{\hyperlink{arbolmain_8cc_a18282731ca98f64b19afc484395e96a6}{00007}} \mbox{\hyperlink{arbolmain_8cc_a694ec8eec0a91ba0762aca230314b26a}{BT}} \mbox{\hyperlink{arbolmain_8cc_a18282731ca98f64b19afc484395e96a6}{leer\_rio}}() \{}
+\DoxyCodeLine{\Hypertarget{arbolmain_8cc_source_l00008}00008     \textcolor{keywordtype}{string} identificador;}
+\DoxyCodeLine{\Hypertarget{arbolmain_8cc_source_l00009}00009     cin >> identificador;}
+\DoxyCodeLine{\Hypertarget{arbolmain_8cc_source_l00010}00010 }
+\DoxyCodeLine{\Hypertarget{arbolmain_8cc_source_l00011}00011     \textcolor{keywordflow}{if} (identificador == \textcolor{stringliteral}{"{}\#"{}}) \textcolor{keywordflow}{return} \mbox{\hyperlink{arbolmain_8cc_a694ec8eec0a91ba0762aca230314b26a}{BT}}();}
+\DoxyCodeLine{\Hypertarget{arbolmain_8cc_source_l00012}00012     \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{\Hypertarget{arbolmain_8cc_source_l00013}00013         \mbox{\hyperlink{arbolmain_8cc_a694ec8eec0a91ba0762aca230314b26a}{BT}} left = \mbox{\hyperlink{arbolmain_8cc_a18282731ca98f64b19afc484395e96a6}{leer\_rio}}();}
+\DoxyCodeLine{\Hypertarget{arbolmain_8cc_source_l00014}00014         \mbox{\hyperlink{arbolmain_8cc_a694ec8eec0a91ba0762aca230314b26a}{BT}} right = \mbox{\hyperlink{arbolmain_8cc_a18282731ca98f64b19afc484395e96a6}{leer\_rio}}();}
+\DoxyCodeLine{\Hypertarget{arbolmain_8cc_source_l00015}00015         \textcolor{keywordflow}{return} \mbox{\hyperlink{arbolmain_8cc_a694ec8eec0a91ba0762aca230314b26a}{BT}}(identificador, left, right);}
+\DoxyCodeLine{\Hypertarget{arbolmain_8cc_source_l00016}00016     \}}
+\DoxyCodeLine{\Hypertarget{arbolmain_8cc_source_l00017}00017 \}}
+\DoxyCodeLine{\Hypertarget{arbolmain_8cc_source_l00018}00018 }
+\DoxyCodeLine{\Hypertarget{arbolmain_8cc_source_l00019}\mbox{\hyperlink{arbolmain_8cc_ae66f6b31b5ad750f1fe042a706a4e3d4}{00019}} \textcolor{keywordtype}{int} \mbox{\hyperlink{arbolmain_8cc_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} () \{}
+\DoxyCodeLine{\Hypertarget{arbolmain_8cc_source_l00020}00020     \mbox{\hyperlink{arbolmain_8cc_a694ec8eec0a91ba0762aca230314b26a}{BT}} t;}
+\DoxyCodeLine{\Hypertarget{arbolmain_8cc_source_l00021}00021     \textcolor{keywordtype}{string} nombre;}
+\DoxyCodeLine{\Hypertarget{arbolmain_8cc_source_l00022}00022     \textcolor{keywordtype}{string} format;}
+\DoxyCodeLine{\Hypertarget{arbolmain_8cc_source_l00023}00023     cin >> format;}
+\DoxyCodeLine{\Hypertarget{arbolmain_8cc_source_l00024}00024     \mbox{\hyperlink{arbolmain_8cc_a694ec8eec0a91ba0762aca230314b26a}{BT}} pri = \mbox{\hyperlink{arbolmain_8cc_a18282731ca98f64b19afc484395e96a6}{leer\_rio}}();}
+\DoxyCodeLine{\Hypertarget{arbolmain_8cc_source_l00025}00025     pri.setInputOutputFormat(format==\textcolor{stringliteral}{"{}INLINEFORMAT"{}}?  BT::INLINEFORMAT  :  BT::VISUALFORMAT);}
+\DoxyCodeLine{\Hypertarget{arbolmain_8cc_source_l00026}00026     cout << pri << endl;}
+\DoxyCodeLine{\Hypertarget{arbolmain_8cc_source_l00027}00027 \}}
+\DoxyCodeLine{\Hypertarget{arbolmain_8cc_source_l00028}00028 }
+
+\end{DoxyCode}

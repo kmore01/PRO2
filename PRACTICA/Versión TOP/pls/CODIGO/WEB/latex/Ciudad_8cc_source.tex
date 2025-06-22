@@ -1,0 +1,125 @@
+\hypertarget{Ciudad_8cc_source}{}\doxysection{Ciudad.\+cc}
+\mbox{\hyperlink{Ciudad_8cc}{Ir a la documentación de este archivo.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{Ciudad_8cc_source_l00001}00001 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{Ciudad_8hh}{Ciudad.hh}}"{}}}
+\DoxyCodeLine{\Hypertarget{Ciudad_8cc_source_l00002}00002 }
+\DoxyCodeLine{\Hypertarget{Ciudad_8cc_source_l00003}\mbox{\hyperlink{classCiudad_a58cb38dda8085e38bb0358ff54ca0e0c}{00003}} \mbox{\hyperlink{classCiudad_a58cb38dda8085e38bb0358ff54ca0e0c}{Ciudad::Ciudad}}() }
+\DoxyCodeLine{\Hypertarget{Ciudad_8cc_source_l00004}00004 \{}
+\DoxyCodeLine{\Hypertarget{Ciudad_8cc_source_l00005}00005 \}}
+\DoxyCodeLine{\Hypertarget{Ciudad_8cc_source_l00006}00006 }
+\DoxyCodeLine{\Hypertarget{Ciudad_8cc_source_l00007}\mbox{\hyperlink{classCiudad_a0b5274a40e657fe040941dd3648a1cd0}{00007}} \mbox{\hyperlink{classCiudad_a58cb38dda8085e38bb0358ff54ca0e0c}{Ciudad::Ciudad}}(\textcolor{keywordtype}{string} \textcolor{keywordtype}{id}) }
+\DoxyCodeLine{\Hypertarget{Ciudad_8cc_source_l00008}00008 \{}
+\DoxyCodeLine{\Hypertarget{Ciudad_8cc_source_l00009}00009     \mbox{\hyperlink{classCiudad_aa25b30c410e5b0db96597d8920972c6b}{identificador}} = id;}
+\DoxyCodeLine{\Hypertarget{Ciudad_8cc_source_l00010}00010 \}}
+\DoxyCodeLine{\Hypertarget{Ciudad_8cc_source_l00011}00011 }
+\DoxyCodeLine{\Hypertarget{Ciudad_8cc_source_l00012}\mbox{\hyperlink{classCiudad_a7271861f437d94cf7b84f5f6cd0a8bc8}{00012}} \textcolor{keywordtype}{void} \mbox{\hyperlink{classCiudad_a7271861f437d94cf7b84f5f6cd0a8bc8}{Ciudad::poner\_producto}}(\textcolor{keyword}{const} \mbox{\hyperlink{classProducto}{Producto}} \&p, \textcolor{keywordtype}{int} id\_producto)}
+\DoxyCodeLine{\Hypertarget{Ciudad_8cc_source_l00013}00013 \{}
+\DoxyCodeLine{\Hypertarget{Ciudad_8cc_source_l00014}00014     \textcolor{keywordflow}{if} (\mbox{\hyperlink{classCiudad_a9409d563f332e7d21faafd82da0ee144}{inventario}}.find(id\_producto) == \mbox{\hyperlink{classCiudad_a9409d563f332e7d21faafd82da0ee144}{inventario}}.end()) \{}
+\DoxyCodeLine{\Hypertarget{Ciudad_8cc_source_l00015}00015         \mbox{\hyperlink{classCiudad_a9409d563f332e7d21faafd82da0ee144}{inventario}}[id\_producto] = p;}
+\DoxyCodeLine{\Hypertarget{Ciudad_8cc_source_l00016}00016         \mbox{\hyperlink{classCiudad_acca02fdeea122b66162683bdb4a233e0}{peso\_total}} += p.\mbox{\hyperlink{classProducto_aa589470178b80e532594ee788327d88b}{consul\_peso}}() * p.\mbox{\hyperlink{classProducto_a0807b5915ad52244d8b32993dc39ff93}{consul\_enpos}}();}
+\DoxyCodeLine{\Hypertarget{Ciudad_8cc_source_l00017}00017         \mbox{\hyperlink{classCiudad_a8f8767e000c1d7e9611bd0299d4942d9}{volumen\_total}} += p.\mbox{\hyperlink{classProducto_a5c40afd885b98ff01a3d7a87f12150a8}{consul\_volumen}}() * p.\mbox{\hyperlink{classProducto_a0807b5915ad52244d8b32993dc39ff93}{consul\_enpos}}();}
+\DoxyCodeLine{\Hypertarget{Ciudad_8cc_source_l00018}00018         cout << \mbox{\hyperlink{classCiudad_acca02fdeea122b66162683bdb4a233e0}{peso\_total}} << \textcolor{charliteral}{' '} << \mbox{\hyperlink{classCiudad_a8f8767e000c1d7e9611bd0299d4942d9}{volumen\_total}} << endl;}
+\DoxyCodeLine{\Hypertarget{Ciudad_8cc_source_l00019}00019     \}}
+\DoxyCodeLine{\Hypertarget{Ciudad_8cc_source_l00020}00020     \textcolor{keywordflow}{else} cout << \textcolor{stringliteral}{"{}error: la ciudad ya tiene el producto"{}} << endl;}
+\DoxyCodeLine{\Hypertarget{Ciudad_8cc_source_l00021}00021 \}}
+\DoxyCodeLine{\Hypertarget{Ciudad_8cc_source_l00022}00022 }
+\DoxyCodeLine{\Hypertarget{Ciudad_8cc_source_l00023}\mbox{\hyperlink{classCiudad_a343768f4178a303f95c6e643437aee8d}{00023}} \textcolor{keywordtype}{void} \mbox{\hyperlink{classCiudad_a343768f4178a303f95c6e643437aee8d}{Ciudad::poner\_producto2}}(\textcolor{keyword}{const} \mbox{\hyperlink{classProducto}{Producto}} \&p, \textcolor{keywordtype}{int} id\_producto)}
+\DoxyCodeLine{\Hypertarget{Ciudad_8cc_source_l00024}00024 \{}
+\DoxyCodeLine{\Hypertarget{Ciudad_8cc_source_l00025}00025     \mbox{\hyperlink{classCiudad_a9409d563f332e7d21faafd82da0ee144}{inventario}}[id\_producto] = p;}
+\DoxyCodeLine{\Hypertarget{Ciudad_8cc_source_l00026}00026     \mbox{\hyperlink{classCiudad_acca02fdeea122b66162683bdb4a233e0}{peso\_total}} += p.\mbox{\hyperlink{classProducto_aa589470178b80e532594ee788327d88b}{consul\_peso}}() * p.\mbox{\hyperlink{classProducto_a0807b5915ad52244d8b32993dc39ff93}{consul\_enpos}}();}
+\DoxyCodeLine{\Hypertarget{Ciudad_8cc_source_l00027}00027     \mbox{\hyperlink{classCiudad_a8f8767e000c1d7e9611bd0299d4942d9}{volumen\_total}} += p.\mbox{\hyperlink{classProducto_a5c40afd885b98ff01a3d7a87f12150a8}{consul\_volumen}}() * p.\mbox{\hyperlink{classProducto_a0807b5915ad52244d8b32993dc39ff93}{consul\_enpos}}();}
+\DoxyCodeLine{\Hypertarget{Ciudad_8cc_source_l00028}00028 \}}
+\DoxyCodeLine{\Hypertarget{Ciudad_8cc_source_l00029}00029 }
+\DoxyCodeLine{\Hypertarget{Ciudad_8cc_source_l00030}\mbox{\hyperlink{classCiudad_a057cf6ce9233cbf0de44f08dd826dd0c}{00030}} \textcolor{keywordtype}{void} \mbox{\hyperlink{classCiudad_a057cf6ce9233cbf0de44f08dd826dd0c}{Ciudad::modificar\_producto}}(\textcolor{keyword}{const} \mbox{\hyperlink{classProducto}{Producto}} \&p, \textcolor{keywordtype}{int} id\_producto) }
+\DoxyCodeLine{\Hypertarget{Ciudad_8cc_source_l00031}00031 \{}
+\DoxyCodeLine{\Hypertarget{Ciudad_8cc_source_l00032}00032     \textcolor{keyword}{auto} it = \mbox{\hyperlink{classCiudad_a9409d563f332e7d21faafd82da0ee144}{inventario}}.find(id\_producto);}
+\DoxyCodeLine{\Hypertarget{Ciudad_8cc_source_l00033}00033     \textcolor{keywordflow}{if} (it != \mbox{\hyperlink{classCiudad_a9409d563f332e7d21faafd82da0ee144}{inventario}}.end()) \{}
+\DoxyCodeLine{\Hypertarget{Ciudad_8cc_source_l00034}00034         \textcolor{keywordtype}{int} tiene = it-\/>second.consul\_enpos();}
+\DoxyCodeLine{\Hypertarget{Ciudad_8cc_source_l00035}00035         \textcolor{keywordtype}{int} tiene2 = p.\mbox{\hyperlink{classProducto_a0807b5915ad52244d8b32993dc39ff93}{consul\_enpos}}();}
+\DoxyCodeLine{\Hypertarget{Ciudad_8cc_source_l00036}00036         \mbox{\hyperlink{classCiudad_acca02fdeea122b66162683bdb4a233e0}{peso\_total}} = \mbox{\hyperlink{classCiudad_acca02fdeea122b66162683bdb4a233e0}{peso\_total}} -\/ (it-\/>second.consul\_peso() * tiene) + (p.\mbox{\hyperlink{classProducto_aa589470178b80e532594ee788327d88b}{consul\_peso}}() * tiene2);}
+\DoxyCodeLine{\Hypertarget{Ciudad_8cc_source_l00037}00037         \mbox{\hyperlink{classCiudad_a8f8767e000c1d7e9611bd0299d4942d9}{volumen\_total}} = \mbox{\hyperlink{classCiudad_a8f8767e000c1d7e9611bd0299d4942d9}{volumen\_total}} -\/ (it-\/>second.consul\_volumen() * tiene) + (p.\mbox{\hyperlink{classProducto_a5c40afd885b98ff01a3d7a87f12150a8}{consul\_volumen}}() * tiene2);}
+\DoxyCodeLine{\Hypertarget{Ciudad_8cc_source_l00038}00038         \mbox{\hyperlink{classCiudad_a9409d563f332e7d21faafd82da0ee144}{inventario}}[id\_producto] = p;}
+\DoxyCodeLine{\Hypertarget{Ciudad_8cc_source_l00039}00039         cout << \mbox{\hyperlink{classCiudad_acca02fdeea122b66162683bdb4a233e0}{peso\_total}} << \textcolor{charliteral}{' '} << \mbox{\hyperlink{classCiudad_a8f8767e000c1d7e9611bd0299d4942d9}{volumen\_total}} << endl;}
+\DoxyCodeLine{\Hypertarget{Ciudad_8cc_source_l00040}00040     \}}
+\DoxyCodeLine{\Hypertarget{Ciudad_8cc_source_l00041}00041     \textcolor{keywordflow}{else} cout << \textcolor{stringliteral}{"{}error: la ciudad no tiene el producto"{}} << endl;}
+\DoxyCodeLine{\Hypertarget{Ciudad_8cc_source_l00042}00042 \}}
+\DoxyCodeLine{\Hypertarget{Ciudad_8cc_source_l00043}00043 }
+\DoxyCodeLine{\Hypertarget{Ciudad_8cc_source_l00044}\mbox{\hyperlink{classCiudad_ab13f78f7778959a4f15b3816178cf3a3}{00044}} \textcolor{keywordtype}{void} \mbox{\hyperlink{classCiudad_ab13f78f7778959a4f15b3816178cf3a3}{Ciudad::quitar\_producto}}(\textcolor{keywordtype}{int} id\_producto)}
+\DoxyCodeLine{\Hypertarget{Ciudad_8cc_source_l00045}00045 \{}
+\DoxyCodeLine{\Hypertarget{Ciudad_8cc_source_l00046}00046     \textcolor{keyword}{auto} it = \mbox{\hyperlink{classCiudad_a9409d563f332e7d21faafd82da0ee144}{inventario}}.find(id\_producto);}
+\DoxyCodeLine{\Hypertarget{Ciudad_8cc_source_l00047}00047     \textcolor{keywordflow}{if} (it != \mbox{\hyperlink{classCiudad_a9409d563f332e7d21faafd82da0ee144}{inventario}}.end()) \{}
+\DoxyCodeLine{\Hypertarget{Ciudad_8cc_source_l00048}00048         \mbox{\hyperlink{classCiudad_acca02fdeea122b66162683bdb4a233e0}{peso\_total}} -\/= it-\/>second.consul\_peso() * it-\/>second.consul\_enpos();}
+\DoxyCodeLine{\Hypertarget{Ciudad_8cc_source_l00049}00049         \mbox{\hyperlink{classCiudad_a8f8767e000c1d7e9611bd0299d4942d9}{volumen\_total}} -\/= it-\/>second.consul\_volumen() * it-\/>second.consul\_enpos();}
+\DoxyCodeLine{\Hypertarget{Ciudad_8cc_source_l00050}00050         \mbox{\hyperlink{classCiudad_a9409d563f332e7d21faafd82da0ee144}{inventario}}.erase(it); }
+\DoxyCodeLine{\Hypertarget{Ciudad_8cc_source_l00051}00051         cout << \mbox{\hyperlink{classCiudad_acca02fdeea122b66162683bdb4a233e0}{peso\_total}} << \textcolor{charliteral}{' '} << \mbox{\hyperlink{classCiudad_a8f8767e000c1d7e9611bd0299d4942d9}{volumen\_total}} << endl;}
+\DoxyCodeLine{\Hypertarget{Ciudad_8cc_source_l00052}00052     \}}
+\DoxyCodeLine{\Hypertarget{Ciudad_8cc_source_l00053}00053     \textcolor{keywordflow}{else} cout << \textcolor{stringliteral}{"{}error: la ciudad no tiene el producto"{}} << endl;}
+\DoxyCodeLine{\Hypertarget{Ciudad_8cc_source_l00054}00054 \}}
+\DoxyCodeLine{\Hypertarget{Ciudad_8cc_source_l00055}00055 }
+\DoxyCodeLine{\Hypertarget{Ciudad_8cc_source_l00056}\mbox{\hyperlink{classCiudad_a391c9c00f9cb5041e30edd88d648e879}{00056}} \textcolor{keywordtype}{void} \mbox{\hyperlink{classCiudad_a391c9c00f9cb5041e30edd88d648e879}{Ciudad::comerciar\_inventario}}(\mbox{\hyperlink{classCiudad}{Ciudad}} \&c)}
+\DoxyCodeLine{\Hypertarget{Ciudad_8cc_source_l00057}00057 \{}
+\DoxyCodeLine{\Hypertarget{Ciudad_8cc_source_l00058}00058     \textcolor{comment}{/* OPTIMIZACION NECESARIA */}}
+\DoxyCodeLine{\Hypertarget{Ciudad_8cc_source_l00059}00059     \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} it = \mbox{\hyperlink{classCiudad_a9409d563f332e7d21faafd82da0ee144}{inventario}}.begin(); it != \mbox{\hyperlink{classCiudad_a9409d563f332e7d21faafd82da0ee144}{inventario}}.end(); ++it) \{}
+\DoxyCodeLine{\Hypertarget{Ciudad_8cc_source_l00060}00060         \textcolor{keyword}{auto} it2 = c.\mbox{\hyperlink{classCiudad_a9409d563f332e7d21faafd82da0ee144}{inventario}}.find(it-\/>first);}
+\DoxyCodeLine{\Hypertarget{Ciudad_8cc_source_l00061}00061         \textcolor{keywordflow}{if} (it2 != c.\mbox{\hyperlink{classCiudad_a9409d563f332e7d21faafd82da0ee144}{inventario}}.end()) \{}
+\DoxyCodeLine{\Hypertarget{Ciudad_8cc_source_l00062}00062             \textcolor{keywordtype}{bool} parar = \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{Ciudad_8cc_source_l00063}00063             \textcolor{keywordtype}{int} peso1 = it-\/>second.consul\_peso();}
+\DoxyCodeLine{\Hypertarget{Ciudad_8cc_source_l00064}00064             \textcolor{keywordtype}{int} vol1 = it-\/>second.consul\_volumen();}
+\DoxyCodeLine{\Hypertarget{Ciudad_8cc_source_l00065}00065             \textcolor{keywordtype}{int} peso2 = it2-\/>second.consul\_peso();}
+\DoxyCodeLine{\Hypertarget{Ciudad_8cc_source_l00066}00066             \textcolor{keywordtype}{int} vol2 = it2-\/>second.consul\_volumen();}
+\DoxyCodeLine{\Hypertarget{Ciudad_8cc_source_l00067}00067             \textcolor{keywordflow}{while} (not parar) \{}
+\DoxyCodeLine{\Hypertarget{Ciudad_8cc_source_l00068}00068                 \textcolor{keywordflow}{if} (it-\/>second.consul\_enpos() < it-\/>second.consul\_des() and   it2-\/>second.consul\_enpos() > it2-\/>second.consul\_des()) \{}
+\DoxyCodeLine{\Hypertarget{Ciudad_8cc_source_l00069}00069                     it-\/>second.mas\_tiene();}
+\DoxyCodeLine{\Hypertarget{Ciudad_8cc_source_l00070}00070                     \mbox{\hyperlink{classCiudad_acca02fdeea122b66162683bdb4a233e0}{peso\_total}} += peso1;}
+\DoxyCodeLine{\Hypertarget{Ciudad_8cc_source_l00071}00071                     \mbox{\hyperlink{classCiudad_a8f8767e000c1d7e9611bd0299d4942d9}{volumen\_total}} += vol1;}
+\DoxyCodeLine{\Hypertarget{Ciudad_8cc_source_l00072}00072                     it2-\/>second.menos\_tiene();}
+\DoxyCodeLine{\Hypertarget{Ciudad_8cc_source_l00073}00073                     c.\mbox{\hyperlink{classCiudad_acca02fdeea122b66162683bdb4a233e0}{peso\_total}} -\/= peso2;}
+\DoxyCodeLine{\Hypertarget{Ciudad_8cc_source_l00074}00074                     c.\mbox{\hyperlink{classCiudad_a8f8767e000c1d7e9611bd0299d4942d9}{volumen\_total}} -\/= vol2;}
+\DoxyCodeLine{\Hypertarget{Ciudad_8cc_source_l00075}00075                 \}}
+\DoxyCodeLine{\Hypertarget{Ciudad_8cc_source_l00076}00076                 \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (it2-\/>second.consul\_enpos() < it2-\/>second.consul\_des() and it-\/>second.consul\_enpos() > it-\/>second.consul\_des()) \{}
+\DoxyCodeLine{\Hypertarget{Ciudad_8cc_source_l00077}00077                     it2-\/>second.mas\_tiene();}
+\DoxyCodeLine{\Hypertarget{Ciudad_8cc_source_l00078}00078                     c.\mbox{\hyperlink{classCiudad_acca02fdeea122b66162683bdb4a233e0}{peso\_total}} += peso2;}
+\DoxyCodeLine{\Hypertarget{Ciudad_8cc_source_l00079}00079                     c.\mbox{\hyperlink{classCiudad_a8f8767e000c1d7e9611bd0299d4942d9}{volumen\_total}} += vol2;}
+\DoxyCodeLine{\Hypertarget{Ciudad_8cc_source_l00080}00080                     it-\/>second.menos\_tiene();}
+\DoxyCodeLine{\Hypertarget{Ciudad_8cc_source_l00081}00081                     \mbox{\hyperlink{classCiudad_acca02fdeea122b66162683bdb4a233e0}{peso\_total}} -\/= peso1;}
+\DoxyCodeLine{\Hypertarget{Ciudad_8cc_source_l00082}00082                     \mbox{\hyperlink{classCiudad_a8f8767e000c1d7e9611bd0299d4942d9}{volumen\_total}} -\/= vol1;}
+\DoxyCodeLine{\Hypertarget{Ciudad_8cc_source_l00083}00083                 \}}
+\DoxyCodeLine{\Hypertarget{Ciudad_8cc_source_l00084}00084                 parar = (it-\/>second.consul\_des() == it-\/>second.consul\_enpos()) or (it2-\/>second.consul\_des() == it2-\/>second.consul\_enpos());}
+\DoxyCodeLine{\Hypertarget{Ciudad_8cc_source_l00085}00085                 \textcolor{keywordflow}{if} (parar) \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{Ciudad_8cc_source_l00086}00086             \}}
+\DoxyCodeLine{\Hypertarget{Ciudad_8cc_source_l00087}00087         \}}
+\DoxyCodeLine{\Hypertarget{Ciudad_8cc_source_l00088}00088     \}}
+\DoxyCodeLine{\Hypertarget{Ciudad_8cc_source_l00089}00089 }
+\DoxyCodeLine{\Hypertarget{Ciudad_8cc_source_l00090}00090 \}}
+\DoxyCodeLine{\Hypertarget{Ciudad_8cc_source_l00091}00091 }
+\DoxyCodeLine{\Hypertarget{Ciudad_8cc_source_l00092}\mbox{\hyperlink{classCiudad_aacea13c9d366e2e1cd6aa7ffd5288024}{00092}} \textcolor{keywordtype}{void} \mbox{\hyperlink{classCiudad_aacea13c9d366e2e1cd6aa7ffd5288024}{Ciudad::inicializar}}()}
+\DoxyCodeLine{\Hypertarget{Ciudad_8cc_source_l00093}00093 \{}
+\DoxyCodeLine{\Hypertarget{Ciudad_8cc_source_l00094}00094     \mbox{\hyperlink{classCiudad_acca02fdeea122b66162683bdb4a233e0}{peso\_total}} = \mbox{\hyperlink{classCiudad_a8f8767e000c1d7e9611bd0299d4942d9}{volumen\_total}} = 0;}
+\DoxyCodeLine{\Hypertarget{Ciudad_8cc_source_l00095}00095 \}}
+\DoxyCodeLine{\Hypertarget{Ciudad_8cc_source_l00096}00096 }
+\DoxyCodeLine{\Hypertarget{Ciudad_8cc_source_l00097}\mbox{\hyperlink{classCiudad_af7490812ed73e415e4e1cfceb367c8bb}{00097}} \textcolor{keywordtype}{void} \mbox{\hyperlink{classCiudad_af7490812ed73e415e4e1cfceb367c8bb}{Ciudad::consultar\_producto}}(\textcolor{keywordtype}{int} id\_producto)\textcolor{keyword}{ const}}
+\DoxyCodeLine{\Hypertarget{Ciudad_8cc_source_l00098}00098 \textcolor{keyword}{}\{}
+\DoxyCodeLine{\Hypertarget{Ciudad_8cc_source_l00099}00099     \textcolor{keyword}{auto} it = \mbox{\hyperlink{classCiudad_a9409d563f332e7d21faafd82da0ee144}{inventario}}.find(id\_producto);}
+\DoxyCodeLine{\Hypertarget{Ciudad_8cc_source_l00100}00100     \textcolor{keywordflow}{if} (it != \mbox{\hyperlink{classCiudad_a9409d563f332e7d21faafd82da0ee144}{inventario}}.end()) \{}
+\DoxyCodeLine{\Hypertarget{Ciudad_8cc_source_l00101}00101         cout << it-\/>second.consul\_enpos() << \textcolor{charliteral}{' '} << it-\/>second.consul\_des() << endl;}
+\DoxyCodeLine{\Hypertarget{Ciudad_8cc_source_l00102}00102     \}}
+\DoxyCodeLine{\Hypertarget{Ciudad_8cc_source_l00103}00103     \textcolor{keywordflow}{else} cout << \textcolor{stringliteral}{"{}error: la ciudad no tiene el producto"{}} << endl;}
+\DoxyCodeLine{\Hypertarget{Ciudad_8cc_source_l00104}00104 \}}
+\DoxyCodeLine{\Hypertarget{Ciudad_8cc_source_l00105}00105 }
+\DoxyCodeLine{\Hypertarget{Ciudad_8cc_source_l00106}\mbox{\hyperlink{classCiudad_a77fe91213d6fc8068ff4cb5c81e128d6}{00106}} \textcolor{keywordtype}{int} \mbox{\hyperlink{classCiudad_a77fe91213d6fc8068ff4cb5c81e128d6}{Ciudad::consultar\_size}}()\textcolor{keyword}{ const}}
+\DoxyCodeLine{\Hypertarget{Ciudad_8cc_source_l00107}00107 \textcolor{keyword}{}\{}
+\DoxyCodeLine{\Hypertarget{Ciudad_8cc_source_l00108}00108     \textcolor{keywordflow}{return} \mbox{\hyperlink{classCiudad_a9409d563f332e7d21faafd82da0ee144}{inventario}}.size();}
+\DoxyCodeLine{\Hypertarget{Ciudad_8cc_source_l00109}00109 \}}
+\DoxyCodeLine{\Hypertarget{Ciudad_8cc_source_l00110}00110 }
+\DoxyCodeLine{\Hypertarget{Ciudad_8cc_source_l00111}\mbox{\hyperlink{classCiudad_a324076d0213839ed80cd57bfd4b257d1}{00111}} \textcolor{keywordtype}{void} \mbox{\hyperlink{classCiudad_a324076d0213839ed80cd57bfd4b257d1}{Ciudad::escribir\_ciudad}}()\textcolor{keyword}{ const}}
+\DoxyCodeLine{\Hypertarget{Ciudad_8cc_source_l00112}00112 \textcolor{keyword}{}\{}
+\DoxyCodeLine{\Hypertarget{Ciudad_8cc_source_l00113}00113     \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} it = \mbox{\hyperlink{classCiudad_a9409d563f332e7d21faafd82da0ee144}{inventario}}.begin(); it != \mbox{\hyperlink{classCiudad_a9409d563f332e7d21faafd82da0ee144}{inventario}}.end(); ++it) \{}
+\DoxyCodeLine{\Hypertarget{Ciudad_8cc_source_l00114}00114         cout << it-\/>first << \textcolor{charliteral}{' '} << it-\/>second.consul\_enpos() << \textcolor{charliteral}{' '}}
+\DoxyCodeLine{\Hypertarget{Ciudad_8cc_source_l00115}00115              << it-\/>second.consul\_des() << endl;}
+\DoxyCodeLine{\Hypertarget{Ciudad_8cc_source_l00116}00116         \textcolor{comment}{//it-\/>second.escribir\_producto();}}
+\DoxyCodeLine{\Hypertarget{Ciudad_8cc_source_l00117}00117         \textcolor{comment}{// cout << endl;  }}
+\DoxyCodeLine{\Hypertarget{Ciudad_8cc_source_l00118}00118     \}}
+\DoxyCodeLine{\Hypertarget{Ciudad_8cc_source_l00119}00119     cout << \mbox{\hyperlink{classCiudad_acca02fdeea122b66162683bdb4a233e0}{peso\_total}} << \textcolor{charliteral}{' '} << \mbox{\hyperlink{classCiudad_a8f8767e000c1d7e9611bd0299d4942d9}{volumen\_total}} << endl; }
+\DoxyCodeLine{\Hypertarget{Ciudad_8cc_source_l00120}00120 \}}
+
+\end{DoxyCode}

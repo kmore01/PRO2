@@ -1,0 +1,171 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>PRO2 PRÁCTICA - Comercio fluvial -: Fichero Fuente Barco.cc</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">PRO2 PRÁCTICA - Comercio fluvial -
+   &#160;<span id="projectnumber">Versión primavera 2024</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">Barco.cc</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="Barco_8cc.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="Barco_8hh.html">Barco.hh</a>&quot;</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
+<div class="line"><a name="l00003"></a><span class="lineno"><a class="line" href="classBarco.html#aea54a1f00318af549e695999ccf08e38">    3</a></span>&#160;<a class="code" href="classBarco.html#aea54a1f00318af549e695999ccf08e38">Barco::Barco</a>()</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;{</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;    <a class="code" href="classBarco.html#a507426ffcd74398d965d4c1970e8a04a">idProductoComprar</a> = <a class="code" href="classBarco.html#a52bb7a5ae9cb5b42a78022b04bf18259">nproductoComprar</a> = 0;</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;    <a class="code" href="classBarco.html#abf0be583838c883dbf64fe705872fff7">idProductoVender</a> = <a class="code" href="classBarco.html#a6b03f1f9cabab5cdb1b9195dd77037b6">nProductoVender</a> = 0;</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    <a class="code" href="classBarco.html#a95580a8317213144ce6f9e5e7db9d664">viajes</a> = list&lt;string&gt;();</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;}</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
+<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="classBarco.html#a24461024052a406bae67865da7e37486">   10</a></span>&#160;<a class="code" href="classBarco.html#aea54a1f00318af549e695999ccf08e38">Barco::Barco</a>(<span class="keywordtype">int</span> id1, <span class="keywordtype">int</span> nid1, <span class="keywordtype">int</span> id2, <span class="keywordtype">int</span> nid2, list&lt;string&gt; l)</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;{</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <a class="code" href="classBarco.html#a507426ffcd74398d965d4c1970e8a04a">idProductoComprar</a> = id1;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <a class="code" href="classBarco.html#a52bb7a5ae9cb5b42a78022b04bf18259">nproductoComprar</a> = nid1;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <a class="code" href="classBarco.html#abf0be583838c883dbf64fe705872fff7">idProductoVender</a> = id2;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <a class="code" href="classBarco.html#a6b03f1f9cabab5cdb1b9195dd77037b6">nProductoVender</a> = nid2;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    l = <a class="code" href="classBarco.html#a95580a8317213144ce6f9e5e7db9d664">viajes</a>;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;}</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="classBarco.html#a929d145ae55e1025c88c1f08af4639c5">   19</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classBarco.html#a929d145ae55e1025c88c1f08af4639c5">Barco::modificar_barco</a>(<span class="keywordtype">int</span> id1, <span class="keywordtype">int</span> nid1, <span class="keywordtype">int</span> id2, <span class="keywordtype">int</span> nid2)</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;{</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <a class="code" href="classBarco.html#a507426ffcd74398d965d4c1970e8a04a">idProductoComprar</a> = id1;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <a class="code" href="classBarco.html#a52bb7a5ae9cb5b42a78022b04bf18259">nproductoComprar</a> = nid1;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <a class="code" href="classBarco.html#abf0be583838c883dbf64fe705872fff7">idProductoVender</a> = id2;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <a class="code" href="classBarco.html#a6b03f1f9cabab5cdb1b9195dd77037b6">nProductoVender</a> = nid2;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;}</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="classBarco.html#a02e1602b8fd26f49560a33cdaab0d2b4">   27</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classBarco.html#a02e1602b8fd26f49560a33cdaab0d2b4">Barco::modificar_ncomprar</a>(<span class="keywordtype">int</span> nid1)</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;{</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <a class="code" href="classBarco.html#a52bb7a5ae9cb5b42a78022b04bf18259">nproductoComprar</a> = nid1;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;}</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="classBarco.html#a236cc8b2e1a0df725c817ec697bbeecc">   32</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classBarco.html#a236cc8b2e1a0df725c817ec697bbeecc">Barco::modificar_nvender</a>(<span class="keywordtype">int</span> nid2)</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;{</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <a class="code" href="classBarco.html#a6b03f1f9cabab5cdb1b9195dd77037b6">nProductoVender</a> = nid2;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;}</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="classBarco.html#aedc69e98340c24baa6a5be34f33a5ae0">   37</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classBarco.html#aedc69e98340c24baa6a5be34f33a5ae0">Barco::anadir_viaje</a>(<span class="keywordtype">string</span> ciudad)</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;{</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <a class="code" href="classBarco.html#a95580a8317213144ce6f9e5e7db9d664">viajes</a>.push_back(ciudad);</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;}</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="classBarco.html#a7c56b635ecaf977e6ca924e9dbc39b47">   42</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="classBarco.html#a7c56b635ecaf977e6ca924e9dbc39b47">Barco::consultar_idcompra</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classBarco.html#a507426ffcd74398d965d4c1970e8a04a">idProductoComprar</a>;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;}</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="classBarco.html#aeb3795a66ef08c54a3674ae2e6c7ee36">   47</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="classBarco.html#aeb3795a66ef08c54a3674ae2e6c7ee36">Barco::consultar_nidcompra</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classBarco.html#a52bb7a5ae9cb5b42a78022b04bf18259">nproductoComprar</a>;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;}</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
+<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="classBarco.html#a5628cad9a12763791496aa0a77ba9149">   52</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="classBarco.html#a5628cad9a12763791496aa0a77ba9149">Barco::consultar_idventa</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classBarco.html#abf0be583838c883dbf64fe705872fff7">idProductoVender</a>;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;}</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
+<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="classBarco.html#a2703e6554c772fddc9392d07f4e1b20d">   57</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="classBarco.html#a2703e6554c772fddc9392d07f4e1b20d">Barco::consultar_nidventa</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classBarco.html#a6b03f1f9cabab5cdb1b9195dd77037b6">nProductoVender</a>;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;}</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
+<div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="classBarco.html#adbcd8100a10a2fea162e6c18bd8d3914">   62</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classBarco.html#adbcd8100a10a2fea162e6c18bd8d3914">Barco::leer</a>()</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;{</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keywordtype">int</span> id1, id2, nid1, nid2;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    cin &gt;&gt; id1 &gt;&gt; nid1 &gt;&gt; id2 &gt;&gt; nid2;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <a class="code" href="classBarco.html#a507426ffcd74398d965d4c1970e8a04a">idProductoComprar</a> = id1;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <a class="code" href="classBarco.html#a52bb7a5ae9cb5b42a78022b04bf18259">nproductoComprar</a> = nid1;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <a class="code" href="classBarco.html#abf0be583838c883dbf64fe705872fff7">idProductoVender</a> = id2;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <a class="code" href="classBarco.html#a6b03f1f9cabab5cdb1b9195dd77037b6">nProductoVender</a> = nid2;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;}</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
+<div class="line"><a name="l00072"></a><span class="lineno"><a class="line" href="classBarco.html#a3f1c26f2f0565e375924dae85b2e89a0">   72</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classBarco.html#a3f1c26f2f0565e375924dae85b2e89a0">Barco::escribir_barco</a>()<span class="keyword"> const </span></div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    cout &lt;&lt; <a class="code" href="classBarco.html#a507426ffcd74398d965d4c1970e8a04a">idProductoComprar</a> &lt;&lt; <span class="charliteral">&#39; &#39;</span> &lt;&lt; <a class="code" href="classBarco.html#a52bb7a5ae9cb5b42a78022b04bf18259">nproductoComprar</a> &lt;&lt; <span class="charliteral">&#39; &#39;</span>;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    cout &lt;&lt; <a class="code" href="classBarco.html#abf0be583838c883dbf64fe705872fff7">idProductoVender</a> &lt;&lt; <span class="charliteral">&#39; &#39;</span> &lt;&lt; <a class="code" href="classBarco.html#a6b03f1f9cabab5cdb1b9195dd77037b6">nProductoVender</a> &lt;&lt; endl;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">auto</span> it = <a class="code" href="classBarco.html#a95580a8317213144ce6f9e5e7db9d664">viajes</a>.begin(); it != <a class="code" href="classBarco.html#a95580a8317213144ce6f9e5e7db9d664">viajes</a>.end(); ++it) {</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        cout &lt;&lt; *it &lt;&lt; endl;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    }</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;}</div>
+<div class="ttc" id="aBarco_8hh_html"><div class="ttname"><a href="Barco_8hh.html">Barco.hh</a></div><div class="ttdoc">Especificación de la clase Barco.</div></div>
+<div class="ttc" id="aclassBarco_html_a02e1602b8fd26f49560a33cdaab0d2b4"><div class="ttname"><a href="classBarco.html#a02e1602b8fd26f49560a33cdaab0d2b4">Barco::modificar_ncomprar</a></div><div class="ttdeci">void modificar_ncomprar(int nid1)</div><div class="ttdoc">Modificadora de las unidades de producto a comprar.</div><div class="ttdef"><b>Definition:</b> <a href="Barco_8cc_source.html#l00027">Barco.cc:27</a></div></div>
+<div class="ttc" id="aclassBarco_html_a236cc8b2e1a0df725c817ec697bbeecc"><div class="ttname"><a href="classBarco.html#a236cc8b2e1a0df725c817ec697bbeecc">Barco::modificar_nvender</a></div><div class="ttdeci">void modificar_nvender(int nid2)</div><div class="ttdoc">Modificadora de las unidades de producto a vender.</div><div class="ttdef"><b>Definition:</b> <a href="Barco_8cc_source.html#l00032">Barco.cc:32</a></div></div>
+<div class="ttc" id="aclassBarco_html_a2703e6554c772fddc9392d07f4e1b20d"><div class="ttname"><a href="classBarco.html#a2703e6554c772fddc9392d07f4e1b20d">Barco::consultar_nidventa</a></div><div class="ttdeci">int consultar_nidventa() const</div><div class="ttdoc">Consultora de las unidades de producto a vender.</div><div class="ttdef"><b>Definition:</b> <a href="Barco_8cc_source.html#l00057">Barco.cc:57</a></div></div>
+<div class="ttc" id="aclassBarco_html_a3f1c26f2f0565e375924dae85b2e89a0"><div class="ttname"><a href="classBarco.html#a3f1c26f2f0565e375924dae85b2e89a0">Barco::escribir_barco</a></div><div class="ttdeci">void escribir_barco() const</div><div class="ttdoc">Operación de escritura.</div><div class="ttdef"><b>Definition:</b> <a href="Barco_8cc_source.html#l00072">Barco.cc:72</a></div></div>
+<div class="ttc" id="aclassBarco_html_a507426ffcd74398d965d4c1970e8a04a"><div class="ttname"><a href="classBarco.html#a507426ffcd74398d965d4c1970e8a04a">Barco::idProductoComprar</a></div><div class="ttdeci">int idProductoComprar</div><div class="ttdef"><b>Definition:</b> <a href="Barco_8hh_source.html#l00105">Barco.hh:105</a></div></div>
+<div class="ttc" id="aclassBarco_html_a52bb7a5ae9cb5b42a78022b04bf18259"><div class="ttname"><a href="classBarco.html#a52bb7a5ae9cb5b42a78022b04bf18259">Barco::nproductoComprar</a></div><div class="ttdeci">int nproductoComprar</div><div class="ttdef"><b>Definition:</b> <a href="Barco_8hh_source.html#l00106">Barco.hh:106</a></div></div>
+<div class="ttc" id="aclassBarco_html_a5628cad9a12763791496aa0a77ba9149"><div class="ttname"><a href="classBarco.html#a5628cad9a12763791496aa0a77ba9149">Barco::consultar_idventa</a></div><div class="ttdeci">int consultar_idventa() const</div><div class="ttdoc">Consultora de el id del producto a vender.</div><div class="ttdef"><b>Definition:</b> <a href="Barco_8cc_source.html#l00052">Barco.cc:52</a></div></div>
+<div class="ttc" id="aclassBarco_html_a6b03f1f9cabab5cdb1b9195dd77037b6"><div class="ttname"><a href="classBarco.html#a6b03f1f9cabab5cdb1b9195dd77037b6">Barco::nProductoVender</a></div><div class="ttdeci">int nProductoVender</div><div class="ttdef"><b>Definition:</b> <a href="Barco_8hh_source.html#l00108">Barco.hh:108</a></div></div>
+<div class="ttc" id="aclassBarco_html_a7c56b635ecaf977e6ca924e9dbc39b47"><div class="ttname"><a href="classBarco.html#a7c56b635ecaf977e6ca924e9dbc39b47">Barco::consultar_idcompra</a></div><div class="ttdeci">int consultar_idcompra() const</div><div class="ttdoc">Consultora de el id del producto a comprar.</div><div class="ttdef"><b>Definition:</b> <a href="Barco_8cc_source.html#l00042">Barco.cc:42</a></div></div>
+<div class="ttc" id="aclassBarco_html_a929d145ae55e1025c88c1f08af4639c5"><div class="ttname"><a href="classBarco.html#a929d145ae55e1025c88c1f08af4639c5">Barco::modificar_barco</a></div><div class="ttdeci">void modificar_barco(int id1, int nid1, int id2, int nid2)</div><div class="ttdoc">Modificadora de la carga del barco.</div><div class="ttdef"><b>Definition:</b> <a href="Barco_8cc_source.html#l00019">Barco.cc:19</a></div></div>
+<div class="ttc" id="aclassBarco_html_a95580a8317213144ce6f9e5e7db9d664"><div class="ttname"><a href="classBarco.html#a95580a8317213144ce6f9e5e7db9d664">Barco::viajes</a></div><div class="ttdeci">list&lt; string &gt; viajes</div><div class="ttdef"><b>Definition:</b> <a href="Barco_8hh_source.html#l00109">Barco.hh:109</a></div></div>
+<div class="ttc" id="aclassBarco_html_abf0be583838c883dbf64fe705872fff7"><div class="ttname"><a href="classBarco.html#abf0be583838c883dbf64fe705872fff7">Barco::idProductoVender</a></div><div class="ttdeci">int idProductoVender</div><div class="ttdef"><b>Definition:</b> <a href="Barco_8hh_source.html#l00107">Barco.hh:107</a></div></div>
+<div class="ttc" id="aclassBarco_html_adbcd8100a10a2fea162e6c18bd8d3914"><div class="ttname"><a href="classBarco.html#adbcd8100a10a2fea162e6c18bd8d3914">Barco::leer</a></div><div class="ttdeci">void leer()</div><div class="ttdoc">Operación de lectura.</div><div class="ttdef"><b>Definition:</b> <a href="Barco_8cc_source.html#l00062">Barco.cc:62</a></div></div>
+<div class="ttc" id="aclassBarco_html_aea54a1f00318af549e695999ccf08e38"><div class="ttname"><a href="classBarco.html#aea54a1f00318af549e695999ccf08e38">Barco::Barco</a></div><div class="ttdeci">Barco()</div><div class="ttdoc">Creadora por defecto. Se ejecuta automáticamente al declarar el barco.</div><div class="ttdef"><b>Definition:</b> <a href="Barco_8cc_source.html#l00003">Barco.cc:3</a></div></div>
+<div class="ttc" id="aclassBarco_html_aeb3795a66ef08c54a3674ae2e6c7ee36"><div class="ttname"><a href="classBarco.html#aeb3795a66ef08c54a3674ae2e6c7ee36">Barco::consultar_nidcompra</a></div><div class="ttdeci">int consultar_nidcompra() const</div><div class="ttdoc">Consultora de las unidades de producto a comprar.</div><div class="ttdef"><b>Definition:</b> <a href="Barco_8cc_source.html#l00047">Barco.cc:47</a></div></div>
+<div class="ttc" id="aclassBarco_html_aedc69e98340c24baa6a5be34f33a5ae0"><div class="ttname"><a href="classBarco.html#aedc69e98340c24baa6a5be34f33a5ae0">Barco::anadir_viaje</a></div><div class="ttdeci">void anadir_viaje(string ciudad)</div><div class="ttdoc">Añade un nuevo viaje.</div><div class="ttdef"><b>Definition:</b> <a href="Barco_8cc_source.html#l00037">Barco.cc:37</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

@@ -1,0 +1,864 @@
+\hypertarget{classRio}{}\doxysection{Referencia de la Clase Rio}
+\label{classRio}\index{Rio@{Rio}}
+
+
+Representa el rio de la cuenca fluvial.  
+
+
+
+
+{\ttfamily \#include $<$Rio.\+hh$>$}
+
+\doxysubsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classRio_a1dc8b1e6f2e4d7087575bf051abb28f4}{Rio}} ()
+\begin{DoxyCompactList}\small\item\em Creadora por defecto. Se ejecuta automáticamente al declarar un río. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classRio_a6ecb0b8e80b47b933c69d7ee2594ba8f}{Rio}} (map$<$ int, \mbox{\hyperlink{classProducto}{Producto}} $>$ cat, Bin\+Tree$<$ string $>$ estruct, map$<$ string, bool $>$ ciud, \mbox{\hyperlink{classBarco}{Barco}} embarc)
+\begin{DoxyCompactList}\small\item\em Creadora con valores concretos. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classRio_ad83abc00e9bfa4d4a627a0bb70cef996}{agregar\+\_\+productos}} (int nprod)
+\begin{DoxyCompactList}\small\item\em Añade nuevos productos al catalogo del \mbox{\hyperlink{classRio}{Rio}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classRio_aa1e085e559d338965c9ad74e4346cd63}{modificar\+\_\+barco}} (int id1, int nid1, int id2, int nid2)
+\begin{DoxyCompactList}\small\item\em Modificadora de \mbox{\hyperlink{classBarco}{Barco}} de \mbox{\hyperlink{classRio}{Rio}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classRio_a5c37a181618956b3234f56e022bfe980}{poner\+\_\+producto}} (string id, int pid, \mbox{\hyperlink{classProducto}{Producto}} \&p)
+\begin{DoxyCompactList}\small\item\em Modificadora de \mbox{\hyperlink{classCiudad}{Ciudad}} de \mbox{\hyperlink{classRio}{Rio}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classRio_a3eac2ea880782074c1126ea1ac2412d0}{quitar\+\_\+producto}} (string id, int pid)
+\begin{DoxyCompactList}\small\item\em Elimina un \mbox{\hyperlink{classProducto}{Producto}} de una \mbox{\hyperlink{classCiudad}{Ciudad}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classRio_a7a653f64d55e6113ea8174ae33c8f678}{modificar\+\_\+producto}} (string id, int pid, \mbox{\hyperlink{classProducto}{Producto}} \&p)
+\begin{DoxyCompactList}\small\item\em Modifica un \mbox{\hyperlink{classProducto}{Producto}} de una \mbox{\hyperlink{classCiudad}{Ciudad}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classRio_aa1ee00916f52fb1e10b545cc9a656634}{comerciar}} (string id1, string id2)
+\begin{DoxyCompactList}\small\item\em Comercia entre dos ciudades con id1 y id2. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classRio_a9be9ba3e2c3434caa5f8bd74ab944fbb}{redistribuir}} ()
+\begin{DoxyCompactList}\small\item\em La ciudad de la desembocadura comercia con su ciudad río arriba a mano derec hay luego con la ciudad río arriba a mano izquierda, y así sucesivamente. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classRio_a7c734ada85112da293a875abe2b6728a}{consultar\+\_\+num}} () const
+\begin{DoxyCompactList}\small\item\em Consultora del número de productos diferentes. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classRio_a0303e953b2454fc07903c7d2aad443ab}{consultar\+\_\+peso}} (int id) const
+\begin{DoxyCompactList}\small\item\em Consultora del peso de un \mbox{\hyperlink{classProducto}{Producto}}. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classRio_a6e2b75c64d48f1421daa8fc6c3ea5e7f}{consultar\+\_\+volumen}} (int id) const
+\begin{DoxyCompactList}\small\item\em Consultora del volumen de un \mbox{\hyperlink{classProducto}{Producto}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classRio_a8e5abb07c17d6f7b04267739c73a4d0e}{consultar\+\_\+prod}} (string identificador, int id) const
+\begin{DoxyCompactList}\small\item\em Consultora del \mbox{\hyperlink{classProducto}{Producto}} de una \mbox{\hyperlink{classCiudad}{Ciudad}}. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classRio_a73eb9cbeac29be7dbe0db2a5d27fa1bf}{existe\+\_\+ciudad}} (string id) const
+\begin{DoxyCompactList}\small\item\em Consultora de la existencia de una ciudad. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classRio_a394db1db6c205f1ca5013f0c837f8cda}{existe\+\_\+prod}} (int id) const
+\begin{DoxyCompactList}\small\item\em Consultora de la existencia de un producto. \end{DoxyCompactList}\item 
+Bin\+Tree$<$ string $>$ \mbox{\hyperlink{classRio_a298bb2dc007527a8c2273205f257687d}{leer\+\_\+rio}} ()
+\begin{DoxyCompactList}\small\item\em Primera operación de lectura. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classRio_a207f2c3a8da8eeed880d0f8845861744}{leer\+\_\+inventario}} (string id)
+\begin{DoxyCompactList}\small\item\em Segunda operación de lectura. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classRio_a3411039631544d16ba19b2b22a92c3a1}{leer\+\_\+inventarios}} ()
+\begin{DoxyCompactList}\small\item\em Tercera operación de lectura. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classRio_ac0d1982f96d94458a8da4a5394f18c6f}{leer\+\_\+productos\+\_\+dif}} ()
+\begin{DoxyCompactList}\small\item\em Cuarta operación de lectura. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classRio_aa49d58e87db25e78ec698042c6403454}{leer\+\_\+barco}} ()
+\begin{DoxyCompactList}\small\item\em Operación de lectura del atributo \mbox{\hyperlink{classBarco}{Barco}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classRio_a457344228d687c95bbd8b35c51b1a8d9}{escribir\+\_\+ciudad}} (string id) const
+\begin{DoxyCompactList}\small\item\em Primera operación de escritura. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classRio_ad1f2ad7a3dfd9f0464e23420aa166baf}{escribir\+\_\+prod}} (int id) const
+\begin{DoxyCompactList}\small\item\em Segunda operación de escritura. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classRio_a082df406f7cc228445692630ac9c3ab0}{escribir\+\_\+barco}} () const
+\begin{DoxyCompactList}\small\item\em Tercera operación de escritura. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Métodos privados}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classRio_a15865724197cb9964e1e5deee212116d}{redistribuir2}} (Bin\+Tree$<$ string $>$ t)
+\end{DoxyCompactItemize}
+\doxysubsection*{Atributos privados}
+\begin{DoxyCompactItemize}
+\item 
+map$<$ int, \mbox{\hyperlink{classProducto}{Producto}} $>$ \mbox{\hyperlink{classRio_a481f396ff3ea99d3ede2f54e5a9376a7}{catalogo}}
+\item 
+Bin\+Tree$<$ string $>$ \mbox{\hyperlink{classRio_aefa7043534c9c57ece7159ee51300c8d}{estructura}}
+\item 
+map$<$ string, \mbox{\hyperlink{classCiudad}{Ciudad}} $>$ \mbox{\hyperlink{classRio_aa58baab0fa7131bc378edcf6baa16314}{info\+Ciudades}}
+\item 
+map$<$ string, bool $>$ \mbox{\hyperlink{classRio_a1df23030aa13e36f618121ea2fb1c0fe}{ciudades}}
+\item 
+\mbox{\hyperlink{classBarco}{Barco}} \mbox{\hyperlink{classRio_a945de076e87f4e5b180a64f5eef3f073}{embarcacion}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+Representa el rio de la cuenca fluvial. 
+
+Definición en la línea 23 del archivo Rio.\+hh.
+
+
+
+\doxysubsection{Documentación del constructor y destructor}
+\mbox{\Hypertarget{classRio_a1dc8b1e6f2e4d7087575bf051abb28f4}\label{classRio_a1dc8b1e6f2e4d7087575bf051abb28f4}} 
+\index{Rio@{Rio}!Rio@{Rio}}
+\index{Rio@{Rio}!Rio@{Rio}}
+\doxysubsubsection{\texorpdfstring{Rio()}{Rio()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Rio\+::\+Rio (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Creadora por defecto. Se ejecuta automáticamente al declarar un río. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape cierto} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El resultado es un rio sin inicializar 
+\end{DoxyPostcond}
+
+
+Definición en la línea 6 del archivo Rio.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{7 \{}
+\DoxyCodeLine{8 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classRio_a6ecb0b8e80b47b933c69d7ee2594ba8f}\label{classRio_a6ecb0b8e80b47b933c69d7ee2594ba8f}} 
+\index{Rio@{Rio}!Rio@{Rio}}
+\index{Rio@{Rio}!Rio@{Rio}}
+\doxysubsubsection{\texorpdfstring{Rio()}{Rio()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Rio\+::\+Rio (\begin{DoxyParamCaption}\item[{map$<$ int, \mbox{\hyperlink{classProducto}{Producto}} $>$}]{cat,  }\item[{Bin\+Tree$<$ string $>$}]{estruct,  }\item[{map$<$ string, bool $>$}]{ciud,  }\item[{\mbox{\hyperlink{classBarco}{Barco}}}]{embarc }\end{DoxyParamCaption})}
+
+
+
+Creadora con valores concretos. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape cierto} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El resultado es un rio con estructura \char`\"{}cuenca\char`\"{}, catalogo \char`\"{}lista\+\_\+prod\char`\"{} y embarcacion embarc 
+\end{DoxyPostcond}
+
+
+Definición en la línea 10 del archivo Rio.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{11 \{}
+\DoxyCodeLine{12     \mbox{\hyperlink{classRio_a481f396ff3ea99d3ede2f54e5a9376a7}{catalogo}} = cat;}
+\DoxyCodeLine{13     \mbox{\hyperlink{classRio_aefa7043534c9c57ece7159ee51300c8d}{estructura}} = estruct;}
+\DoxyCodeLine{14     \mbox{\hyperlink{classRio_a1df23030aa13e36f618121ea2fb1c0fe}{ciudades}} = ciud;}
+\DoxyCodeLine{15     \mbox{\hyperlink{classRio_a945de076e87f4e5b180a64f5eef3f073}{embarcacion}} = embarc;}
+\DoxyCodeLine{16 \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Documentación de las funciones miembro}
+\mbox{\Hypertarget{classRio_ad83abc00e9bfa4d4a627a0bb70cef996}\label{classRio_ad83abc00e9bfa4d4a627a0bb70cef996}} 
+\index{Rio@{Rio}!agregar\_productos@{agregar\_productos}}
+\index{agregar\_productos@{agregar\_productos}!Rio@{Rio}}
+\doxysubsubsection{\texorpdfstring{agregar\_productos()}{agregar\_productos()}}
+{\footnotesize\ttfamily void Rio\+::agregar\+\_\+productos (\begin{DoxyParamCaption}\item[{int}]{nprod }\end{DoxyParamCaption})}
+
+
+
+Añade nuevos productos al catalogo del \mbox{\hyperlink{classRio}{Rio}}. 
+
+\begin{DoxyPrecond}{Precondición}
+nprod $>$ 0 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El parámetro implícito contiene su carga original más nprod nuevos 
+\end{DoxyPostcond}
+
+
+Definición en la línea 18 del archivo Rio.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{19 \{}
+\DoxyCodeLine{20     \textcolor{keyword}{auto} it = \mbox{\hyperlink{classRio_a481f396ff3ea99d3ede2f54e5a9376a7}{catalogo}}.end();}
+\DoxyCodeLine{21     -\/-\/it;}
+\DoxyCodeLine{22     \textcolor{keywordtype}{int} posicion = it-\/>first + 1;}
+\DoxyCodeLine{23     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < nprod; ++i) \{}
+\DoxyCodeLine{24         \mbox{\hyperlink{classProducto}{Producto}} aux;}
+\DoxyCodeLine{25         aux.\mbox{\hyperlink{classProducto_ad8d6d4bc46d18f18b1c4e4efccde781f}{leer}}();}
+\DoxyCodeLine{26         \mbox{\hyperlink{classRio_a481f396ff3ea99d3ede2f54e5a9376a7}{catalogo}}[posicion] = aux;}
+\DoxyCodeLine{27         ++posicion;}
+\DoxyCodeLine{28     \}}
+\DoxyCodeLine{29 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classRio_aa1ee00916f52fb1e10b545cc9a656634}\label{classRio_aa1ee00916f52fb1e10b545cc9a656634}} 
+\index{Rio@{Rio}!comerciar@{comerciar}}
+\index{comerciar@{comerciar}!Rio@{Rio}}
+\doxysubsubsection{\texorpdfstring{comerciar()}{comerciar()}}
+{\footnotesize\ttfamily void Rio\+::comerciar (\begin{DoxyParamCaption}\item[{string}]{id1,  }\item[{string}]{id2 }\end{DoxyParamCaption})}
+
+
+
+Comercia entre dos ciudades con id1 y id2. 
+
+\begin{DoxyPrecond}{Precondición}
+Las dos ciudades existen 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Los productos de las ciudades del parámetro implícito han sido modificados 
+\end{DoxyPostcond}
+
+
+Definición en la línea 54 del archivo Rio.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{55 \{}
+\DoxyCodeLine{56     \textcolor{keywordtype}{int} size1 = \mbox{\hyperlink{classRio_aa58baab0fa7131bc378edcf6baa16314}{infoCiudades}}[id1].consultar\_size();}
+\DoxyCodeLine{57     \textcolor{keywordtype}{int} size2 = \mbox{\hyperlink{classRio_aa58baab0fa7131bc378edcf6baa16314}{infoCiudades}}[id2].consultar\_size();}
+\DoxyCodeLine{58     \textcolor{keywordflow}{if} (size1 < size2) \{}
+\DoxyCodeLine{59         \textcolor{keyword}{auto} it = \mbox{\hyperlink{classRio_aa58baab0fa7131bc378edcf6baa16314}{infoCiudades}}.find(id2);}
+\DoxyCodeLine{60         \mbox{\hyperlink{classRio_aa58baab0fa7131bc378edcf6baa16314}{infoCiudades}}[id1].comerciar\_inventario(it-\/>second);}
+\DoxyCodeLine{61     \}}
+\DoxyCodeLine{62     \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{63         \textcolor{keyword}{auto} it = \mbox{\hyperlink{classRio_aa58baab0fa7131bc378edcf6baa16314}{infoCiudades}}.find(id1);}
+\DoxyCodeLine{64         \mbox{\hyperlink{classRio_aa58baab0fa7131bc378edcf6baa16314}{infoCiudades}}[id2].comerciar\_inventario(it-\/>second);}
+\DoxyCodeLine{65     \}}
+\DoxyCodeLine{66 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classRio_a7c734ada85112da293a875abe2b6728a}\label{classRio_a7c734ada85112da293a875abe2b6728a}} 
+\index{Rio@{Rio}!consultar\_num@{consultar\_num}}
+\index{consultar\_num@{consultar\_num}!Rio@{Rio}}
+\doxysubsubsection{\texorpdfstring{consultar\_num()}{consultar\_num()}}
+{\footnotesize\ttfamily int Rio\+::consultar\+\_\+num (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Consultora del número de productos diferentes. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape cierto} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El resultado es el tamaño del diccionario del parámetro implícito 
+\end{DoxyPostcond}
+
+
+Definición en la línea 81 del archivo Rio.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{82 \{}
+\DoxyCodeLine{83     \textcolor{keywordflow}{return} \mbox{\hyperlink{classRio_a481f396ff3ea99d3ede2f54e5a9376a7}{catalogo}}.size();}
+\DoxyCodeLine{84 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classRio_a0303e953b2454fc07903c7d2aad443ab}\label{classRio_a0303e953b2454fc07903c7d2aad443ab}} 
+\index{Rio@{Rio}!consultar\_peso@{consultar\_peso}}
+\index{consultar\_peso@{consultar\_peso}!Rio@{Rio}}
+\doxysubsubsection{\texorpdfstring{consultar\_peso()}{consultar\_peso()}}
+{\footnotesize\ttfamily int Rio\+::consultar\+\_\+peso (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption}) const}
+
+
+
+Consultora del peso de un \mbox{\hyperlink{classProducto}{Producto}}. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape cierto} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El resultado es el peso del \mbox{\hyperlink{classProducto}{Producto}} 
+\end{DoxyPostcond}
+
+
+Definición en la línea 86 del archivo Rio.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{86                                     \{}
+\DoxyCodeLine{87     \textcolor{keyword}{auto} it = \mbox{\hyperlink{classRio_a481f396ff3ea99d3ede2f54e5a9376a7}{catalogo}}.find(\textcolor{keywordtype}{id});}
+\DoxyCodeLine{88     \textcolor{keywordflow}{return} it-\/>second.consul\_peso();}
+\DoxyCodeLine{89 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classRio_a8e5abb07c17d6f7b04267739c73a4d0e}\label{classRio_a8e5abb07c17d6f7b04267739c73a4d0e}} 
+\index{Rio@{Rio}!consultar\_prod@{consultar\_prod}}
+\index{consultar\_prod@{consultar\_prod}!Rio@{Rio}}
+\doxysubsubsection{\texorpdfstring{consultar\_prod()}{consultar\_prod()}}
+{\footnotesize\ttfamily void Rio\+::consultar\+\_\+prod (\begin{DoxyParamCaption}\item[{string}]{identificador,  }\item[{int}]{id }\end{DoxyParamCaption}) const}
+
+
+
+Consultora del \mbox{\hyperlink{classProducto}{Producto}} de una \mbox{\hyperlink{classCiudad}{Ciudad}}. 
+
+\begin{DoxyPrecond}{Precondición}
+El producto existe, la ciudad existe y el producto está en el inventario de la ciudad 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se escribe el producto de la \mbox{\hyperlink{classCiudad}{Ciudad}} \char`\"{}identificador\char`\"{} con id id 
+\end{DoxyPostcond}
+
+
+Definición en la línea 97 del archivo Rio.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{98 \{}
+\DoxyCodeLine{99     \mbox{\hyperlink{classRio_aa58baab0fa7131bc378edcf6baa16314}{infoCiudades}}.at(identificador).consultar\_producto(\textcolor{keywordtype}{id});}
+\DoxyCodeLine{100 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classRio_a6e2b75c64d48f1421daa8fc6c3ea5e7f}\label{classRio_a6e2b75c64d48f1421daa8fc6c3ea5e7f}} 
+\index{Rio@{Rio}!consultar\_volumen@{consultar\_volumen}}
+\index{consultar\_volumen@{consultar\_volumen}!Rio@{Rio}}
+\doxysubsubsection{\texorpdfstring{consultar\_volumen()}{consultar\_volumen()}}
+{\footnotesize\ttfamily int Rio\+::consultar\+\_\+volumen (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption}) const}
+
+
+
+Consultora del volumen de un \mbox{\hyperlink{classProducto}{Producto}}. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape cierto} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El resultado es el volumen del \mbox{\hyperlink{classProducto}{Producto}} 
+\end{DoxyPostcond}
+
+
+Definición en la línea 91 del archivo Rio.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{92 \{}
+\DoxyCodeLine{93     \textcolor{keyword}{auto} it = \mbox{\hyperlink{classRio_a481f396ff3ea99d3ede2f54e5a9376a7}{catalogo}}.find(\textcolor{keywordtype}{id});}
+\DoxyCodeLine{94     \textcolor{keywordflow}{return} it-\/>second.consul\_volumen();}
+\DoxyCodeLine{95 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classRio_a082df406f7cc228445692630ac9c3ab0}\label{classRio_a082df406f7cc228445692630ac9c3ab0}} 
+\index{Rio@{Rio}!escribir\_barco@{escribir\_barco}}
+\index{escribir\_barco@{escribir\_barco}!Rio@{Rio}}
+\doxysubsubsection{\texorpdfstring{escribir\_barco()}{escribir\_barco()}}
+{\footnotesize\ttfamily void Rio\+::escribir\+\_\+barco (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Tercera operación de escritura. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape cierto} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se han escrito los atributos del parámetro implícito en el canal standard de salida ~\newline
+ 
+\end{DoxyPostcond}
+
+
+Definición en la línea 179 del archivo Rio.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{180 \{}
+\DoxyCodeLine{181     \mbox{\hyperlink{classRio_a945de076e87f4e5b180a64f5eef3f073}{embarcacion}}.\mbox{\hyperlink{classBarco_a3f1c26f2f0565e375924dae85b2e89a0}{escribir\_barco}}();}
+\DoxyCodeLine{182 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classRio_a457344228d687c95bbd8b35c51b1a8d9}\label{classRio_a457344228d687c95bbd8b35c51b1a8d9}} 
+\index{Rio@{Rio}!escribir\_ciudad@{escribir\_ciudad}}
+\index{escribir\_ciudad@{escribir\_ciudad}!Rio@{Rio}}
+\doxysubsubsection{\texorpdfstring{escribir\_ciudad()}{escribir\_ciudad()}}
+{\footnotesize\ttfamily void Rio\+::escribir\+\_\+ciudad (\begin{DoxyParamCaption}\item[{string}]{id }\end{DoxyParamCaption}) const}
+
+
+
+Primera operación de escritura. 
+
+\begin{DoxyPrecond}{Precondición}
+La ciudad con identificador \char`\"{}id\char`\"{} existe 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se han escrito los atributos del parámetro implícito en el canal standard de salida ~\newline
+ 
+\end{DoxyPostcond}
+
+
+Definición en la línea 166 del archivo Rio.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{167 \{}
+\DoxyCodeLine{168     \textcolor{keyword}{auto} it = \mbox{\hyperlink{classRio_aa58baab0fa7131bc378edcf6baa16314}{infoCiudades}}.find(\textcolor{keywordtype}{id});}
+\DoxyCodeLine{169     it-\/>second.escribir\_ciudad();}
+\DoxyCodeLine{170 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classRio_ad1f2ad7a3dfd9f0464e23420aa166baf}\label{classRio_ad1f2ad7a3dfd9f0464e23420aa166baf}} 
+\index{Rio@{Rio}!escribir\_prod@{escribir\_prod}}
+\index{escribir\_prod@{escribir\_prod}!Rio@{Rio}}
+\doxysubsubsection{\texorpdfstring{escribir\_prod()}{escribir\_prod()}}
+{\footnotesize\ttfamily void Rio\+::escribir\+\_\+prod (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption}) const}
+
+
+
+Segunda operación de escritura. 
+
+\begin{DoxyPrecond}{Precondición}
+El producto con identificador id existe 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se han escrito los atributos del parámetro implícito en el canal standard de salida ~\newline
+ 
+\end{DoxyPostcond}
+
+
+Definición en la línea 172 del archivo Rio.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{173 \{}
+\DoxyCodeLine{174     \textcolor{keyword}{auto} it = \mbox{\hyperlink{classRio_a481f396ff3ea99d3ede2f54e5a9376a7}{catalogo}}.find(\textcolor{keywordtype}{id});}
+\DoxyCodeLine{175     cout << \textcolor{keywordtype}{id} << \textcolor{charliteral}{' '};}
+\DoxyCodeLine{176     it-\/>second.escribir\_producto();}
+\DoxyCodeLine{177 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classRio_a73eb9cbeac29be7dbe0db2a5d27fa1bf}\label{classRio_a73eb9cbeac29be7dbe0db2a5d27fa1bf}} 
+\index{Rio@{Rio}!existe\_ciudad@{existe\_ciudad}}
+\index{existe\_ciudad@{existe\_ciudad}!Rio@{Rio}}
+\doxysubsubsection{\texorpdfstring{existe\_ciudad()}{existe\_ciudad()}}
+{\footnotesize\ttfamily bool Rio\+::existe\+\_\+ciudad (\begin{DoxyParamCaption}\item[{string}]{id }\end{DoxyParamCaption}) const}
+
+
+
+Consultora de la existencia de una ciudad. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape cierto} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El resultado es true si la ciudad existe, de otra manera falso 
+\end{DoxyPostcond}
+
+
+Definición en la línea 102 del archivo Rio.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{103 \{}
+\DoxyCodeLine{104     \textcolor{keywordflow}{return} \mbox{\hyperlink{classRio_a1df23030aa13e36f618121ea2fb1c0fe}{ciudades}}.count(\textcolor{keywordtype}{id});}
+\DoxyCodeLine{105 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classRio_a394db1db6c205f1ca5013f0c837f8cda}\label{classRio_a394db1db6c205f1ca5013f0c837f8cda}} 
+\index{Rio@{Rio}!existe\_prod@{existe\_prod}}
+\index{existe\_prod@{existe\_prod}!Rio@{Rio}}
+\doxysubsubsection{\texorpdfstring{existe\_prod()}{existe\_prod()}}
+{\footnotesize\ttfamily bool Rio\+::existe\+\_\+prod (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption}) const}
+
+
+
+Consultora de la existencia de un producto. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape cierto} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El resultado es true si el producto existe, de otra manera falso 
+\end{DoxyPostcond}
+
+
+Definición en la línea 107 del archivo Rio.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{108 \{}
+\DoxyCodeLine{109     \textcolor{keywordflow}{return} \mbox{\hyperlink{classRio_a481f396ff3ea99d3ede2f54e5a9376a7}{catalogo}}.count(\textcolor{keywordtype}{id});}
+\DoxyCodeLine{110 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classRio_aa49d58e87db25e78ec698042c6403454}\label{classRio_aa49d58e87db25e78ec698042c6403454}} 
+\index{Rio@{Rio}!leer\_barco@{leer\_barco}}
+\index{leer\_barco@{leer\_barco}!Rio@{Rio}}
+\doxysubsubsection{\texorpdfstring{leer\_barco()}{leer\_barco()}}
+{\footnotesize\ttfamily void Rio\+::leer\+\_\+barco (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Operación de lectura del atributo \mbox{\hyperlink{classBarco}{Barco}}. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape cierto} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se ha leído el barco de río 
+\end{DoxyPostcond}
+
+
+Definición en la línea 161 del archivo Rio.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{162 \{}
+\DoxyCodeLine{163     \mbox{\hyperlink{classRio_a945de076e87f4e5b180a64f5eef3f073}{embarcacion}}.\mbox{\hyperlink{classBarco_adbcd8100a10a2fea162e6c18bd8d3914}{leer}}();}
+\DoxyCodeLine{164 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classRio_a207f2c3a8da8eeed880d0f8845861744}\label{classRio_a207f2c3a8da8eeed880d0f8845861744}} 
+\index{Rio@{Rio}!leer\_inventario@{leer\_inventario}}
+\index{leer\_inventario@{leer\_inventario}!Rio@{Rio}}
+\doxysubsubsection{\texorpdfstring{leer\_inventario()}{leer\_inventario()}}
+{\footnotesize\ttfamily void Rio\+::leer\+\_\+inventario (\begin{DoxyParamCaption}\item[{string}]{id }\end{DoxyParamCaption})}
+
+
+
+Segunda operación de lectura. 
+
+\begin{DoxyPrecond}{Precondición}
+La ciudad existe 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se ha leído el inventario de una ciudad 
+\end{DoxyPostcond}
+
+
+Definición en la línea 126 del archivo Rio.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{127 \{}
+\DoxyCodeLine{128     \textcolor{keywordtype}{int} productos;}
+\DoxyCodeLine{129     cin >> productos;}
+\DoxyCodeLine{130     \textcolor{keywordflow}{if} (productos == 0) \mbox{\hyperlink{classRio_aa58baab0fa7131bc378edcf6baa16314}{infoCiudades}}[id].inicializar();}
+\DoxyCodeLine{131     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < productos; ++i) \{}
+\DoxyCodeLine{132         \textcolor{keywordtype}{int} pid, tiene, quiere;}
+\DoxyCodeLine{133         cin >> pid >> tiene >> quiere;}
+\DoxyCodeLine{134         \textcolor{keywordtype}{int} peso = \mbox{\hyperlink{classRio_a481f396ff3ea99d3ede2f54e5a9376a7}{catalogo}}[pid].consul\_peso();}
+\DoxyCodeLine{135         \textcolor{keywordtype}{int} volumen = \mbox{\hyperlink{classRio_a481f396ff3ea99d3ede2f54e5a9376a7}{catalogo}}[pid].consul\_volumen();}
+\DoxyCodeLine{136         \mbox{\hyperlink{classProducto}{Producto}} aux(peso, volumen, tiene, quiere);}
+\DoxyCodeLine{137         \mbox{\hyperlink{classRio_aa58baab0fa7131bc378edcf6baa16314}{infoCiudades}}[id].poner\_producto2(aux, pid);}
+\DoxyCodeLine{138     \}}
+\DoxyCodeLine{139 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classRio_a3411039631544d16ba19b2b22a92c3a1}\label{classRio_a3411039631544d16ba19b2b22a92c3a1}} 
+\index{Rio@{Rio}!leer\_inventarios@{leer\_inventarios}}
+\index{leer\_inventarios@{leer\_inventarios}!Rio@{Rio}}
+\doxysubsubsection{\texorpdfstring{leer\_inventarios()}{leer\_inventarios()}}
+{\footnotesize\ttfamily void Rio\+::leer\+\_\+inventarios (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Tercera operación de lectura. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape cierto} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se ha leído el inventario de varias ciudades 
+\end{DoxyPostcond}
+
+
+Definición en la línea 141 del archivo Rio.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{142 \{}
+\DoxyCodeLine{143     \textcolor{keywordtype}{string} id;}
+\DoxyCodeLine{144     cin >> id;}
+\DoxyCodeLine{145     \textcolor{keywordflow}{while} (\textcolor{keywordtype}{id} != \textcolor{stringliteral}{"{}\#"{}}) \{}
+\DoxyCodeLine{146         \mbox{\hyperlink{classRio_a207f2c3a8da8eeed880d0f8845861744}{leer\_inventario}}(\textcolor{keywordtype}{id});}
+\DoxyCodeLine{147         cin >> id;}
+\DoxyCodeLine{148     \}}
+\DoxyCodeLine{149 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classRio_ac0d1982f96d94458a8da4a5394f18c6f}\label{classRio_ac0d1982f96d94458a8da4a5394f18c6f}} 
+\index{Rio@{Rio}!leer\_productos\_dif@{leer\_productos\_dif}}
+\index{leer\_productos\_dif@{leer\_productos\_dif}!Rio@{Rio}}
+\doxysubsubsection{\texorpdfstring{leer\_productos\_dif()}{leer\_productos\_dif()}}
+{\footnotesize\ttfamily void Rio\+::leer\+\_\+productos\+\_\+dif (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Cuarta operación de lectura. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape cierto} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se ha leído todos los productos de río 
+\end{DoxyPostcond}
+
+
+Definición en la línea 151 del archivo Rio.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{152 \{}
+\DoxyCodeLine{153     \textcolor{keywordtype}{int} numProd;}
+\DoxyCodeLine{154     cin >> numProd;}
+\DoxyCodeLine{155     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 1; i <= numProd; ++i) \{}
+\DoxyCodeLine{156         \mbox{\hyperlink{classProducto}{Producto}} p;}
+\DoxyCodeLine{157         p.\mbox{\hyperlink{classProducto_ad8d6d4bc46d18f18b1c4e4efccde781f}{leer}}();}
+\DoxyCodeLine{158         \mbox{\hyperlink{classRio_a481f396ff3ea99d3ede2f54e5a9376a7}{catalogo}}[i] = p;}
+\DoxyCodeLine{159     \}}
+\DoxyCodeLine{160 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classRio_a298bb2dc007527a8c2273205f257687d}\label{classRio_a298bb2dc007527a8c2273205f257687d}} 
+\index{Rio@{Rio}!leer\_rio@{leer\_rio}}
+\index{leer\_rio@{leer\_rio}!Rio@{Rio}}
+\doxysubsubsection{\texorpdfstring{leer\_rio()}{leer\_rio()}}
+{\footnotesize\ttfamily Bin\+Tree$<$ string $>$ Rio\+::leer\+\_\+rio (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Primera operación de lectura. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape cierto} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se ha leído la estructura del rio 
+\end{DoxyPostcond}
+
+
+Definición en la línea 112 del archivo Rio.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{113 \{}
+\DoxyCodeLine{114     \textcolor{keywordtype}{string} identificador;}
+\DoxyCodeLine{115     cin >> identificador;}
+\DoxyCodeLine{116 }
+\DoxyCodeLine{117     \textcolor{keywordflow}{if} (identificador == \textcolor{stringliteral}{"{}\#"{}}) \textcolor{keywordflow}{return} BinTree<string>();}
+\DoxyCodeLine{118     \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{119         \mbox{\hyperlink{classRio_a1df23030aa13e36f618121ea2fb1c0fe}{ciudades}}[identificador] = \textcolor{keyword}{true};}
+\DoxyCodeLine{120         BinTree<string> left = \mbox{\hyperlink{classRio_a298bb2dc007527a8c2273205f257687d}{leer\_rio}}();}
+\DoxyCodeLine{121         BinTree<string> right = \mbox{\hyperlink{classRio_a298bb2dc007527a8c2273205f257687d}{leer\_rio}}();}
+\DoxyCodeLine{122         \textcolor{keywordflow}{return} BinTree<string>(identificador, left, right);}
+\DoxyCodeLine{123     \}}
+\DoxyCodeLine{124 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classRio_aa1e085e559d338965c9ad74e4346cd63}\label{classRio_aa1e085e559d338965c9ad74e4346cd63}} 
+\index{Rio@{Rio}!modificar\_barco@{modificar\_barco}}
+\index{modificar\_barco@{modificar\_barco}!Rio@{Rio}}
+\doxysubsubsection{\texorpdfstring{modificar\_barco()}{modificar\_barco()}}
+{\footnotesize\ttfamily void Rio\+::modificar\+\_\+barco (\begin{DoxyParamCaption}\item[{int}]{id1,  }\item[{int}]{nid1,  }\item[{int}]{id2,  }\item[{int}]{nid2 }\end{DoxyParamCaption})}
+
+
+
+Modificadora de \mbox{\hyperlink{classBarco}{Barco}} de \mbox{\hyperlink{classRio}{Rio}}. 
+
+\begin{DoxyPrecond}{Precondición}
+Los dos productos existen, diferentes, las unidades no son negativas y al menos una de ellas es estrictamente positiva 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El barco del parámetro implícito ha sido modificado 
+\end{DoxyPostcond}
+
+
+Definición en la línea 31 del archivo Rio.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{32 \{}
+\DoxyCodeLine{33     \mbox{\hyperlink{classRio_a945de076e87f4e5b180a64f5eef3f073}{embarcacion}}.\mbox{\hyperlink{classBarco_a929d145ae55e1025c88c1f08af4639c5}{modificar\_barco}}(id1, nid1, id2, nid2);}
+\DoxyCodeLine{34 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classRio_a7a653f64d55e6113ea8174ae33c8f678}\label{classRio_a7a653f64d55e6113ea8174ae33c8f678}} 
+\index{Rio@{Rio}!modificar\_producto@{modificar\_producto}}
+\index{modificar\_producto@{modificar\_producto}!Rio@{Rio}}
+\doxysubsubsection{\texorpdfstring{modificar\_producto()}{modificar\_producto()}}
+{\footnotesize\ttfamily void Rio\+::modificar\+\_\+producto (\begin{DoxyParamCaption}\item[{string}]{id,  }\item[{int}]{pid,  }\item[{\mbox{\hyperlink{classProducto}{Producto}} \&}]{p }\end{DoxyParamCaption})}
+
+
+
+Modifica un \mbox{\hyperlink{classProducto}{Producto}} de una \mbox{\hyperlink{classCiudad}{Ciudad}}. 
+
+\begin{DoxyPrecond}{Precondición}
+El producto existe, la ciudad existe y el producto está en el inventario de la ciudad 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Los productos del parámetro implícito han sido modificados 
+\end{DoxyPostcond}
+
+
+Definición en la línea 48 del archivo Rio.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{49 \{}
+\DoxyCodeLine{50     \textcolor{keyword}{auto} it = \mbox{\hyperlink{classRio_aa58baab0fa7131bc378edcf6baa16314}{infoCiudades}}.find(\textcolor{keywordtype}{id});}
+\DoxyCodeLine{51     it-\/>second.modificar\_producto(p, pid);}
+\DoxyCodeLine{52 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classRio_a5c37a181618956b3234f56e022bfe980}\label{classRio_a5c37a181618956b3234f56e022bfe980}} 
+\index{Rio@{Rio}!poner\_producto@{poner\_producto}}
+\index{poner\_producto@{poner\_producto}!Rio@{Rio}}
+\doxysubsubsection{\texorpdfstring{poner\_producto()}{poner\_producto()}}
+{\footnotesize\ttfamily void Rio\+::poner\+\_\+producto (\begin{DoxyParamCaption}\item[{string}]{id,  }\item[{int}]{pid,  }\item[{\mbox{\hyperlink{classProducto}{Producto}} \&}]{p }\end{DoxyParamCaption})}
+
+
+
+Modificadora de \mbox{\hyperlink{classCiudad}{Ciudad}} de \mbox{\hyperlink{classRio}{Rio}}. 
+
+\begin{DoxyPrecond}{Precondición}
+El producto existe, la ciudad existe y el producto no está en el inventario de la ciudad 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Los productos del parámetro implícito han sido modificados 
+\end{DoxyPostcond}
+
+
+Definición en la línea 36 del archivo Rio.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{37 \{}
+\DoxyCodeLine{38     \textcolor{keyword}{auto} it = \mbox{\hyperlink{classRio_aa58baab0fa7131bc378edcf6baa16314}{infoCiudades}}.find(\textcolor{keywordtype}{id});}
+\DoxyCodeLine{39     it-\/>second.poner\_producto(p, pid);}
+\DoxyCodeLine{40 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classRio_a3eac2ea880782074c1126ea1ac2412d0}\label{classRio_a3eac2ea880782074c1126ea1ac2412d0}} 
+\index{Rio@{Rio}!quitar\_producto@{quitar\_producto}}
+\index{quitar\_producto@{quitar\_producto}!Rio@{Rio}}
+\doxysubsubsection{\texorpdfstring{quitar\_producto()}{quitar\_producto()}}
+{\footnotesize\ttfamily void Rio\+::quitar\+\_\+producto (\begin{DoxyParamCaption}\item[{string}]{id,  }\item[{int}]{pid }\end{DoxyParamCaption})}
+
+
+
+Elimina un \mbox{\hyperlink{classProducto}{Producto}} de una \mbox{\hyperlink{classCiudad}{Ciudad}}. 
+
+\begin{DoxyPrecond}{Precondición}
+El producto existe, la ciudad existe y el producto está en el inventario de la ciudad 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Los productos del parámetro implícito han sido modificados 
+\end{DoxyPostcond}
+
+
+Definición en la línea 42 del archivo Rio.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{43 \{}
+\DoxyCodeLine{44     \textcolor{keyword}{auto} it = \mbox{\hyperlink{classRio_aa58baab0fa7131bc378edcf6baa16314}{infoCiudades}}.find(\textcolor{keywordtype}{id});}
+\DoxyCodeLine{45     it-\/>second.quitar\_producto(pid);}
+\DoxyCodeLine{46 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classRio_a9be9ba3e2c3434caa5f8bd74ab944fbb}\label{classRio_a9be9ba3e2c3434caa5f8bd74ab944fbb}} 
+\index{Rio@{Rio}!redistribuir@{redistribuir}}
+\index{redistribuir@{redistribuir}!Rio@{Rio}}
+\doxysubsubsection{\texorpdfstring{redistribuir()}{redistribuir()}}
+{\footnotesize\ttfamily void Rio\+::redistribuir (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+La ciudad de la desembocadura comercia con su ciudad río arriba a mano derec hay luego con la ciudad río arriba a mano izquierda, y así sucesivamente. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape cierto} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Los inventarios de las Ciudades del \mbox{\hyperlink{classRio}{Rio}} han sido modificados 
+\end{DoxyPostcond}
+
+
+Definición en la línea 68 del archivo Rio.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{69 \{}
+\DoxyCodeLine{70     \textcolor{keywordflow}{if} (\mbox{\hyperlink{classRio_aefa7043534c9c57ece7159ee51300c8d}{estructura}}.empty()) \textcolor{keywordflow}{return};}
+\DoxyCodeLine{71     \mbox{\hyperlink{classRio_a15865724197cb9964e1e5deee212116d}{redistribuir2}}(\mbox{\hyperlink{classRio_aefa7043534c9c57ece7159ee51300c8d}{estructura}}.left());}
+\DoxyCodeLine{72     \mbox{\hyperlink{classRio_a15865724197cb9964e1e5deee212116d}{redistribuir2}}(\mbox{\hyperlink{classRio_aefa7043534c9c57ece7159ee51300c8d}{estructura}}.right());}
+\DoxyCodeLine{73     \textcolor{keywordflow}{if} (not \mbox{\hyperlink{classRio_aefa7043534c9c57ece7159ee51300c8d}{estructura}}.left().empty()) \{}
+\DoxyCodeLine{74         \mbox{\hyperlink{classRio_aa1ee00916f52fb1e10b545cc9a656634}{comerciar}}(\mbox{\hyperlink{classRio_aefa7043534c9c57ece7159ee51300c8d}{estructura}}.value(), \mbox{\hyperlink{classRio_aefa7043534c9c57ece7159ee51300c8d}{estructura}}.left().value());}
+\DoxyCodeLine{75     \}}
+\DoxyCodeLine{76     \textcolor{keywordflow}{if} (not \mbox{\hyperlink{classRio_aefa7043534c9c57ece7159ee51300c8d}{estructura}}.right().empty()) \{}
+\DoxyCodeLine{77         \mbox{\hyperlink{classRio_aa1ee00916f52fb1e10b545cc9a656634}{comerciar}}(\mbox{\hyperlink{classRio_aefa7043534c9c57ece7159ee51300c8d}{estructura}}.value(), \mbox{\hyperlink{classRio_aefa7043534c9c57ece7159ee51300c8d}{estructura}}.right().value());}
+\DoxyCodeLine{78     \}}
+\DoxyCodeLine{79 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classRio_a15865724197cb9964e1e5deee212116d}\label{classRio_a15865724197cb9964e1e5deee212116d}} 
+\index{Rio@{Rio}!redistribuir2@{redistribuir2}}
+\index{redistribuir2@{redistribuir2}!Rio@{Rio}}
+\doxysubsubsection{\texorpdfstring{redistribuir2()}{redistribuir2()}}
+{\footnotesize\ttfamily void Rio\+::redistribuir2 (\begin{DoxyParamCaption}\item[{Bin\+Tree$<$ string $>$}]{t }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definición en la línea 184 del archivo Rio.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{185 \{}
+\DoxyCodeLine{186     \textcolor{keywordflow}{if} (t.empty()) \textcolor{keywordflow}{return};}
+\DoxyCodeLine{187     \mbox{\hyperlink{classRio_a15865724197cb9964e1e5deee212116d}{redistribuir2}}(t.left());}
+\DoxyCodeLine{188     \mbox{\hyperlink{classRio_a15865724197cb9964e1e5deee212116d}{redistribuir2}}(t.right());}
+\DoxyCodeLine{189     \textcolor{keywordflow}{if} (not t.left().empty()) \{}
+\DoxyCodeLine{190         \mbox{\hyperlink{classRio_aa1ee00916f52fb1e10b545cc9a656634}{comerciar}}(t.value(), t.left().value());}
+\DoxyCodeLine{191     \}}
+\DoxyCodeLine{192     \textcolor{keywordflow}{if} (not t.right().empty()) \{}
+\DoxyCodeLine{193         \mbox{\hyperlink{classRio_aa1ee00916f52fb1e10b545cc9a656634}{comerciar}}(t.value(), t.right().value());}
+\DoxyCodeLine{194     \}}
+\DoxyCodeLine{195 \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Documentación de los datos miembro}
+\mbox{\Hypertarget{classRio_a481f396ff3ea99d3ede2f54e5a9376a7}\label{classRio_a481f396ff3ea99d3ede2f54e5a9376a7}} 
+\index{Rio@{Rio}!catalogo@{catalogo}}
+\index{catalogo@{catalogo}!Rio@{Rio}}
+\doxysubsubsection{\texorpdfstring{catalogo}{catalogo}}
+{\footnotesize\ttfamily map$<$int, \mbox{\hyperlink{classProducto}{Producto}}$>$ Rio\+::catalogo\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definición en la línea 179 del archivo Rio.\+hh.
+
+\mbox{\Hypertarget{classRio_a1df23030aa13e36f618121ea2fb1c0fe}\label{classRio_a1df23030aa13e36f618121ea2fb1c0fe}} 
+\index{Rio@{Rio}!ciudades@{ciudades}}
+\index{ciudades@{ciudades}!Rio@{Rio}}
+\doxysubsubsection{\texorpdfstring{ciudades}{ciudades}}
+{\footnotesize\ttfamily map$<$string, bool$>$ Rio\+::ciudades\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definición en la línea 184 del archivo Rio.\+hh.
+
+\mbox{\Hypertarget{classRio_a945de076e87f4e5b180a64f5eef3f073}\label{classRio_a945de076e87f4e5b180a64f5eef3f073}} 
+\index{Rio@{Rio}!embarcacion@{embarcacion}}
+\index{embarcacion@{embarcacion}!Rio@{Rio}}
+\doxysubsubsection{\texorpdfstring{embarcacion}{embarcacion}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classBarco}{Barco}} Rio\+::embarcacion\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definición en la línea 185 del archivo Rio.\+hh.
+
+\mbox{\Hypertarget{classRio_aefa7043534c9c57ece7159ee51300c8d}\label{classRio_aefa7043534c9c57ece7159ee51300c8d}} 
+\index{Rio@{Rio}!estructura@{estructura}}
+\index{estructura@{estructura}!Rio@{Rio}}
+\doxysubsubsection{\texorpdfstring{estructura}{estructura}}
+{\footnotesize\ttfamily Bin\+Tree$<$string$>$ Rio\+::estructura\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definición en la línea 180 del archivo Rio.\+hh.
+
+\mbox{\Hypertarget{classRio_aa58baab0fa7131bc378edcf6baa16314}\label{classRio_aa58baab0fa7131bc378edcf6baa16314}} 
+\index{Rio@{Rio}!infoCiudades@{infoCiudades}}
+\index{infoCiudades@{infoCiudades}!Rio@{Rio}}
+\doxysubsubsection{\texorpdfstring{infoCiudades}{infoCiudades}}
+{\footnotesize\ttfamily map$<$string, \mbox{\hyperlink{classCiudad}{Ciudad}}$>$ Rio\+::info\+Ciudades\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definición en la línea 182 del archivo Rio.\+hh.
+
+
+
+La documentación para esta clase fue generada a partir de los siguientes ficheros\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{Rio_8hh}{Rio.\+hh}}\item 
+\mbox{\hyperlink{Rio_8cc}{Rio.\+cc}}\end{DoxyCompactItemize}

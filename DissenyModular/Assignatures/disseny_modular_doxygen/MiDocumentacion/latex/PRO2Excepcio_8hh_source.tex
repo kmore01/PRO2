@@ -1,0 +1,25 @@
+\hypertarget{PRO2Excepcio_8hh_source}{}\doxysection{PRO2\+Excepcio.\+hh}
+\label{PRO2Excepcio_8hh_source}\index{PRO2Excepcio.hh@{PRO2Excepcio.hh}}
+\mbox{\hyperlink{PRO2Excepcio_8hh}{Ir a la documentación de este archivo.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef PRO2\_EXCEPCIO  }\textcolor{comment}{// per evitar fer mes d'un include d'aquest fitxer}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define PRO2\_EXCEPCIO}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <exception>}}
+\DoxyCodeLine{5 }
+\DoxyCodeLine{6 \textcolor{keyword}{using namespace }std;}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8 \textcolor{comment}{/* Classe PRO2Excepcio */}}
+\DoxyCodeLine{9 \textcolor{keyword}{class }\mbox{\hyperlink{classPRO2Excepcio}{PRO2Excepcio}}: \textcolor{keyword}{public} exception \{}
+\DoxyCodeLine{10   \textcolor{keyword}{public}:}
+\DoxyCodeLine{11    \mbox{\hyperlink{classPRO2Excepcio_ac86c0800bbe57a3376f18a3ad6ea3c02}{PRO2Excepcio}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char}* mot) : exception(), mensaje(mot) \{\}}
+\DoxyCodeLine{12    \textcolor{keyword}{const} \textcolor{keywordtype}{char}* \mbox{\hyperlink{classPRO2Excepcio_a6627ed19302010f7b80f638592cce85b}{what}}() \textcolor{keyword}{const} throw() \{\textcolor{keywordflow}{return} mensaje;\}; }
+\DoxyCodeLine{13   \textcolor{keyword}{private}:}
+\DoxyCodeLine{14    \textcolor{keyword}{const} \textcolor{keywordtype}{char}* mensaje;}
+\DoxyCodeLine{15 \};}
+\DoxyCodeLine{16 \textcolor{comment}{/* Fi classe PRO2Excepcio*/}}
+\DoxyCodeLine{17 }
+\DoxyCodeLine{18 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{19 }
+
+\end{DoxyCode}

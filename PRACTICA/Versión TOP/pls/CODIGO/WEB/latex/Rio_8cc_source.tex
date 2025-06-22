@@ -1,0 +1,188 @@
+\hypertarget{Rio_8cc_source}{}\doxysection{Rio.\+cc}
+\mbox{\hyperlink{Rio_8cc}{Ir a la documentación de este archivo.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{Rio_8cc_source_l00001}00001 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{Rio_8hh}{Rio.hh}}"{}}}
+\DoxyCodeLine{\Hypertarget{Rio_8cc_source_l00002}00002 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{Producto_8hh}{Producto.hh}}"{}}}
+\DoxyCodeLine{\Hypertarget{Rio_8cc_source_l00003}00003 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{Ciudad_8hh}{Ciudad.hh}}"{}}}
+\DoxyCodeLine{\Hypertarget{Rio_8cc_source_l00004}00004 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{Barco_8hh}{Barco.hh}}"{}}}
+\DoxyCodeLine{\Hypertarget{Rio_8cc_source_l00005}00005 }
+\DoxyCodeLine{\Hypertarget{Rio_8cc_source_l00006}\mbox{\hyperlink{classRio_a1dc8b1e6f2e4d7087575bf051abb28f4}{00006}} \mbox{\hyperlink{classRio_a1dc8b1e6f2e4d7087575bf051abb28f4}{Rio::Rio}}()}
+\DoxyCodeLine{\Hypertarget{Rio_8cc_source_l00007}00007 \{}
+\DoxyCodeLine{\Hypertarget{Rio_8cc_source_l00008}00008 \}}
+\DoxyCodeLine{\Hypertarget{Rio_8cc_source_l00009}00009 }
+\DoxyCodeLine{\Hypertarget{Rio_8cc_source_l00010}\mbox{\hyperlink{classRio_a6ecb0b8e80b47b933c69d7ee2594ba8f}{00010}} \mbox{\hyperlink{classRio_a1dc8b1e6f2e4d7087575bf051abb28f4}{Rio::Rio}}(map<int, Producto> cat, BinTree<string> estruct, map<string, bool> ciud, \mbox{\hyperlink{classBarco}{Barco}} embarc)}
+\DoxyCodeLine{\Hypertarget{Rio_8cc_source_l00011}00011 \{}
+\DoxyCodeLine{\Hypertarget{Rio_8cc_source_l00012}00012     \mbox{\hyperlink{classRio_a481f396ff3ea99d3ede2f54e5a9376a7}{catalogo}} = cat;}
+\DoxyCodeLine{\Hypertarget{Rio_8cc_source_l00013}00013     \mbox{\hyperlink{classRio_aefa7043534c9c57ece7159ee51300c8d}{estructura}} = estruct;}
+\DoxyCodeLine{\Hypertarget{Rio_8cc_source_l00014}00014     \mbox{\hyperlink{classRio_a1df23030aa13e36f618121ea2fb1c0fe}{ciudades}} = ciud;}
+\DoxyCodeLine{\Hypertarget{Rio_8cc_source_l00015}00015     \mbox{\hyperlink{classRio_a945de076e87f4e5b180a64f5eef3f073}{embarcacion}} = embarc;}
+\DoxyCodeLine{\Hypertarget{Rio_8cc_source_l00016}00016 \}}
+\DoxyCodeLine{\Hypertarget{Rio_8cc_source_l00017}00017 }
+\DoxyCodeLine{\Hypertarget{Rio_8cc_source_l00018}\mbox{\hyperlink{classRio_ad83abc00e9bfa4d4a627a0bb70cef996}{00018}} \textcolor{keywordtype}{void} \mbox{\hyperlink{classRio_ad83abc00e9bfa4d4a627a0bb70cef996}{Rio::agregar\_productos}}(\textcolor{keywordtype}{int} nprod)}
+\DoxyCodeLine{\Hypertarget{Rio_8cc_source_l00019}00019 \{}
+\DoxyCodeLine{\Hypertarget{Rio_8cc_source_l00020}00020     \textcolor{keyword}{auto} it = \mbox{\hyperlink{classRio_a481f396ff3ea99d3ede2f54e5a9376a7}{catalogo}}.end();}
+\DoxyCodeLine{\Hypertarget{Rio_8cc_source_l00021}00021     -\/-\/it;}
+\DoxyCodeLine{\Hypertarget{Rio_8cc_source_l00022}00022     \textcolor{keywordtype}{int} posicion = it-\/>first + 1;}
+\DoxyCodeLine{\Hypertarget{Rio_8cc_source_l00023}00023     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < nprod; ++i) \{}
+\DoxyCodeLine{\Hypertarget{Rio_8cc_source_l00024}00024         \mbox{\hyperlink{classProducto}{Producto}} aux;}
+\DoxyCodeLine{\Hypertarget{Rio_8cc_source_l00025}00025         aux.\mbox{\hyperlink{classProducto_ad8d6d4bc46d18f18b1c4e4efccde781f}{leer}}();}
+\DoxyCodeLine{\Hypertarget{Rio_8cc_source_l00026}00026         \mbox{\hyperlink{classRio_a481f396ff3ea99d3ede2f54e5a9376a7}{catalogo}}[posicion] = aux;}
+\DoxyCodeLine{\Hypertarget{Rio_8cc_source_l00027}00027         ++posicion;}
+\DoxyCodeLine{\Hypertarget{Rio_8cc_source_l00028}00028     \}}
+\DoxyCodeLine{\Hypertarget{Rio_8cc_source_l00029}00029 \}}
+\DoxyCodeLine{\Hypertarget{Rio_8cc_source_l00030}00030 }
+\DoxyCodeLine{\Hypertarget{Rio_8cc_source_l00031}\mbox{\hyperlink{classRio_aa1e085e559d338965c9ad74e4346cd63}{00031}} \textcolor{keywordtype}{void} \mbox{\hyperlink{classRio_aa1e085e559d338965c9ad74e4346cd63}{Rio::modificar\_barco}}(\textcolor{keywordtype}{int} id1, \textcolor{keywordtype}{int} nid1, \textcolor{keywordtype}{int} id2, \textcolor{keywordtype}{int} nid2)}
+\DoxyCodeLine{\Hypertarget{Rio_8cc_source_l00032}00032 \{}
+\DoxyCodeLine{\Hypertarget{Rio_8cc_source_l00033}00033     \mbox{\hyperlink{classRio_a945de076e87f4e5b180a64f5eef3f073}{embarcacion}}.\mbox{\hyperlink{classBarco_a929d145ae55e1025c88c1f08af4639c5}{modificar\_barco}}(id1, nid1, id2, nid2);}
+\DoxyCodeLine{\Hypertarget{Rio_8cc_source_l00034}00034 \}}
+\DoxyCodeLine{\Hypertarget{Rio_8cc_source_l00035}00035 }
+\DoxyCodeLine{\Hypertarget{Rio_8cc_source_l00036}\mbox{\hyperlink{classRio_a5c37a181618956b3234f56e022bfe980}{00036}} \textcolor{keywordtype}{void} \mbox{\hyperlink{classRio_a5c37a181618956b3234f56e022bfe980}{Rio::poner\_producto}}(\textcolor{keywordtype}{string} \textcolor{keywordtype}{id}, \textcolor{keywordtype}{int} pid, \mbox{\hyperlink{classProducto}{Producto}} \&p) }
+\DoxyCodeLine{\Hypertarget{Rio_8cc_source_l00037}00037 \{}
+\DoxyCodeLine{\Hypertarget{Rio_8cc_source_l00038}00038     \textcolor{keyword}{auto} it = \mbox{\hyperlink{classRio_aa58baab0fa7131bc378edcf6baa16314}{infoCiudades}}.find(\textcolor{keywordtype}{id});}
+\DoxyCodeLine{\Hypertarget{Rio_8cc_source_l00039}00039     it-\/>second.poner\_producto(p, pid);}
+\DoxyCodeLine{\Hypertarget{Rio_8cc_source_l00040}00040 \}}
+\DoxyCodeLine{\Hypertarget{Rio_8cc_source_l00041}00041 }
+\DoxyCodeLine{\Hypertarget{Rio_8cc_source_l00042}\mbox{\hyperlink{classRio_a3eac2ea880782074c1126ea1ac2412d0}{00042}} \textcolor{keywordtype}{void} \mbox{\hyperlink{classRio_a3eac2ea880782074c1126ea1ac2412d0}{Rio::quitar\_producto}}(\textcolor{keywordtype}{string} \textcolor{keywordtype}{id}, \textcolor{keywordtype}{int} pid)}
+\DoxyCodeLine{\Hypertarget{Rio_8cc_source_l00043}00043 \{}
+\DoxyCodeLine{\Hypertarget{Rio_8cc_source_l00044}00044     \textcolor{keyword}{auto} it = \mbox{\hyperlink{classRio_aa58baab0fa7131bc378edcf6baa16314}{infoCiudades}}.find(\textcolor{keywordtype}{id});}
+\DoxyCodeLine{\Hypertarget{Rio_8cc_source_l00045}00045     it-\/>second.quitar\_producto(pid);}
+\DoxyCodeLine{\Hypertarget{Rio_8cc_source_l00046}00046 \}}
+\DoxyCodeLine{\Hypertarget{Rio_8cc_source_l00047}00047 }
+\DoxyCodeLine{\Hypertarget{Rio_8cc_source_l00048}\mbox{\hyperlink{classRio_a7a653f64d55e6113ea8174ae33c8f678}{00048}} \textcolor{keywordtype}{void} \mbox{\hyperlink{classRio_a7a653f64d55e6113ea8174ae33c8f678}{Rio::modificar\_producto}}(\textcolor{keywordtype}{string} \textcolor{keywordtype}{id}, \textcolor{keywordtype}{int} pid, \mbox{\hyperlink{classProducto}{Producto}} \&p)}
+\DoxyCodeLine{\Hypertarget{Rio_8cc_source_l00049}00049 \{}
+\DoxyCodeLine{\Hypertarget{Rio_8cc_source_l00050}00050     \textcolor{keyword}{auto} it = \mbox{\hyperlink{classRio_aa58baab0fa7131bc378edcf6baa16314}{infoCiudades}}.find(\textcolor{keywordtype}{id});}
+\DoxyCodeLine{\Hypertarget{Rio_8cc_source_l00051}00051     it-\/>second.modificar\_producto(p, pid);}
+\DoxyCodeLine{\Hypertarget{Rio_8cc_source_l00052}00052 \}}
+\DoxyCodeLine{\Hypertarget{Rio_8cc_source_l00053}00053 }
+\DoxyCodeLine{\Hypertarget{Rio_8cc_source_l00054}\mbox{\hyperlink{classRio_aa1ee00916f52fb1e10b545cc9a656634}{00054}} \textcolor{keywordtype}{void} \mbox{\hyperlink{classRio_aa1ee00916f52fb1e10b545cc9a656634}{Rio::comerciar}}(\textcolor{keywordtype}{string} id1, \textcolor{keywordtype}{string} id2)}
+\DoxyCodeLine{\Hypertarget{Rio_8cc_source_l00055}00055 \{}
+\DoxyCodeLine{\Hypertarget{Rio_8cc_source_l00056}00056     \textcolor{keywordtype}{int} size1 = \mbox{\hyperlink{classRio_aa58baab0fa7131bc378edcf6baa16314}{infoCiudades}}[id1].consultar\_size();}
+\DoxyCodeLine{\Hypertarget{Rio_8cc_source_l00057}00057     \textcolor{keywordtype}{int} size2 = \mbox{\hyperlink{classRio_aa58baab0fa7131bc378edcf6baa16314}{infoCiudades}}[id2].consultar\_size();}
+\DoxyCodeLine{\Hypertarget{Rio_8cc_source_l00058}00058     \textcolor{keywordflow}{if} (size1 < size2) \{}
+\DoxyCodeLine{\Hypertarget{Rio_8cc_source_l00059}00059         \textcolor{keyword}{auto} it = \mbox{\hyperlink{classRio_aa58baab0fa7131bc378edcf6baa16314}{infoCiudades}}.find(id2);}
+\DoxyCodeLine{\Hypertarget{Rio_8cc_source_l00060}00060         \mbox{\hyperlink{classRio_aa58baab0fa7131bc378edcf6baa16314}{infoCiudades}}[id1].comerciar\_inventario(it-\/>second);}
+\DoxyCodeLine{\Hypertarget{Rio_8cc_source_l00061}00061     \}}
+\DoxyCodeLine{\Hypertarget{Rio_8cc_source_l00062}00062     \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{\Hypertarget{Rio_8cc_source_l00063}00063         \textcolor{keyword}{auto} it = \mbox{\hyperlink{classRio_aa58baab0fa7131bc378edcf6baa16314}{infoCiudades}}.find(id1);}
+\DoxyCodeLine{\Hypertarget{Rio_8cc_source_l00064}00064         \mbox{\hyperlink{classRio_aa58baab0fa7131bc378edcf6baa16314}{infoCiudades}}[id2].comerciar\_inventario(it-\/>second);}
+\DoxyCodeLine{\Hypertarget{Rio_8cc_source_l00065}00065     \}}
+\DoxyCodeLine{\Hypertarget{Rio_8cc_source_l00066}00066 \}}
+\DoxyCodeLine{\Hypertarget{Rio_8cc_source_l00067}00067 }
+\DoxyCodeLine{\Hypertarget{Rio_8cc_source_l00068}\mbox{\hyperlink{classRio_a9be9ba3e2c3434caa5f8bd74ab944fbb}{00068}} \textcolor{keywordtype}{void} \mbox{\hyperlink{classRio_a9be9ba3e2c3434caa5f8bd74ab944fbb}{Rio::redistribuir}}()}
+\DoxyCodeLine{\Hypertarget{Rio_8cc_source_l00069}00069 \{}
+\DoxyCodeLine{\Hypertarget{Rio_8cc_source_l00070}00070     \mbox{\hyperlink{classRio_a15865724197cb9964e1e5deee212116d}{redistribuir2}}(\mbox{\hyperlink{classRio_aefa7043534c9c57ece7159ee51300c8d}{estructura}});}
+\DoxyCodeLine{\Hypertarget{Rio_8cc_source_l00071}00071 \}}
+\DoxyCodeLine{\Hypertarget{Rio_8cc_source_l00072}00072 }
+\DoxyCodeLine{\Hypertarget{Rio_8cc_source_l00073}\mbox{\hyperlink{classRio_a7c734ada85112da293a875abe2b6728a}{00073}} \textcolor{keywordtype}{int} \mbox{\hyperlink{classRio_a7c734ada85112da293a875abe2b6728a}{Rio::consultar\_num}}()\textcolor{keyword}{ const }}
+\DoxyCodeLine{\Hypertarget{Rio_8cc_source_l00074}00074 \textcolor{keyword}{}\{}
+\DoxyCodeLine{\Hypertarget{Rio_8cc_source_l00075}00075     \textcolor{keywordflow}{return} \mbox{\hyperlink{classRio_a481f396ff3ea99d3ede2f54e5a9376a7}{catalogo}}.size();}
+\DoxyCodeLine{\Hypertarget{Rio_8cc_source_l00076}00076 \}}
+\DoxyCodeLine{\Hypertarget{Rio_8cc_source_l00077}00077 }
+\DoxyCodeLine{\Hypertarget{Rio_8cc_source_l00078}\mbox{\hyperlink{classRio_a0303e953b2454fc07903c7d2aad443ab}{00078}} \textcolor{keywordtype}{int} \mbox{\hyperlink{classRio_a0303e953b2454fc07903c7d2aad443ab}{Rio::consultar\_peso}}(\textcolor{keywordtype}{int} \textcolor{keywordtype}{id})\textcolor{keyword}{ const }\{}
+\DoxyCodeLine{\Hypertarget{Rio_8cc_source_l00079}00079     \textcolor{keyword}{auto} it = \mbox{\hyperlink{classRio_a481f396ff3ea99d3ede2f54e5a9376a7}{catalogo}}.find(\textcolor{keywordtype}{id});}
+\DoxyCodeLine{\Hypertarget{Rio_8cc_source_l00080}00080     \textcolor{keywordflow}{return} it-\/>second.consul\_peso();}
+\DoxyCodeLine{\Hypertarget{Rio_8cc_source_l00081}00081 \}}
+\DoxyCodeLine{\Hypertarget{Rio_8cc_source_l00082}00082 }
+\DoxyCodeLine{\Hypertarget{Rio_8cc_source_l00083}\mbox{\hyperlink{classRio_a6e2b75c64d48f1421daa8fc6c3ea5e7f}{00083}} \textcolor{keywordtype}{int} \mbox{\hyperlink{classRio_a6e2b75c64d48f1421daa8fc6c3ea5e7f}{Rio::consultar\_volumen}}(\textcolor{keywordtype}{int} \textcolor{keywordtype}{id})\textcolor{keyword}{ const}}
+\DoxyCodeLine{\Hypertarget{Rio_8cc_source_l00084}00084 \textcolor{keyword}{}\{}
+\DoxyCodeLine{\Hypertarget{Rio_8cc_source_l00085}00085     \textcolor{keyword}{auto} it = \mbox{\hyperlink{classRio_a481f396ff3ea99d3ede2f54e5a9376a7}{catalogo}}.find(\textcolor{keywordtype}{id});}
+\DoxyCodeLine{\Hypertarget{Rio_8cc_source_l00086}00086     \textcolor{keywordflow}{return} it-\/>second.consul\_volumen();}
+\DoxyCodeLine{\Hypertarget{Rio_8cc_source_l00087}00087 \}}
+\DoxyCodeLine{\Hypertarget{Rio_8cc_source_l00088}00088 }
+\DoxyCodeLine{\Hypertarget{Rio_8cc_source_l00089}\mbox{\hyperlink{classRio_a8e5abb07c17d6f7b04267739c73a4d0e}{00089}} \textcolor{keywordtype}{void} \mbox{\hyperlink{classRio_a8e5abb07c17d6f7b04267739c73a4d0e}{Rio::consultar\_prod}}(\textcolor{keywordtype}{string} identificador, \textcolor{keywordtype}{int} \textcolor{keywordtype}{id})\textcolor{keyword}{ const}}
+\DoxyCodeLine{\Hypertarget{Rio_8cc_source_l00090}00090 \textcolor{keyword}{}\{}
+\DoxyCodeLine{\Hypertarget{Rio_8cc_source_l00091}00091     \mbox{\hyperlink{classRio_aa58baab0fa7131bc378edcf6baa16314}{infoCiudades}}.at(identificador).consultar\_producto(\textcolor{keywordtype}{id});}
+\DoxyCodeLine{\Hypertarget{Rio_8cc_source_l00092}00092 \}}
+\DoxyCodeLine{\Hypertarget{Rio_8cc_source_l00093}00093 }
+\DoxyCodeLine{\Hypertarget{Rio_8cc_source_l00094}\mbox{\hyperlink{classRio_a73eb9cbeac29be7dbe0db2a5d27fa1bf}{00094}} \textcolor{keywordtype}{bool} \mbox{\hyperlink{classRio_a73eb9cbeac29be7dbe0db2a5d27fa1bf}{Rio::existe\_ciudad}}(\textcolor{keywordtype}{string} \textcolor{keywordtype}{id})\textcolor{keyword}{ const}}
+\DoxyCodeLine{\Hypertarget{Rio_8cc_source_l00095}00095 \textcolor{keyword}{}\{}
+\DoxyCodeLine{\Hypertarget{Rio_8cc_source_l00096}00096     \textcolor{keywordflow}{return} \mbox{\hyperlink{classRio_a1df23030aa13e36f618121ea2fb1c0fe}{ciudades}}.count(\textcolor{keywordtype}{id});}
+\DoxyCodeLine{\Hypertarget{Rio_8cc_source_l00097}00097 \}}
+\DoxyCodeLine{\Hypertarget{Rio_8cc_source_l00098}00098 }
+\DoxyCodeLine{\Hypertarget{Rio_8cc_source_l00099}\mbox{\hyperlink{classRio_a394db1db6c205f1ca5013f0c837f8cda}{00099}} \textcolor{keywordtype}{bool} \mbox{\hyperlink{classRio_a394db1db6c205f1ca5013f0c837f8cda}{Rio::existe\_prod}}(\textcolor{keywordtype}{int} \textcolor{keywordtype}{id})\textcolor{keyword}{ const}}
+\DoxyCodeLine{\Hypertarget{Rio_8cc_source_l00100}00100 \textcolor{keyword}{}\{}
+\DoxyCodeLine{\Hypertarget{Rio_8cc_source_l00101}00101     \textcolor{keywordflow}{return} \mbox{\hyperlink{classRio_a481f396ff3ea99d3ede2f54e5a9376a7}{catalogo}}.count(\textcolor{keywordtype}{id});}
+\DoxyCodeLine{\Hypertarget{Rio_8cc_source_l00102}00102 \}}
+\DoxyCodeLine{\Hypertarget{Rio_8cc_source_l00103}00103 }
+\DoxyCodeLine{\Hypertarget{Rio_8cc_source_l00104}\mbox{\hyperlink{classRio_a298bb2dc007527a8c2273205f257687d}{00104}} BinTree<string> \mbox{\hyperlink{classRio_a298bb2dc007527a8c2273205f257687d}{Rio::leer\_rio}}() }
+\DoxyCodeLine{\Hypertarget{Rio_8cc_source_l00105}00105 \{}
+\DoxyCodeLine{\Hypertarget{Rio_8cc_source_l00106}00106     \textcolor{keywordtype}{string} identificador;}
+\DoxyCodeLine{\Hypertarget{Rio_8cc_source_l00107}00107     cin >> identificador;}
+\DoxyCodeLine{\Hypertarget{Rio_8cc_source_l00108}00108 }
+\DoxyCodeLine{\Hypertarget{Rio_8cc_source_l00109}00109     \textcolor{keywordflow}{if} (identificador == \textcolor{stringliteral}{"{}\#"{}}) \textcolor{keywordflow}{return} BinTree<string>();}
+\DoxyCodeLine{\Hypertarget{Rio_8cc_source_l00110}00110     \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{\Hypertarget{Rio_8cc_source_l00111}00111         \mbox{\hyperlink{classRio_a1df23030aa13e36f618121ea2fb1c0fe}{ciudades}}[identificador] = \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{Rio_8cc_source_l00112}00112         BinTree<string> left = \mbox{\hyperlink{classRio_a298bb2dc007527a8c2273205f257687d}{leer\_rio}}();}
+\DoxyCodeLine{\Hypertarget{Rio_8cc_source_l00113}00113         BinTree<string> right = \mbox{\hyperlink{classRio_a298bb2dc007527a8c2273205f257687d}{leer\_rio}}();}
+\DoxyCodeLine{\Hypertarget{Rio_8cc_source_l00114}00114         \textcolor{keywordflow}{return} BinTree<string>(identificador, left, right);}
+\DoxyCodeLine{\Hypertarget{Rio_8cc_source_l00115}00115     \}}
+\DoxyCodeLine{\Hypertarget{Rio_8cc_source_l00116}00116 \}}
+\DoxyCodeLine{\Hypertarget{Rio_8cc_source_l00117}00117 }
+\DoxyCodeLine{\Hypertarget{Rio_8cc_source_l00118}\mbox{\hyperlink{classRio_a207f2c3a8da8eeed880d0f8845861744}{00118}} \textcolor{keywordtype}{void} \mbox{\hyperlink{classRio_a207f2c3a8da8eeed880d0f8845861744}{Rio::leer\_inventario}}(\textcolor{keywordtype}{string} \textcolor{keywordtype}{id}) }
+\DoxyCodeLine{\Hypertarget{Rio_8cc_source_l00119}00119 \{}
+\DoxyCodeLine{\Hypertarget{Rio_8cc_source_l00120}00120     \textcolor{keywordtype}{int} productos;}
+\DoxyCodeLine{\Hypertarget{Rio_8cc_source_l00121}00121     cin >> productos;}
+\DoxyCodeLine{\Hypertarget{Rio_8cc_source_l00122}00122     \textcolor{keywordflow}{if} (productos == 0) \mbox{\hyperlink{classRio_aa58baab0fa7131bc378edcf6baa16314}{infoCiudades}}[id].inicializar();}
+\DoxyCodeLine{\Hypertarget{Rio_8cc_source_l00123}00123     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < productos; ++i) \{}
+\DoxyCodeLine{\Hypertarget{Rio_8cc_source_l00124}00124         \textcolor{keywordtype}{int} pid, tiene, quiere;}
+\DoxyCodeLine{\Hypertarget{Rio_8cc_source_l00125}00125         cin >> pid >> tiene >> quiere;}
+\DoxyCodeLine{\Hypertarget{Rio_8cc_source_l00126}00126         \textcolor{keywordtype}{int} peso = \mbox{\hyperlink{classRio_a481f396ff3ea99d3ede2f54e5a9376a7}{catalogo}}[pid].consul\_peso();}
+\DoxyCodeLine{\Hypertarget{Rio_8cc_source_l00127}00127         \textcolor{keywordtype}{int} volumen = \mbox{\hyperlink{classRio_a481f396ff3ea99d3ede2f54e5a9376a7}{catalogo}}[pid].consul\_volumen();}
+\DoxyCodeLine{\Hypertarget{Rio_8cc_source_l00128}00128         \mbox{\hyperlink{classProducto}{Producto}} aux(peso, volumen, tiene, quiere);}
+\DoxyCodeLine{\Hypertarget{Rio_8cc_source_l00129}00129         \mbox{\hyperlink{classRio_aa58baab0fa7131bc378edcf6baa16314}{infoCiudades}}[id].poner\_producto2(aux, pid);}
+\DoxyCodeLine{\Hypertarget{Rio_8cc_source_l00130}00130     \}}
+\DoxyCodeLine{\Hypertarget{Rio_8cc_source_l00131}00131 \}}
+\DoxyCodeLine{\Hypertarget{Rio_8cc_source_l00132}00132 }
+\DoxyCodeLine{\Hypertarget{Rio_8cc_source_l00133}\mbox{\hyperlink{classRio_a3411039631544d16ba19b2b22a92c3a1}{00133}} \textcolor{keywordtype}{void} \mbox{\hyperlink{classRio_a3411039631544d16ba19b2b22a92c3a1}{Rio::leer\_inventarios}}() }
+\DoxyCodeLine{\Hypertarget{Rio_8cc_source_l00134}00134 \{}
+\DoxyCodeLine{\Hypertarget{Rio_8cc_source_l00135}00135     \textcolor{keywordtype}{string} id;}
+\DoxyCodeLine{\Hypertarget{Rio_8cc_source_l00136}00136     cin >> id;}
+\DoxyCodeLine{\Hypertarget{Rio_8cc_source_l00137}00137     \textcolor{keywordflow}{while} (\textcolor{keywordtype}{id} != \textcolor{stringliteral}{"{}\#"{}}) \{}
+\DoxyCodeLine{\Hypertarget{Rio_8cc_source_l00138}00138         \mbox{\hyperlink{classRio_a207f2c3a8da8eeed880d0f8845861744}{leer\_inventario}}(\textcolor{keywordtype}{id});}
+\DoxyCodeLine{\Hypertarget{Rio_8cc_source_l00139}00139         cin >> id;}
+\DoxyCodeLine{\Hypertarget{Rio_8cc_source_l00140}00140     \}}
+\DoxyCodeLine{\Hypertarget{Rio_8cc_source_l00141}00141 \}}
+\DoxyCodeLine{\Hypertarget{Rio_8cc_source_l00142}00142 }
+\DoxyCodeLine{\Hypertarget{Rio_8cc_source_l00143}\mbox{\hyperlink{classRio_ac0d1982f96d94458a8da4a5394f18c6f}{00143}} \textcolor{keywordtype}{void} \mbox{\hyperlink{classRio_ac0d1982f96d94458a8da4a5394f18c6f}{Rio::leer\_productos\_dif}}() }
+\DoxyCodeLine{\Hypertarget{Rio_8cc_source_l00144}00144 \{}
+\DoxyCodeLine{\Hypertarget{Rio_8cc_source_l00145}00145     \textcolor{keywordtype}{int} numProd;}
+\DoxyCodeLine{\Hypertarget{Rio_8cc_source_l00146}00146     cin >> numProd;}
+\DoxyCodeLine{\Hypertarget{Rio_8cc_source_l00147}00147     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 1; i <= numProd; ++i) \{}
+\DoxyCodeLine{\Hypertarget{Rio_8cc_source_l00148}00148         \mbox{\hyperlink{classProducto}{Producto}} p;}
+\DoxyCodeLine{\Hypertarget{Rio_8cc_source_l00149}00149         p.\mbox{\hyperlink{classProducto_ad8d6d4bc46d18f18b1c4e4efccde781f}{leer}}();}
+\DoxyCodeLine{\Hypertarget{Rio_8cc_source_l00150}00150         \mbox{\hyperlink{classRio_a481f396ff3ea99d3ede2f54e5a9376a7}{catalogo}}[i] = p;}
+\DoxyCodeLine{\Hypertarget{Rio_8cc_source_l00151}00151     \}}
+\DoxyCodeLine{\Hypertarget{Rio_8cc_source_l00152}00152 \}}
+\DoxyCodeLine{\Hypertarget{Rio_8cc_source_l00153}\mbox{\hyperlink{classRio_aa49d58e87db25e78ec698042c6403454}{00153}} \textcolor{keywordtype}{void} \mbox{\hyperlink{classRio_aa49d58e87db25e78ec698042c6403454}{Rio::leer\_barco}}()}
+\DoxyCodeLine{\Hypertarget{Rio_8cc_source_l00154}00154 \{}
+\DoxyCodeLine{\Hypertarget{Rio_8cc_source_l00155}00155     \mbox{\hyperlink{classRio_a945de076e87f4e5b180a64f5eef3f073}{embarcacion}}.\mbox{\hyperlink{classBarco_adbcd8100a10a2fea162e6c18bd8d3914}{leer}}();}
+\DoxyCodeLine{\Hypertarget{Rio_8cc_source_l00156}00156 \}}
+\DoxyCodeLine{\Hypertarget{Rio_8cc_source_l00157}00157 }
+\DoxyCodeLine{\Hypertarget{Rio_8cc_source_l00158}\mbox{\hyperlink{classRio_a457344228d687c95bbd8b35c51b1a8d9}{00158}} \textcolor{keywordtype}{void} \mbox{\hyperlink{classRio_a457344228d687c95bbd8b35c51b1a8d9}{Rio::escribir\_ciudad}}(\textcolor{keywordtype}{string} \textcolor{keywordtype}{id})\textcolor{keyword}{ const}}
+\DoxyCodeLine{\Hypertarget{Rio_8cc_source_l00159}00159 \textcolor{keyword}{}\{}
+\DoxyCodeLine{\Hypertarget{Rio_8cc_source_l00160}00160     \textcolor{keyword}{auto} it = \mbox{\hyperlink{classRio_aa58baab0fa7131bc378edcf6baa16314}{infoCiudades}}.find(\textcolor{keywordtype}{id});}
+\DoxyCodeLine{\Hypertarget{Rio_8cc_source_l00161}00161     it-\/>second.escribir\_ciudad();}
+\DoxyCodeLine{\Hypertarget{Rio_8cc_source_l00162}00162 \}}
+\DoxyCodeLine{\Hypertarget{Rio_8cc_source_l00163}00163 }
+\DoxyCodeLine{\Hypertarget{Rio_8cc_source_l00164}\mbox{\hyperlink{classRio_ad1f2ad7a3dfd9f0464e23420aa166baf}{00164}} \textcolor{keywordtype}{void} \mbox{\hyperlink{classRio_ad1f2ad7a3dfd9f0464e23420aa166baf}{Rio::escribir\_prod}}(\textcolor{keywordtype}{int} \textcolor{keywordtype}{id})\textcolor{keyword}{ const}}
+\DoxyCodeLine{\Hypertarget{Rio_8cc_source_l00165}00165 \textcolor{keyword}{}\{}
+\DoxyCodeLine{\Hypertarget{Rio_8cc_source_l00166}00166     \textcolor{keyword}{auto} it = \mbox{\hyperlink{classRio_a481f396ff3ea99d3ede2f54e5a9376a7}{catalogo}}.find(\textcolor{keywordtype}{id});}
+\DoxyCodeLine{\Hypertarget{Rio_8cc_source_l00167}00167     cout << \textcolor{keywordtype}{id} << \textcolor{charliteral}{' '};}
+\DoxyCodeLine{\Hypertarget{Rio_8cc_source_l00168}00168     it-\/>second.escribir\_producto();}
+\DoxyCodeLine{\Hypertarget{Rio_8cc_source_l00169}00169 \}}
+\DoxyCodeLine{\Hypertarget{Rio_8cc_source_l00170}00170 }
+\DoxyCodeLine{\Hypertarget{Rio_8cc_source_l00171}\mbox{\hyperlink{classRio_a082df406f7cc228445692630ac9c3ab0}{00171}} \textcolor{keywordtype}{void} \mbox{\hyperlink{classRio_a082df406f7cc228445692630ac9c3ab0}{Rio::escribir\_barco}}()\textcolor{keyword}{ const}}
+\DoxyCodeLine{\Hypertarget{Rio_8cc_source_l00172}00172 \textcolor{keyword}{}\{}
+\DoxyCodeLine{\Hypertarget{Rio_8cc_source_l00173}00173     \mbox{\hyperlink{classRio_a945de076e87f4e5b180a64f5eef3f073}{embarcacion}}.\mbox{\hyperlink{classBarco_a3f1c26f2f0565e375924dae85b2e89a0}{escribir\_barco}}();}
+\DoxyCodeLine{\Hypertarget{Rio_8cc_source_l00174}00174 \}}
+\DoxyCodeLine{\Hypertarget{Rio_8cc_source_l00175}00175 }
+\DoxyCodeLine{\Hypertarget{Rio_8cc_source_l00176}\mbox{\hyperlink{classRio_a15865724197cb9964e1e5deee212116d}{00176}} \textcolor{keywordtype}{void} \mbox{\hyperlink{classRio_a15865724197cb9964e1e5deee212116d}{Rio::redistribuir2}}(BinTree<string> t)}
+\DoxyCodeLine{\Hypertarget{Rio_8cc_source_l00177}00177 \{}
+\DoxyCodeLine{\Hypertarget{Rio_8cc_source_l00178}00178     \textcolor{keywordflow}{if} (t.empty()) \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{Rio_8cc_source_l00179}00179     \mbox{\hyperlink{classRio_a15865724197cb9964e1e5deee212116d}{redistribuir2}}(t.left());}
+\DoxyCodeLine{\Hypertarget{Rio_8cc_source_l00180}00180     \mbox{\hyperlink{classRio_a15865724197cb9964e1e5deee212116d}{redistribuir2}}(t.right());}
+\DoxyCodeLine{\Hypertarget{Rio_8cc_source_l00181}00181     \textcolor{keywordflow}{if} (not t.left().empty()) \mbox{\hyperlink{classRio_aa1ee00916f52fb1e10b545cc9a656634}{comerciar}}(t.value(), t.left().value());}
+\DoxyCodeLine{\Hypertarget{Rio_8cc_source_l00182}00182     \textcolor{keywordflow}{if} (not t.right().empty()) \mbox{\hyperlink{classRio_aa1ee00916f52fb1e10b545cc9a656634}{comerciar}}(t.value(), t.right().value());}
+\DoxyCodeLine{\Hypertarget{Rio_8cc_source_l00183}00183 \}}
+
+\end{DoxyCode}

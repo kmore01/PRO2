@@ -1,0 +1,120 @@
+#include "Ciudad.hh"
+
+Ciudad::Ciudad() 
+{
+}
+
+Ciudad::Ciudad(string id) 
+{
+    identificador = id;
+}
+
+void Ciudad::poner_producto(const Producto &p, int id_producto)
+{
+    if (inventario.find(id_producto) == inventario.end()) {
+        inventario[id_producto] = p;
+        peso_total += p.consul_peso() * p.consul_enpos();
+        volumen_total += p.consul_volumen() * p.consul_enpos();
+        cout << peso_total << ' ' << volumen_total << endl;
+    }
+    else cout << "error: la ciudad ya tiene el producto" << endl;
+}
+
+void Ciudad::poner_producto2(const Producto &p, int id_producto)
+{
+    inventario[id_producto] = p;
+    peso_total += p.consul_peso() * p.consul_enpos();
+    volumen_total += p.consul_volumen() * p.consul_enpos();
+}
+
+void Ciudad::modificar_producto(const Producto &p, int id_producto) 
+{
+    auto it = inventario.find(id_producto);
+    if (it != inventario.end()) {
+        int tiene = it->second.consul_enpos();
+        int tiene2 = p.consul_enpos();
+        peso_total = peso_total - (it->second.consul_peso() * tiene) + (p.consul_peso() * tiene2);
+        volumen_total = volumen_total - (it->second.consul_volumen() * tiene) + (p.consul_volumen() * tiene2);
+        inventario[id_producto] = p;
+        cout << peso_total << ' ' << volumen_total << endl;
+    }
+    else cout << "error: la ciudad no tiene el producto" << endl;
+}
+
+void Ciudad::quitar_producto(int id_producto)
+{
+    auto it = inventario.find(id_producto);
+    if (it != inventario.end()) {
+        peso_total -= it->second.consul_peso() * it->second.consul_enpos();
+        volumen_total -= it->second.consul_volumen() * it->second.consul_enpos();
+        inventario.erase(it); 
+        cout << peso_total << ' ' << volumen_total << endl;
+    }
+    else cout << "error: la ciudad no tiene el producto" << endl;
+}
+
+void Ciudad::comerciar_inventario(Ciudad &c)
+{
+    /* OPTIMIZACION NECESARIA */
+    for (auto it = inventario.begin(); it != inventario.end(); ++it) {
+        auto it2 = c.inventario.find(it->first);
+        if (it2 != c.inventario.end()) {
+            bool parar = false;
+            int peso1 = it->second.consul_peso();
+            int vol1 = it->second.consul_volumen();
+            int peso2 = it2->second.consul_peso();
+            int vol2 = it2->second.consul_volumen();
+            while (not parar) {
+                if (it->second.consul_enpos() < it->second.consul_des() and   it2->second.consul_enpos() > it2->second.consul_des()) {
+                    it->second.mas_tiene();
+                    peso_total += peso1;
+                    volumen_total += vol1;
+                    it2->second.menos_tiene();
+                    c.peso_total -= peso2;
+                    c.volumen_total -= vol2;
+                }
+                else if (it2->second.consul_enpos() < it2->second.consul_des() and it->second.consul_enpos() > it->second.consul_des()) {
+                    it2->second.mas_tiene();
+                    c.peso_total += peso2;
+                    c.volumen_total += vol2;
+                    it->second.menos_tiene();
+                    peso_total -= peso1;
+                    volumen_total -= vol1;
+                }
+                parar = (it->second.consul_des() == it->second.consul_enpos()) or (it2->second.consul_des() == it2->second.consul_enpos());
+                if (parar) break;
+            }
+        }
+    }
+
+}
+
+void Ciudad::inicializar()
+{
+    peso_total = volumen_total = 0;
+}
+
+void Ciudad::consultar_producto(int id_producto) const
+{
+    auto it = inventario.find(id_producto);
+    if (it != inventario.end()) {
+        cout << it->second.consul_enpos() << ' ' << it->second.consul_des() << endl;
+    }
+    else cout << "error: la ciudad no tiene el producto" << endl;
+}
+
+int Ciudad::consultar_size() const
+{
+    return inventario.size();
+}
+
+void Ciudad::escribir_ciudad() const
+{
+    for (auto it = inventario.begin(); it != inventario.end(); ++it) {
+        cout << it->first << ' ' << it->second.consul_enpos() << ' '
+             << it->second.consul_des() << endl;
+        //it->second.escribir_producto();
+        // cout << endl;  
+    }
+    cout << peso_total << ' ' << volumen_total << endl; 
+}

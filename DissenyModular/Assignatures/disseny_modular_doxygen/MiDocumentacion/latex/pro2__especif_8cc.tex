@@ -1,0 +1,84 @@
+\hypertarget{pro2__especif_8cc}{}\doxysection{Referencia del Archivo pro2\+\_\+especif.\+cc}
+\label{pro2__especif_8cc}\index{pro2\_especif.cc@{pro2\_especif.cc}}
+{\ttfamily \#include \char`\"{}Prenda.\+hh\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Lavadora.\+hh\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Cubeta.\+hh\char`\"{}}\newline
+Dependencia gráfica adjunta para pro2\+\_\+especif.\+cc\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=213pt]{pro2__especif_8cc__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Funciones}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{pro2__especif_8cc_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\begin{DoxyCompactList}\small\item\em Programa principal para el ejercicio {\itshape Gestión de una lavadora}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Documentación de las funciones}
+\mbox{\Hypertarget{pro2__especif_8cc_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{pro2__especif_8cc_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
+\index{pro2\_especif.cc@{pro2\_especif.cc}!main@{main}}
+\index{main@{main}!pro2\_especif.cc@{pro2\_especif.cc}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Programa principal para el ejercicio {\itshape Gestión de una lavadora}. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{25             \{}
+\DoxyCodeLine{26     \mbox{\hyperlink{classLavadora}{Lavadora}} lav;}
+\DoxyCodeLine{27     \mbox{\hyperlink{classCubeta}{Cubeta}} cub;}
+\DoxyCodeLine{28     \textcolor{keywordtype}{int} opcion;}
+\DoxyCodeLine{29     cin >> opcion;}
+\DoxyCodeLine{30     \textcolor{keywordflow}{while} (opcion != -\/8) \{    }
+\DoxyCodeLine{31         \textcolor{comment}{// inicializar lavadora (datos: peso máximo y color)}}
+\DoxyCodeLine{32         \textcolor{keywordflow}{if} (opcion == -\/1) \{}
+\DoxyCodeLine{33             \textcolor{keywordtype}{int} pmaxim;}
+\DoxyCodeLine{34             \textcolor{keywordtype}{bool} color;}
+\DoxyCodeLine{35             cin >> pmaxim;}
+\DoxyCodeLine{36             color = readbool();}
+\DoxyCodeLine{37             lav.\mbox{\hyperlink{classLavadora_a733af02910dca3f75390be4ca6ac84f6}{inicializar}}(pmaxim, color);}
+\DoxyCodeLine{38         \}}
+\DoxyCodeLine{39         \textcolor{comment}{// añadir una prenda a la lavadora (datos: peso  y color de la prenda)}}
+\DoxyCodeLine{40         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (opcion == -\/2) \{}
+\DoxyCodeLine{41             \textcolor{keywordtype}{int} peso;}
+\DoxyCodeLine{42             \textcolor{keywordtype}{bool} color;}
+\DoxyCodeLine{43             cin >> peso;}
+\DoxyCodeLine{44             color = readbool();}
+\DoxyCodeLine{45             \mbox{\hyperlink{classPrenda}{Prenda}} pren(peso, color);}
+\DoxyCodeLine{46             lav.\mbox{\hyperlink{classLavadora_a7e465e1f11ba5ba3cffcee1ce9507e79}{anadir\_prenda}}(pren);}
+\DoxyCodeLine{47         \}}
+\DoxyCodeLine{48         \textcolor{comment}{// añadir una prenda a la cubeta (datos: peso  y color de la prenda)}}
+\DoxyCodeLine{49         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (opcion == -\/3) \{}
+\DoxyCodeLine{50             \textcolor{keywordtype}{int} peso;}
+\DoxyCodeLine{51             \textcolor{keywordtype}{bool} color;}
+\DoxyCodeLine{52             cin >> peso >> color;}
+\DoxyCodeLine{53             \mbox{\hyperlink{classPrenda}{Prenda}} pren(peso, color);}
+\DoxyCodeLine{54             cub.\mbox{\hyperlink{classCubeta_a431873df8f99cebe56b4787a5271e395}{anadir\_prenda}}(pren);}
+\DoxyCodeLine{55         \}}
+\DoxyCodeLine{56         \textcolor{comment}{// completar la lavadora}}
+\DoxyCodeLine{57         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (opcion == -\/4) \{}
+\DoxyCodeLine{58             cub.\mbox{\hyperlink{classCubeta_a60a5a4f4133ce02f1e4fe49bbe8b9ec7}{completar\_lavadora}}(lav);}
+\DoxyCodeLine{59         \}}
+\DoxyCodeLine{60         \textcolor{comment}{// realizar un lavado}}
+\DoxyCodeLine{61         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (opcion == -\/5) \{}
+\DoxyCodeLine{62             lav.\mbox{\hyperlink{classLavadora_a82bd403e688482030fcb95f0c3fd62d1}{lavado}}();}
+\DoxyCodeLine{63         \}}
+\DoxyCodeLine{64         \textcolor{comment}{// escribir el contenido de la cubeta}}
+\DoxyCodeLine{65         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (opcion == -\/6) \{}
+\DoxyCodeLine{66             cub.\mbox{\hyperlink{classCubeta_a3153ac390389f689bead058cd0b1690e}{escribir}}();}
+\DoxyCodeLine{67         \}}
+\DoxyCodeLine{68         \textcolor{comment}{// escribir el contenido de la lavadora}}
+\DoxyCodeLine{69         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (opcion == -\/7) \{}
+\DoxyCodeLine{70             lav.\mbox{\hyperlink{classLavadora_a2372c33a5f76dda6e3892d118ae726f1}{escribir}}();}
+\DoxyCodeLine{71         \}}
+\DoxyCodeLine{72         cin >> opcion;}
+\DoxyCodeLine{73     \}}
+\DoxyCodeLine{74 \}}
+
+\end{DoxyCode}

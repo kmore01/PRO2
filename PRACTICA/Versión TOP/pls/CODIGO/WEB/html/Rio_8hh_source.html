@@ -1,0 +1,205 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>PRO2 PRÁCTICA - Comercio fluvial -: Fichero Fuente Rio.hh</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">PRO2 PRÁCTICA - Comercio fluvial -
+   &#160;<span id="projectnumber">Versión primavera 2024</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">Rio.hh</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="Rio_8hh.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#ifndef _RIO_HH_</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#define _RIO_HH_</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="Producto_8hh.html">Producto.hh</a>&quot;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="Ciudad_8hh.html">Ciudad.hh</a>&quot;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="Barco_8hh.html">Barco.hh</a>&quot;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#ifndef NO_DIAGRAM</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &quot;BinTree.hh&quot;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &lt;map&gt;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &lt;list&gt;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="classRio.html">   24</a></span>&#160;<span class="keyword">class </span><a class="code" href="classRio.html">Rio</a></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;{</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="comment">// Constructoras</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <a class="code" href="classRio.html#a1dc8b1e6f2e4d7087575bf051abb28f4">Rio</a>();</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <a class="code" href="classRio.html#a1dc8b1e6f2e4d7087575bf051abb28f4">Rio</a>(map&lt;int, Producto&gt; cat, BinTree&lt;string&gt; estruct, <a class="code" href="classBarco.html">Barco</a> embarc);</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="comment">// Modificadoras</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classRio.html#ad83abc00e9bfa4d4a627a0bb70cef996">agregar_productos</a>(<span class="keywordtype">int</span> nprod);</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classRio.html#aa1e085e559d338965c9ad74e4346cd63">modificar_barco</a>(<span class="keywordtype">int</span> id1, <span class="keywordtype">int</span> nid1, <span class="keywordtype">int</span> id2, <span class="keywordtype">int</span> nid2);</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classRio.html#a5c37a181618956b3234f56e022bfe980">poner_producto</a>(<span class="keywordtype">string</span> <span class="keywordtype">id</span>, <span class="keywordtype">int</span> pid, <a class="code" href="classProducto.html">Producto</a> &amp;p);</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classRio.html#a3eac2ea880782074c1126ea1ac2412d0">quitar_producto</a>(<span class="keywordtype">string</span> <span class="keywordtype">id</span>, <span class="keywordtype">int</span> pid);</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classRio.html#a7a653f64d55e6113ea8174ae33c8f678">modificar_producto</a>(<span class="keywordtype">string</span> <span class="keywordtype">id</span>, <span class="keywordtype">int</span> pid, <a class="code" href="classProducto.html">Producto</a> &amp;p);</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classRio.html#aa798d3c2cd60e914ad005eac0da7afc9">modificar_producto2</a>(<span class="keywordtype">string</span> <span class="keywordtype">id</span>, <span class="keywordtype">int</span> pid, <a class="code" href="classProducto.html">Producto</a> &amp;p);</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classRio.html#aa1ee00916f52fb1e10b545cc9a656634">comerciar</a>(<span class="keywordtype">string</span> id1, <span class="keywordtype">string</span> id2);</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classRio.html#a9be9ba3e2c3434caa5f8bd74ab944fbb">redistribuir</a>();</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160; </div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classRio.html#ae50bf4c5f1aa05c7b8bea6d8f10b51f6">hacer_viaje</a>();</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160; </div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="comment">// Consultoras</span></div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160; </div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classRio.html#a7c734ada85112da293a875abe2b6728a">consultar_num</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160; </div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classRio.html#a0303e953b2454fc07903c7d2aad443ab">consultar_peso</a>(<span class="keywordtype">int</span> <span class="keywordtype">id</span>) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160; </div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classRio.html#a6e2b75c64d48f1421daa8fc6c3ea5e7f">consultar_volumen</a>(<span class="keywordtype">int</span> <span class="keywordtype">id</span>) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160; </div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classRio.html#a8e5abb07c17d6f7b04267739c73a4d0e">consultar_prod</a>(<span class="keywordtype">string</span> identificador, <span class="keywordtype">int</span> <span class="keywordtype">id</span>) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160; </div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classRio.html#a73eb9cbeac29be7dbe0db2a5d27fa1bf">existe_ciudad</a>(<span class="keywordtype">string</span> <span class="keywordtype">id</span>) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160; </div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classRio.html#a394db1db6c205f1ca5013f0c837f8cda">existe_prod</a>(<span class="keywordtype">int</span> <span class="keywordtype">id</span>) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160; </div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    list&lt;string&gt; <a class="code" href="classRio.html#af72f485dd7db5de1a46a216c7596d6f8">camino</a>();</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160; </div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    <span class="comment">// Lectura y escritura de rio</span></div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160; </div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classRio.html#ac0eaeb22a0624fffab22f82c06071d81">leer_rio0</a>();</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160; </div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;    BinTree&lt;string&gt; <a class="code" href="classRio.html#a298bb2dc007527a8c2273205f257687d">leer_rio</a>();</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160; </div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classRio.html#a207f2c3a8da8eeed880d0f8845861744">leer_inventario</a>(<span class="keywordtype">string</span> <span class="keywordtype">id</span>);</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160; </div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classRio.html#a3411039631544d16ba19b2b22a92c3a1">leer_inventarios</a>();</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160; </div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classRio.html#ac0d1982f96d94458a8da4a5394f18c6f">leer_productos_dif</a>();</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160; </div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classRio.html#aa49d58e87db25e78ec698042c6403454">leer_barco</a>();</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160; </div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classRio.html#a457344228d687c95bbd8b35c51b1a8d9">escribir_ciudad</a>(<span class="keywordtype">string</span> <span class="keywordtype">id</span>) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160; </div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classRio.html#ad1f2ad7a3dfd9f0464e23420aa166baf">escribir_prod</a>(<span class="keywordtype">int</span> <span class="keywordtype">id</span>) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160; </div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classRio.html#a082df406f7cc228445692630ac9c3ab0">escribir_barco</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160; </div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160; </div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160; </div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00192"></a><span class="lineno"><a class="line" href="classRio.html#a481f396ff3ea99d3ede2f54e5a9376a7">  192</a></span>&#160;    map&lt;int, Producto&gt; <a class="code" href="classRio.html#a481f396ff3ea99d3ede2f54e5a9376a7">catalogo</a>;</div>
+<div class="line"><a name="l00193"></a><span class="lineno"><a class="line" href="classRio.html#aefa7043534c9c57ece7159ee51300c8d">  193</a></span>&#160;    BinTree&lt;string&gt; <a class="code" href="classRio.html#aefa7043534c9c57ece7159ee51300c8d">estructura</a>;</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;    <span class="comment">// id-&gt;Ciudad</span></div>
+<div class="line"><a name="l00195"></a><span class="lineno"><a class="line" href="classRio.html#aa58baab0fa7131bc378edcf6baa16314">  195</a></span>&#160;    map&lt;string, Ciudad&gt; <a class="code" href="classRio.html#aa58baab0fa7131bc378edcf6baa16314">infoCiudades</a>;</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;    <span class="comment">// string-&gt;Ciudad</span></div>
+<div class="line"><a name="l00197"></a><span class="lineno"><a class="line" href="classRio.html#a945de076e87f4e5b180a64f5eef3f073">  197</a></span>&#160;    <a class="code" href="classBarco.html">Barco</a> <a class="code" href="classRio.html#a945de076e87f4e5b180a64f5eef3f073">embarcacion</a>;</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classRio.html#a15865724197cb9964e1e5deee212116d">redistribuir2</a>(BinTree&lt;string&gt; t);</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;    <span class="keyword">static</span> list&lt;string&gt; <a class="code" href="classRio.html#aefdc17749cfe6fa1cd5d813971e984b7">camino2</a>(BinTree&lt;string&gt; t, <span class="keyword">const</span> map&lt;string, Ciudad&gt; &amp;info, <a class="code" href="classBarco.html">Barco</a> b, <span class="keywordtype">int</span> &amp;compradas, <span class="keywordtype">int</span> &amp;vendidas);</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;};</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aBarco_8hh_html"><div class="ttname"><a href="Barco_8hh.html">Barco.hh</a></div><div class="ttdoc">Especificación de la clase Barco.</div></div>
+<div class="ttc" id="aCiudad_8hh_html"><div class="ttname"><a href="Ciudad_8hh.html">Ciudad.hh</a></div><div class="ttdoc">Especificación de la clase Ciudad.</div></div>
+<div class="ttc" id="aProducto_8hh_html"><div class="ttname"><a href="Producto_8hh.html">Producto.hh</a></div><div class="ttdoc">Especificación de la clase Producto.</div></div>
+<div class="ttc" id="aclassBarco_html"><div class="ttname"><a href="classBarco.html">Barco</a></div><div class="ttdoc">Representa el barco comerciante de la cuenca fluvial.</div><div class="ttdef"><b>Definition:</b> <a href="Barco_8hh_source.html#l00020">Barco.hh:21</a></div></div>
+<div class="ttc" id="aclassProducto_html"><div class="ttname"><a href="classProducto.html">Producto</a></div><div class="ttdoc">Representa una producto.</div><div class="ttdef"><b>Definition:</b> <a href="Producto_8hh_source.html#l00017">Producto.hh:18</a></div></div>
+<div class="ttc" id="aclassRio_html"><div class="ttname"><a href="classRio.html">Rio</a></div><div class="ttdoc">Representa el rio de la cuenca fluvial.</div><div class="ttdef"><b>Definition:</b> <a href="Rio_8hh_source.html#l00024">Rio.hh:25</a></div></div>
+<div class="ttc" id="aclassRio_html_a0303e953b2454fc07903c7d2aad443ab"><div class="ttname"><a href="classRio.html#a0303e953b2454fc07903c7d2aad443ab">Rio::consultar_peso</a></div><div class="ttdeci">int consultar_peso(int id) const</div><div class="ttdoc">Consultora del peso de un Producto.</div><div class="ttdef"><b>Definition:</b> <a href="Rio_8cc_source.html#l00132">Rio.cc:132</a></div></div>
+<div class="ttc" id="aclassRio_html_a082df406f7cc228445692630ac9c3ab0"><div class="ttname"><a href="classRio.html#a082df406f7cc228445692630ac9c3ab0">Rio::escribir_barco</a></div><div class="ttdeci">void escribir_barco() const</div><div class="ttdoc">Tercera operación de escritura.</div><div class="ttdef"><b>Definition:</b> <a href="Rio_8cc_source.html#l00253">Rio.cc:253</a></div></div>
+<div class="ttc" id="aclassRio_html_a15865724197cb9964e1e5deee212116d"><div class="ttname"><a href="classRio.html#a15865724197cb9964e1e5deee212116d">Rio::redistribuir2</a></div><div class="ttdeci">void redistribuir2(BinTree&lt; string &gt; t)</div><div class="ttdef"><b>Definition:</b> <a href="Rio_8cc_source.html#l00258">Rio.cc:258</a></div></div>
+<div class="ttc" id="aclassRio_html_a1dc8b1e6f2e4d7087575bf051abb28f4"><div class="ttname"><a href="classRio.html#a1dc8b1e6f2e4d7087575bf051abb28f4">Rio::Rio</a></div><div class="ttdeci">Rio()</div><div class="ttdoc">Creadora por defecto. Se ejecuta automáticamente al declarar un río.</div><div class="ttdef"><b>Definition:</b> <a href="Rio_8cc_source.html#l00006">Rio.cc:6</a></div></div>
+<div class="ttc" id="aclassRio_html_a207f2c3a8da8eeed880d0f8845861744"><div class="ttname"><a href="classRio.html#a207f2c3a8da8eeed880d0f8845861744">Rio::leer_inventario</a></div><div class="ttdeci">void leer_inventario(string id)</div><div class="ttdoc">Segunda operación de lectura.</div><div class="ttdef"><b>Definition:</b> <a href="Rio_8cc_source.html#l00193">Rio.cc:193</a></div></div>
+<div class="ttc" id="aclassRio_html_a298bb2dc007527a8c2273205f257687d"><div class="ttname"><a href="classRio.html#a298bb2dc007527a8c2273205f257687d">Rio::leer_rio</a></div><div class="ttdeci">BinTree&lt; string &gt; leer_rio()</div><div class="ttdoc">Primera operación de lectura.</div><div class="ttdef"><b>Definition:</b> <a href="Rio_8cc_source.html#l00179">Rio.cc:179</a></div></div>
+<div class="ttc" id="aclassRio_html_a3411039631544d16ba19b2b22a92c3a1"><div class="ttname"><a href="classRio.html#a3411039631544d16ba19b2b22a92c3a1">Rio::leer_inventarios</a></div><div class="ttdeci">void leer_inventarios()</div><div class="ttdoc">Tercera operación de lectura.</div><div class="ttdef"><b>Definition:</b> <a href="Rio_8cc_source.html#l00213">Rio.cc:213</a></div></div>
+<div class="ttc" id="aclassRio_html_a394db1db6c205f1ca5013f0c837f8cda"><div class="ttname"><a href="classRio.html#a394db1db6c205f1ca5013f0c837f8cda">Rio::existe_prod</a></div><div class="ttdeci">bool existe_prod(int id) const</div><div class="ttdoc">Consultora de la existencia de un producto.</div><div class="ttdef"><b>Definition:</b> <a href="Rio_8cc_source.html#l00153">Rio.cc:153</a></div></div>
+<div class="ttc" id="aclassRio_html_a3eac2ea880782074c1126ea1ac2412d0"><div class="ttname"><a href="classRio.html#a3eac2ea880782074c1126ea1ac2412d0">Rio::quitar_producto</a></div><div class="ttdeci">void quitar_producto(string id, int pid)</div><div class="ttdoc">Elimina un Producto de una Ciudad.</div><div class="ttdef"><b>Definition:</b> <a href="Rio_8cc_source.html#l00045">Rio.cc:45</a></div></div>
+<div class="ttc" id="aclassRio_html_a457344228d687c95bbd8b35c51b1a8d9"><div class="ttname"><a href="classRio.html#a457344228d687c95bbd8b35c51b1a8d9">Rio::escribir_ciudad</a></div><div class="ttdeci">void escribir_ciudad(string id) const</div><div class="ttdoc">Primera operación de escritura.</div><div class="ttdef"><b>Definition:</b> <a href="Rio_8cc_source.html#l00240">Rio.cc:240</a></div></div>
+<div class="ttc" id="aclassRio_html_a481f396ff3ea99d3ede2f54e5a9376a7"><div class="ttname"><a href="classRio.html#a481f396ff3ea99d3ede2f54e5a9376a7">Rio::catalogo</a></div><div class="ttdeci">map&lt; int, Producto &gt; catalogo</div><div class="ttdef"><b>Definition:</b> <a href="Rio_8hh_source.html#l00192">Rio.hh:192</a></div></div>
+<div class="ttc" id="aclassRio_html_a5c37a181618956b3234f56e022bfe980"><div class="ttname"><a href="classRio.html#a5c37a181618956b3234f56e022bfe980">Rio::poner_producto</a></div><div class="ttdeci">void poner_producto(string id, int pid, Producto &amp;p)</div><div class="ttdoc">Modificadora de Ciudad de Rio.</div><div class="ttdef"><b>Definition:</b> <a href="Rio_8cc_source.html#l00039">Rio.cc:39</a></div></div>
+<div class="ttc" id="aclassRio_html_a6e2b75c64d48f1421daa8fc6c3ea5e7f"><div class="ttname"><a href="classRio.html#a6e2b75c64d48f1421daa8fc6c3ea5e7f">Rio::consultar_volumen</a></div><div class="ttdeci">int consultar_volumen(int id) const</div><div class="ttdoc">Consultora del volumen de un Producto.</div><div class="ttdef"><b>Definition:</b> <a href="Rio_8cc_source.html#l00137">Rio.cc:137</a></div></div>
+<div class="ttc" id="aclassRio_html_a73eb9cbeac29be7dbe0db2a5d27fa1bf"><div class="ttname"><a href="classRio.html#a73eb9cbeac29be7dbe0db2a5d27fa1bf">Rio::existe_ciudad</a></div><div class="ttdeci">bool existe_ciudad(string id) const</div><div class="ttdoc">Consultora de la existencia de una ciudad.</div><div class="ttdef"><b>Definition:</b> <a href="Rio_8cc_source.html#l00148">Rio.cc:148</a></div></div>
+<div class="ttc" id="aclassRio_html_a7a653f64d55e6113ea8174ae33c8f678"><div class="ttname"><a href="classRio.html#a7a653f64d55e6113ea8174ae33c8f678">Rio::modificar_producto</a></div><div class="ttdeci">void modificar_producto(string id, int pid, Producto &amp;p)</div><div class="ttdoc">Modifica un Producto de una Ciudad.</div><div class="ttdef"><b>Definition:</b> <a href="Rio_8cc_source.html#l00051">Rio.cc:51</a></div></div>
+<div class="ttc" id="aclassRio_html_a7c734ada85112da293a875abe2b6728a"><div class="ttname"><a href="classRio.html#a7c734ada85112da293a875abe2b6728a">Rio::consultar_num</a></div><div class="ttdeci">int consultar_num() const</div><div class="ttdoc">Consultora del número de productos diferentes.</div><div class="ttdef"><b>Definition:</b> <a href="Rio_8cc_source.html#l00127">Rio.cc:127</a></div></div>
+<div class="ttc" id="aclassRio_html_a8e5abb07c17d6f7b04267739c73a4d0e"><div class="ttname"><a href="classRio.html#a8e5abb07c17d6f7b04267739c73a4d0e">Rio::consultar_prod</a></div><div class="ttdeci">void consultar_prod(string identificador, int id) const</div><div class="ttdoc">Consultora del Producto de una Ciudad.</div><div class="ttdef"><b>Definition:</b> <a href="Rio_8cc_source.html#l00143">Rio.cc:143</a></div></div>
+<div class="ttc" id="aclassRio_html_a945de076e87f4e5b180a64f5eef3f073"><div class="ttname"><a href="classRio.html#a945de076e87f4e5b180a64f5eef3f073">Rio::embarcacion</a></div><div class="ttdeci">Barco embarcacion</div><div class="ttdef"><b>Definition:</b> <a href="Rio_8hh_source.html#l00197">Rio.hh:197</a></div></div>
+<div class="ttc" id="aclassRio_html_a9be9ba3e2c3434caa5f8bd74ab944fbb"><div class="ttname"><a href="classRio.html#a9be9ba3e2c3434caa5f8bd74ab944fbb">Rio::redistribuir</a></div><div class="ttdeci">void redistribuir()</div><div class="ttdoc">La ciudad de la desembocadura comercia con su ciudad río arriba a mano derec hay luego con la ciudad ...</div><div class="ttdef"><b>Definition:</b> <a href="Rio_8cc_source.html#l00077">Rio.cc:77</a></div></div>
+<div class="ttc" id="aclassRio_html_aa1e085e559d338965c9ad74e4346cd63"><div class="ttname"><a href="classRio.html#aa1e085e559d338965c9ad74e4346cd63">Rio::modificar_barco</a></div><div class="ttdeci">void modificar_barco(int id1, int nid1, int id2, int nid2)</div><div class="ttdoc">Modificadora de Barco de Rio.</div><div class="ttdef"><b>Definition:</b> <a href="Rio_8cc_source.html#l00034">Rio.cc:34</a></div></div>
+<div class="ttc" id="aclassRio_html_aa1ee00916f52fb1e10b545cc9a656634"><div class="ttname"><a href="classRio.html#aa1ee00916f52fb1e10b545cc9a656634">Rio::comerciar</a></div><div class="ttdeci">void comerciar(string id1, string id2)</div><div class="ttdoc">Comercia entre dos ciudades con id1 y id2.</div><div class="ttdef"><b>Definition:</b> <a href="Rio_8cc_source.html#l00063">Rio.cc:63</a></div></div>
+<div class="ttc" id="aclassRio_html_aa49d58e87db25e78ec698042c6403454"><div class="ttname"><a href="classRio.html#aa49d58e87db25e78ec698042c6403454">Rio::leer_barco</a></div><div class="ttdeci">void leer_barco()</div><div class="ttdoc">Operación de lectura del atributo Barco.</div><div class="ttdef"><b>Definition:</b> <a href="Rio_8cc_source.html#l00235">Rio.cc:235</a></div></div>
+<div class="ttc" id="aclassRio_html_aa58baab0fa7131bc378edcf6baa16314"><div class="ttname"><a href="classRio.html#aa58baab0fa7131bc378edcf6baa16314">Rio::infoCiudades</a></div><div class="ttdeci">map&lt; string, Ciudad &gt; infoCiudades</div><div class="ttdef"><b>Definition:</b> <a href="Rio_8hh_source.html#l00195">Rio.hh:195</a></div></div>
+<div class="ttc" id="aclassRio_html_aa798d3c2cd60e914ad005eac0da7afc9"><div class="ttname"><a href="classRio.html#aa798d3c2cd60e914ad005eac0da7afc9">Rio::modificar_producto2</a></div><div class="ttdeci">void modificar_producto2(string id, int pid, Producto &amp;p)</div><div class="ttdef"><b>Definition:</b> <a href="Rio_8cc_source.html#l00057">Rio.cc:57</a></div></div>
+<div class="ttc" id="aclassRio_html_ac0d1982f96d94458a8da4a5394f18c6f"><div class="ttname"><a href="classRio.html#ac0d1982f96d94458a8da4a5394f18c6f">Rio::leer_productos_dif</a></div><div class="ttdeci">void leer_productos_dif()</div><div class="ttdoc">Cuarta operación de lectura.</div><div class="ttdef"><b>Definition:</b> <a href="Rio_8cc_source.html#l00225">Rio.cc:225</a></div></div>
+<div class="ttc" id="aclassRio_html_ac0eaeb22a0624fffab22f82c06071d81"><div class="ttname"><a href="classRio.html#ac0eaeb22a0624fffab22f82c06071d81">Rio::leer_rio0</a></div><div class="ttdeci">void leer_rio0()</div><div class="ttdef"><b>Definition:</b> <a href="Rio_8cc_source.html#l00172">Rio.cc:172</a></div></div>
+<div class="ttc" id="aclassRio_html_ad1f2ad7a3dfd9f0464e23420aa166baf"><div class="ttname"><a href="classRio.html#ad1f2ad7a3dfd9f0464e23420aa166baf">Rio::escribir_prod</a></div><div class="ttdeci">void escribir_prod(int id) const</div><div class="ttdoc">Segunda operación de escritura.</div><div class="ttdef"><b>Definition:</b> <a href="Rio_8cc_source.html#l00246">Rio.cc:246</a></div></div>
+<div class="ttc" id="aclassRio_html_ad83abc00e9bfa4d4a627a0bb70cef996"><div class="ttname"><a href="classRio.html#ad83abc00e9bfa4d4a627a0bb70cef996">Rio::agregar_productos</a></div><div class="ttdeci">void agregar_productos(int nprod)</div><div class="ttdoc">Añade nuevos productos al catalogo del Rio.</div><div class="ttdef"><b>Definition:</b> <a href="Rio_8cc_source.html#l00021">Rio.cc:21</a></div></div>
+<div class="ttc" id="aclassRio_html_ae50bf4c5f1aa05c7b8bea6d8f10b51f6"><div class="ttname"><a href="classRio.html#ae50bf4c5f1aa05c7b8bea6d8f10b51f6">Rio::hacer_viaje</a></div><div class="ttdeci">void hacer_viaje()</div><div class="ttdoc">El Barco compra y vende productos por la ruta que le permita mas esto, en caso de empate,...</div><div class="ttdef"><b>Definition:</b> <a href="Rio_8cc_source.html#l00082">Rio.cc:82</a></div></div>
+<div class="ttc" id="aclassRio_html_aefa7043534c9c57ece7159ee51300c8d"><div class="ttname"><a href="classRio.html#aefa7043534c9c57ece7159ee51300c8d">Rio::estructura</a></div><div class="ttdeci">BinTree&lt; string &gt; estructura</div><div class="ttdef"><b>Definition:</b> <a href="Rio_8hh_source.html#l00193">Rio.hh:193</a></div></div>
+<div class="ttc" id="aclassRio_html_aefdc17749cfe6fa1cd5d813971e984b7"><div class="ttname"><a href="classRio.html#aefdc17749cfe6fa1cd5d813971e984b7">Rio::camino2</a></div><div class="ttdeci">static list&lt; string &gt; camino2(BinTree&lt; string &gt; t, const map&lt; string, Ciudad &gt; &amp;info, Barco b, int &amp;compradas, int &amp;vendidas)</div><div class="ttdef"><b>Definition:</b> <a href="Rio_8cc_source.html#l00267">Rio.cc:267</a></div></div>
+<div class="ttc" id="aclassRio_html_af72f485dd7db5de1a46a216c7596d6f8"><div class="ttname"><a href="classRio.html#af72f485dd7db5de1a46a216c7596d6f8">Rio::camino</a></div><div class="ttdeci">list&lt; string &gt; camino()</div><div class="ttdef"><b>Definition:</b> <a href="Rio_8cc_source.html#l00158">Rio.cc:158</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

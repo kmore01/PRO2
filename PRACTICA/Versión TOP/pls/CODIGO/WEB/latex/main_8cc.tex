@@ -1,0 +1,245 @@
+\hypertarget{main_8cc}{}\doxysection{Referencia del Archivo main.\+cc}
+\label{main_8cc}\index{main.cc@{main.cc}}
+
+
+Programa principal.  
+
+
+{\ttfamily \#include \char`\"{}Rio.\+hh\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Ciudad.\+hh\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Barco.\+hh\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Producto.\+hh\char`\"{}}\newline
+Dependencia gráfica adjunta para main.\+cc\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=265pt]{main_8cc__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef Bin\+Tree$<$ \mbox{\hyperlink{classCiudad}{Ciudad}} $>$ \mbox{\hyperlink{main_8cc_aa8dffebc96d519cf953b57dd6eb8504b}{BT}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Funciones}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{main_8cc_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+Programa principal. 
+
+Estamos suponiendo que los datos leídos siempre son correctos, ya que no incluímos comprobaciones al respecto. Utilizaremos strings como opciones como el enunciado estipula. 
+
+Definición en el archivo \mbox{\hyperlink{main_8cc_source}{main.\+cc}}.
+
+
+
+\doxysubsection{Documentación de los \textquotesingle{}typedefs\textquotesingle{}}
+\mbox{\Hypertarget{main_8cc_aa8dffebc96d519cf953b57dd6eb8504b}\label{main_8cc_aa8dffebc96d519cf953b57dd6eb8504b}} 
+\index{main.cc@{main.cc}!BT@{BT}}
+\index{BT@{BT}!main.cc@{main.cc}}
+\doxysubsubsection{\texorpdfstring{BT}{BT}}
+{\footnotesize\ttfamily typedef Bin\+Tree$<$\mbox{\hyperlink{classCiudad}{Ciudad}}$>$ \mbox{\hyperlink{arbolmain_8cc_a694ec8eec0a91ba0762aca230314b26a}{BT}}}
+
+
+
+Definición en la línea \mbox{\hyperlink{main_8cc_source_l00020}{20}} del archivo \mbox{\hyperlink{main_8cc_source}{main.\+cc}}.
+
+
+
+\doxysubsection{Documentación de las funciones}
+\mbox{\Hypertarget{main_8cc_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{main_8cc_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
+\index{main.cc@{main.cc}!main@{main}}
+\index{main@{main}!main.cc@{main.cc}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definición en la línea \mbox{\hyperlink{main_8cc_source_l00022}{22}} del archivo \mbox{\hyperlink{main_8cc_source}{main.\+cc}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00023 \{}
+\DoxyCodeLine{00024     \textcolor{comment}{/* LECTURA INICIAL */}}
+\DoxyCodeLine{00025     \mbox{\hyperlink{classRio}{Rio}} cuenca;}
+\DoxyCodeLine{00026     \textcolor{comment}{// Leemos todos los productos que hay en el rio}}
+\DoxyCodeLine{00027     cuenca.\mbox{\hyperlink{classRio_ac0d1982f96d94458a8da4a5394f18c6f}{leer\_productos\_dif}}();}
+\DoxyCodeLine{00028     \textcolor{comment}{// Leemos la estructura de la cuenca fluvial}}
+\DoxyCodeLine{00029     cuenca.\mbox{\hyperlink{classRio_a298bb2dc007527a8c2273205f257687d}{leer\_rio}}();}
+\DoxyCodeLine{00030     \textcolor{comment}{// Leemos los datos del barco}}
+\DoxyCodeLine{00031     cuenca.\mbox{\hyperlink{classRio_aa49d58e87db25e78ec698042c6403454}{leer\_barco}}();}
+\DoxyCodeLine{00032 }
+\DoxyCodeLine{00033     \textcolor{comment}{/* BUCLE */}}
+\DoxyCodeLine{00034     \textcolor{keywordtype}{string} accion;}
+\DoxyCodeLine{00035     getline(cin, accion);}
+\DoxyCodeLine{00036     getline(cin, accion); \textcolor{comment}{// Consumir // bucle}}
+\DoxyCodeLine{00037 }
+\DoxyCodeLine{00038     cin >> accion;}
+\DoxyCodeLine{00039     \textcolor{keywordflow}{while} (accion != \textcolor{stringliteral}{"{}fin"{}}) \{}
+\DoxyCodeLine{00040         cout << \textcolor{charliteral}{'\#'} << accion;}
+\DoxyCodeLine{00041         \textcolor{keywordflow}{if} (accion == \textcolor{stringliteral}{"{}leer\_rio"{}} or accion == \textcolor{stringliteral}{"{}lr"{}}) \{}
+\DoxyCodeLine{00042             cout << endl;}
+\DoxyCodeLine{00043             cuenca.\mbox{\hyperlink{classRio_a298bb2dc007527a8c2273205f257687d}{leer\_rio}}();}
+\DoxyCodeLine{00044         \}}
+\DoxyCodeLine{00045 }
+\DoxyCodeLine{00046         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (accion == \textcolor{stringliteral}{"{}leer\_inventario"{}} or accion == \textcolor{stringliteral}{"{}li"{}}) \{}
+\DoxyCodeLine{00047             \textcolor{keywordtype}{string} identificador;}
+\DoxyCodeLine{00048             cin >> identificador;}
+\DoxyCodeLine{00049             cout << \textcolor{charliteral}{' '} << identificador << endl;}
+\DoxyCodeLine{00050             \textcolor{keywordflow}{if} (cuenca.\mbox{\hyperlink{classRio_a73eb9cbeac29be7dbe0db2a5d27fa1bf}{existe\_ciudad}}(identificador)) \{}
+\DoxyCodeLine{00051                 cuenca.\mbox{\hyperlink{classRio_a207f2c3a8da8eeed880d0f8845861744}{leer\_inventario}}(identificador);}
+\DoxyCodeLine{00052             \}}
+\DoxyCodeLine{00053             \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{00054                 cout << \textcolor{stringliteral}{"{}error: no existe la ciudad"{}} << endl;}
+\DoxyCodeLine{00055                 \textcolor{keywordtype}{int} n;}
+\DoxyCodeLine{00056                 cin >> n;}
+\DoxyCodeLine{00057                 \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < n; ++i) \{}
+\DoxyCodeLine{00058                     \textcolor{keywordtype}{int} x;}
+\DoxyCodeLine{00059                     cin >> x >> x >> x;}
+\DoxyCodeLine{00060                 \}}
+\DoxyCodeLine{00061             \}}
+\DoxyCodeLine{00062         \}}
+\DoxyCodeLine{00063 }
+\DoxyCodeLine{00064         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (accion == \textcolor{stringliteral}{"{}leer\_inventarios"{}} or accion == \textcolor{stringliteral}{"{}ls"{}}) \{}
+\DoxyCodeLine{00065             cout << endl;}
+\DoxyCodeLine{00066             cuenca.\mbox{\hyperlink{classRio_a3411039631544d16ba19b2b22a92c3a1}{leer\_inventarios}}();}
+\DoxyCodeLine{00067         \}}
+\DoxyCodeLine{00068 }
+\DoxyCodeLine{00069         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (accion == \textcolor{stringliteral}{"{}modificar\_barco"{}} or accion == \textcolor{stringliteral}{"{}mb"{}}) \{}
+\DoxyCodeLine{00070             cout << endl;}
+\DoxyCodeLine{00071             \textcolor{keywordtype}{int} id1, nid1, id2, nid2;}
+\DoxyCodeLine{00072             cin >> id1 >> nid1 >> id2 >> nid2;}
+\DoxyCodeLine{00073             \textcolor{keywordflow}{if} (id1 == id2) }
+\DoxyCodeLine{00074             cout << \textcolor{stringliteral}{"{}error: no se puede comprar y vender el mismo producto"{}} << endl;}
+\DoxyCodeLine{00075             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (cuenca.\mbox{\hyperlink{classRio_a394db1db6c205f1ca5013f0c837f8cda}{existe\_prod}}(id1) and cuenca.\mbox{\hyperlink{classRio_a394db1db6c205f1ca5013f0c837f8cda}{existe\_prod}}(id2)) \{}
+\DoxyCodeLine{00076                 cuenca.\mbox{\hyperlink{classRio_aa1e085e559d338965c9ad74e4346cd63}{modificar\_barco}}(id1, nid1, id2, nid2);}
+\DoxyCodeLine{00077             \}}
+\DoxyCodeLine{00078             \textcolor{keywordflow}{else} cout << \textcolor{stringliteral}{"{}error: no existe el producto"{}} << endl;}
+\DoxyCodeLine{00079         \}}
+\DoxyCodeLine{00080 }
+\DoxyCodeLine{00081         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (accion == \textcolor{stringliteral}{"{}escribir\_barco"{}} or accion == \textcolor{stringliteral}{"{}eb"{}}) \{}
+\DoxyCodeLine{00082             cout << endl;}
+\DoxyCodeLine{00083             cuenca.\mbox{\hyperlink{classRio_a082df406f7cc228445692630ac9c3ab0}{escribir\_barco}}();}
+\DoxyCodeLine{00084         \}}
+\DoxyCodeLine{00085 }
+\DoxyCodeLine{00086         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (accion == \textcolor{stringliteral}{"{}consultar\_num"{}} or accion == \textcolor{stringliteral}{"{}cn"{}}) \{}
+\DoxyCodeLine{00087             cout << endl;}
+\DoxyCodeLine{00088             cout << cuenca.\mbox{\hyperlink{classRio_a7c734ada85112da293a875abe2b6728a}{consultar\_num}}() << endl;}
+\DoxyCodeLine{00089         \}}
+\DoxyCodeLine{00090 }
+\DoxyCodeLine{00091         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (accion == \textcolor{stringliteral}{"{}agregar\_productos"{}} or accion == \textcolor{stringliteral}{"{}ap"{}}) \{}
+\DoxyCodeLine{00092             \textcolor{keywordtype}{int} n;}
+\DoxyCodeLine{00093             cin >> n;}
+\DoxyCodeLine{00094             cout << \textcolor{charliteral}{' '} << n << endl;}
+\DoxyCodeLine{00095             \textcolor{keywordflow}{if} (n > 0) cuenca.\mbox{\hyperlink{classRio_ad83abc00e9bfa4d4a627a0bb70cef996}{agregar\_productos}}(n);}
+\DoxyCodeLine{00096             \textcolor{keywordflow}{else} cout << \textcolor{stringliteral}{"{}FALLO N <= 0"{}} << endl;}
+\DoxyCodeLine{00097         \}}
+\DoxyCodeLine{00098 }
+\DoxyCodeLine{00099         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (accion == \textcolor{stringliteral}{"{}escribir\_producto"{}} or accion == \textcolor{stringliteral}{"{}ep"{}}) \{}
+\DoxyCodeLine{00100             \textcolor{keywordtype}{int} identificiador;}
+\DoxyCodeLine{00101             cin >> identificiador;}
+\DoxyCodeLine{00102             cout << \textcolor{charliteral}{' '} << identificiador << endl;}
+\DoxyCodeLine{00103             \textcolor{keywordflow}{if} (cuenca.\mbox{\hyperlink{classRio_a394db1db6c205f1ca5013f0c837f8cda}{existe\_prod}}(identificiador)) \{}
+\DoxyCodeLine{00104                 cuenca.\mbox{\hyperlink{classRio_ad1f2ad7a3dfd9f0464e23420aa166baf}{escribir\_prod}}(identificiador);}
+\DoxyCodeLine{00105             \}}
+\DoxyCodeLine{00106             \textcolor{keywordflow}{else} cout << \textcolor{stringliteral}{"{}error: no existe el producto"{}} << endl;}
+\DoxyCodeLine{00107         \}}
+\DoxyCodeLine{00108 }
+\DoxyCodeLine{00109         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (accion == \textcolor{stringliteral}{"{}escribir\_ciudad"{}} or accion == \textcolor{stringliteral}{"{}ec"{}}) \{}
+\DoxyCodeLine{00110             \textcolor{keywordtype}{string} identificador;}
+\DoxyCodeLine{00111             cin >> identificador;}
+\DoxyCodeLine{00112             cout << \textcolor{charliteral}{' '} << identificador << endl;}
+\DoxyCodeLine{00113             \textcolor{keywordflow}{if} (cuenca.\mbox{\hyperlink{classRio_a73eb9cbeac29be7dbe0db2a5d27fa1bf}{existe\_ciudad}}(identificador)) \{}
+\DoxyCodeLine{00114                 cuenca.\mbox{\hyperlink{classRio_a457344228d687c95bbd8b35c51b1a8d9}{escribir\_ciudad}}(identificador);}
+\DoxyCodeLine{00115             \}}
+\DoxyCodeLine{00116             \textcolor{keywordflow}{else} cout << \textcolor{stringliteral}{"{}error: no existe la ciudad"{}} << endl;}
+\DoxyCodeLine{00117         \}}
+\DoxyCodeLine{00118 }
+\DoxyCodeLine{00119         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (accion == \textcolor{stringliteral}{"{}poner\_prod"{}} or accion == \textcolor{stringliteral}{"{}pp"{}}) \{}
+\DoxyCodeLine{00120             \textcolor{keywordtype}{string} idCiudad;}
+\DoxyCodeLine{00121             \textcolor{keywordtype}{int} idProducto, tiene, quiere;}
+\DoxyCodeLine{00122             cin >> idCiudad >> idProducto >> tiene >> quiere;}
+\DoxyCodeLine{00123             cout << \textcolor{charliteral}{' '} << idCiudad << \textcolor{charliteral}{' '} << idProducto << endl;}
+\DoxyCodeLine{00124             \textcolor{keywordflow}{if} (cuenca.\mbox{\hyperlink{classRio_a394db1db6c205f1ca5013f0c837f8cda}{existe\_prod}}(idProducto)) \{}
+\DoxyCodeLine{00125                 \textcolor{keywordflow}{if} (cuenca.\mbox{\hyperlink{classRio_a73eb9cbeac29be7dbe0db2a5d27fa1bf}{existe\_ciudad}}(idCiudad)) \{}
+\DoxyCodeLine{00126                     \mbox{\hyperlink{classProducto}{Producto}} aux (cuenca.\mbox{\hyperlink{classRio_a0303e953b2454fc07903c7d2aad443ab}{consultar\_peso}}(idProducto), cuenca.\mbox{\hyperlink{classRio_a6e2b75c64d48f1421daa8fc6c3ea5e7f}{consultar\_volumen}}(idProducto),tiene, quiere);}
+\DoxyCodeLine{00127                     cuenca.\mbox{\hyperlink{classRio_a5c37a181618956b3234f56e022bfe980}{poner\_producto}}(idCiudad, idProducto, aux);}
+\DoxyCodeLine{00128                 \}}
+\DoxyCodeLine{00129                 \textcolor{keywordflow}{else} cout << \textcolor{stringliteral}{"{}error: no existe la ciudad"{}} << endl;}
+\DoxyCodeLine{00130             \}}
+\DoxyCodeLine{00131             \textcolor{keywordflow}{else} cout << \textcolor{stringliteral}{"{}error: no existe el producto"{}} << endl;}
+\DoxyCodeLine{00132         \}}
+\DoxyCodeLine{00133 }
+\DoxyCodeLine{00134         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (accion == \textcolor{stringliteral}{"{}modificar\_prod"{}} or accion == \textcolor{stringliteral}{"{}mp"{}}) \{}
+\DoxyCodeLine{00135             \textcolor{keywordtype}{string} idCiudad;}
+\DoxyCodeLine{00136             \textcolor{keywordtype}{int} idProducto, tiene, quiere;}
+\DoxyCodeLine{00137             cin >> idCiudad >> idProducto >> tiene >> quiere;}
+\DoxyCodeLine{00138             cout << \textcolor{charliteral}{' '} << idCiudad << \textcolor{charliteral}{' '} << idProducto << endl;}
+\DoxyCodeLine{00139             \textcolor{keywordflow}{if} (cuenca.\mbox{\hyperlink{classRio_a394db1db6c205f1ca5013f0c837f8cda}{existe\_prod}}(idProducto)) \{}
+\DoxyCodeLine{00140                 \textcolor{keywordflow}{if} (cuenca.\mbox{\hyperlink{classRio_a73eb9cbeac29be7dbe0db2a5d27fa1bf}{existe\_ciudad}}(idCiudad)) \{}
+\DoxyCodeLine{00141                     \mbox{\hyperlink{classProducto}{Producto}} aux (cuenca.\mbox{\hyperlink{classRio_a0303e953b2454fc07903c7d2aad443ab}{consultar\_peso}}(idProducto), cuenca.\mbox{\hyperlink{classRio_a6e2b75c64d48f1421daa8fc6c3ea5e7f}{consultar\_volumen}}(idProducto),tiene, quiere);}
+\DoxyCodeLine{00142                     cuenca.\mbox{\hyperlink{classRio_a7a653f64d55e6113ea8174ae33c8f678}{modificar\_producto}}(idCiudad, idProducto, aux);}
+\DoxyCodeLine{00143                 \}}
+\DoxyCodeLine{00144                 \textcolor{keywordflow}{else} cout << \textcolor{stringliteral}{"{}error: no existe la ciudad"{}} << endl;}
+\DoxyCodeLine{00145             \}}
+\DoxyCodeLine{00146             \textcolor{keywordflow}{else} cout << \textcolor{stringliteral}{"{}error: no existe el producto"{}} << endl;}
+\DoxyCodeLine{00147         \}}
+\DoxyCodeLine{00148 }
+\DoxyCodeLine{00149         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (accion == \textcolor{stringliteral}{"{}quitar\_prod"{}} or accion == \textcolor{stringliteral}{"{}qp"{}}) \{}
+\DoxyCodeLine{00150             \textcolor{keywordtype}{string} identificador;}
+\DoxyCodeLine{00151             \textcolor{keywordtype}{int} id;}
+\DoxyCodeLine{00152             cin >> identificador >> id;}
+\DoxyCodeLine{00153             cout << \textcolor{charliteral}{' '} << identificador << \textcolor{charliteral}{' '} << \textcolor{keywordtype}{id} << endl;}
+\DoxyCodeLine{00154             \textcolor{keywordflow}{if} (cuenca.\mbox{\hyperlink{classRio_a394db1db6c205f1ca5013f0c837f8cda}{existe\_prod}}(\textcolor{keywordtype}{id})) \{}
+\DoxyCodeLine{00155                 \textcolor{keywordflow}{if} (cuenca.\mbox{\hyperlink{classRio_a73eb9cbeac29be7dbe0db2a5d27fa1bf}{existe\_ciudad}}(identificador)) \{}
+\DoxyCodeLine{00156                     cuenca.\mbox{\hyperlink{classRio_a3eac2ea880782074c1126ea1ac2412d0}{quitar\_producto}}(identificador, \textcolor{keywordtype}{id});}
+\DoxyCodeLine{00157                 \}}
+\DoxyCodeLine{00158                 \textcolor{keywordflow}{else} cout << \textcolor{stringliteral}{"{}error: no existe la ciudad"{}} << endl;}
+\DoxyCodeLine{00159             \}}
+\DoxyCodeLine{00160             \textcolor{keywordflow}{else} cout << \textcolor{stringliteral}{"{}error: no existe el producto"{}} << endl;}
+\DoxyCodeLine{00161         \}}
+\DoxyCodeLine{00162 }
+\DoxyCodeLine{00163         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (accion == \textcolor{stringliteral}{"{}consultar\_prod"{}} or accion == \textcolor{stringliteral}{"{}cp"{}}) \{}
+\DoxyCodeLine{00164             \textcolor{keywordtype}{string} identificador;}
+\DoxyCodeLine{00165             \textcolor{keywordtype}{int} id;}
+\DoxyCodeLine{00166             cin >> identificador >> id;}
+\DoxyCodeLine{00167             cout << \textcolor{charliteral}{' '} << identificador << \textcolor{charliteral}{' '} << \textcolor{keywordtype}{id} << endl;}
+\DoxyCodeLine{00168             \textcolor{keywordflow}{if} (cuenca.\mbox{\hyperlink{classRio_a394db1db6c205f1ca5013f0c837f8cda}{existe\_prod}}(\textcolor{keywordtype}{id})) \{}
+\DoxyCodeLine{00169                 \textcolor{keywordflow}{if} (cuenca.\mbox{\hyperlink{classRio_a73eb9cbeac29be7dbe0db2a5d27fa1bf}{existe\_ciudad}}(identificador)) \{}
+\DoxyCodeLine{00170                     cuenca.\mbox{\hyperlink{classRio_a8e5abb07c17d6f7b04267739c73a4d0e}{consultar\_prod}}(identificador, \textcolor{keywordtype}{id});}
+\DoxyCodeLine{00171                 \}}
+\DoxyCodeLine{00172                 \textcolor{keywordflow}{else} cout << \textcolor{stringliteral}{"{}error: no existe la ciudad"{}} << endl;}
+\DoxyCodeLine{00173             \}}
+\DoxyCodeLine{00174             \textcolor{keywordflow}{else} cout << \textcolor{stringliteral}{"{}error: no existe el producto"{}} << endl;}
+\DoxyCodeLine{00175         \}}
+\DoxyCodeLine{00176 }
+\DoxyCodeLine{00177         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (accion == \textcolor{stringliteral}{"{}comerciar"{}} or accion == \textcolor{stringliteral}{"{}co"{}}) \{}
+\DoxyCodeLine{00178             \textcolor{keywordtype}{string} identificador1, identificador2;}
+\DoxyCodeLine{00179             cin >> identificador1 >> identificador2;}
+\DoxyCodeLine{00180             cout << \textcolor{charliteral}{' '} << identificador1 << \textcolor{charliteral}{' '} << identificador2 << endl;}
+\DoxyCodeLine{00181             \textcolor{keywordflow}{if} (identificador1 == identificador2) cout << \textcolor{stringliteral}{"{}error: ciudad repetida"{}} << endl;}
+\DoxyCodeLine{00182             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (cuenca.\mbox{\hyperlink{classRio_a73eb9cbeac29be7dbe0db2a5d27fa1bf}{existe\_ciudad}}(identificador1) and cuenca.\mbox{\hyperlink{classRio_a73eb9cbeac29be7dbe0db2a5d27fa1bf}{existe\_ciudad}}(identificador2)) \{}
+\DoxyCodeLine{00183                 cuenca.\mbox{\hyperlink{classRio_aa1ee00916f52fb1e10b545cc9a656634}{comerciar}}(identificador1, identificador2);}
+\DoxyCodeLine{00184             \}}
+\DoxyCodeLine{00185             \textcolor{keywordflow}{else} cout << \textcolor{stringliteral}{"{}error: no existe la ciudad"{}} << endl;}
+\DoxyCodeLine{00186         \}}
+\DoxyCodeLine{00187 }
+\DoxyCodeLine{00188         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (accion == \textcolor{stringliteral}{"{}redistribuir"{}} or accion == \textcolor{stringliteral}{"{}re"{}}) \{}
+\DoxyCodeLine{00189             cout << endl;}
+\DoxyCodeLine{00190             cuenca.\mbox{\hyperlink{classRio_a9be9ba3e2c3434caa5f8bd74ab944fbb}{redistribuir}}();}
+\DoxyCodeLine{00191         \}}
+\DoxyCodeLine{00192 }
+\DoxyCodeLine{00193         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (accion == \textcolor{stringliteral}{"{}hacer\_viaje"{}} or accion == \textcolor{stringliteral}{"{}hv"{}})\{ \textcolor{comment}{// "{}hacer\_viaje"{} o "{}hv"{}}}
+\DoxyCodeLine{00194             cout << endl;}
+\DoxyCodeLine{00195             cout << \textcolor{stringliteral}{"{}EN PROCESO"{}} << endl;}
+\DoxyCodeLine{00196         \}}
+\DoxyCodeLine{00197         cin >> accion;}
+\DoxyCodeLine{00198     \}}
+\DoxyCodeLine{00199 \}}
+
+\end{DoxyCode}
